@@ -105,6 +105,8 @@ body {
     top: 50px;
     left: 0px;
     text-align: end;
+    margin-left: -63px;
+    margin-top: 30px;
   }
   .nav > .nav-links > a {
     display: block;
@@ -115,7 +117,8 @@ body {
   }
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    overflow-y: hidden;
   }
   .login {
     width: 110px !important;
@@ -159,6 +162,8 @@ body {
     top: 50px;
     left: 0px;
     text-align: end;
+    margin-left: -63px;
+    margin-top: 30px;
   }
   .nav > .nav-links > a {
     display: block;
@@ -169,7 +174,8 @@ body {
   }
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    overflow-y: hidden;
   }
   .login {
     width: 110px !important;
