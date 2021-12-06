@@ -104,6 +104,7 @@ body {
     overflow-y: hidden;
     top: 50px;
     left: 0px;
+    text-align: end;
   }
   .nav > .nav-links > a {
     display: block;
@@ -119,6 +120,7 @@ body {
   .login {
     width: 110px !important;
     height: 57px;
+    float: inherit;
   }
 }
 
@@ -156,6 +158,7 @@ body {
     overflow-y: hidden;
     top: 50px;
     left: 0px;
+    text-align: end;
   }
   .nav > .nav-links > a {
     display: block;
@@ -171,5 +174,6 @@ body {
   .login {
     width: 110px !important;
     height: 57px;
+    float: inherit;
   }
 }
