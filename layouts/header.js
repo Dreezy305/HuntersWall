@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <div className="nav">
       <input type="checkbox" id="nav-check" />
-      <div className="nav-header ms-5">
+      <div className="nav-header ms-lg-5">
         <div className="nav-title">HuntersWall</div>
       </div>
       <div className="nav-btn">
@@ -18,26 +18,24 @@ export default function Header() {
       </div>
 
       <div className="nav-links me-5">
-        <a href="/" as={Link} rel="noreferrer">
+        <a href="/" as={Link} rel="noreferrer" className="color me-lg-4">
           Home
         </a>
-        <a href="/aboutUs" as={Link} rel="noreferrer">
+        <a href="/aboutUs" as={Link} rel="noreferrer" className="color me-lg-4">
           About us
         </a>
-        <a href="" as={Link} rel="noreferrer">
+        <a href="" as={Link} rel="noreferrer" className="color me-lg-4">
           Services
         </a>
-        <a href="" as={Link} rel="noreferrer">
+        <a href="" as={Link} rel="noreferrer" className="color me-lg-4">
           Catalogue
         </a>
-        <a href="" as={Link} rel="noreferrer">
+        <a href="" as={Link} rel="noreferrer" className="color me-lg-4">
           FAQ
         </a>
 
-        <a href="" rel="noreferrer">
-          <button type="button" className="btn btn-primary">
-            Login
-          </button>
+        <a href="" className="login color me-lg-3" rel="noreferrer">
+          Login
         </a>
       </div>
     </div>

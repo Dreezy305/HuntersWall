@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Jost:wght@200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@100;300;500;700;900&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +12,7 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: #4d4d4d;
+  background-color: #ffffff;
   position: relative;
   justify-content: space-between;
 }
@@ -19,10 +21,13 @@ body {
   display: inline;
 }
 
+.nav-title {
+  color: #2081f9;
+}
+
 .nav > .nav-header > .nav-title {
   display: inline-block;
-  font-size: 22px;
-  color: #fff;
+  font-size: 25px;
   padding: 10px 10px 10px 10px;
 }
 
@@ -40,12 +45,20 @@ body {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: #000000;
+  font-weight: 500;
+  font-size: 24px;
+  font-family: "Lato";
+  line-height: 29px;
 }
 
 /* .nav > .nav-links > a:hover {
   background-color: rgba(0, 0, 0, 0.3);
 } */
+
+.color {
+  font-style: normal;
+}
 
 .nav > #nav-check {
   display: none;
