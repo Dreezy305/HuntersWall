@@ -27,8 +27,8 @@ body {
 
 .nav > .nav-header > .nav-title {
   display: inline-block;
-  font-size: 25px;
-  padding: 10px 10px 10px 10px;
+  font-size: 30px;
+  padding: 5px 5px 5px 5px;
 }
 
 .nav > .nav-btn {
@@ -47,7 +47,7 @@ body {
   text-decoration: none;
   color: #000000;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   font-family: "Lato";
   line-height: 29px;
 }
@@ -58,6 +58,12 @@ body {
 
 .color {
   font-style: normal;
+}
+
+.login {
+  border: 2px solid #f99820;
+  width: 112px;
+  height: 46px;
 }
 
 .nav > #nav-check {
@@ -91,7 +97,8 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: #ffffff;
+    color: #000000;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -108,5 +115,9 @@ body {
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
+  }
+  .login {
+    width: 110px !important;
+    height: 57px;
   }
 }

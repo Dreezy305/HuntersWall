@@ -24,18 +24,32 @@ export default function Header() {
         <a href="/aboutUs" as={Link} rel="noreferrer" className="color me-lg-4">
           About us
         </a>
-        <a href="" as={Link} rel="noreferrer" className="color me-lg-4">
+        <a
+          href="/services"
+          as={Link}
+          rel="noreferrer"
+          className="color me-lg-4"
+        >
           Services
         </a>
-        <a href="" as={Link} rel="noreferrer" className="color me-lg-4">
+        <a
+          href="/catalogue"
+          as={Link}
+          rel="noreferrer"
+          className="color me-lg-4"
+        >
           Catalogue
         </a>
-        <a href="" as={Link} rel="noreferrer" className="color me-lg-4">
+        <a href="/faq" as={Link} rel="noreferrer" className="color me-lg-4">
           FAQ
         </a>
 
-        <a href="" className="login color me-lg-3" rel="noreferrer">
-          Login
+        <a
+          href="/login"
+          className="login color me-lg-3 p-lg-2 pt-lg-1"
+          rel="noreferrer"
+        >
+          <span className="px-lg-3 px-3">Login</span>
         </a>
       </div>
     </div>
