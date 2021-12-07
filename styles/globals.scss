@@ -45,5 +45,27 @@
     line-height: 29px;
     color: #ffffff;
     border: none;
+    white-space: nowrap;
   }
 }
+
+/** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
+@media screen and (max-width: 600px) {
+  .home {
+    h1 {
+      line-height: 29px;
+      // width: 365px;
+      width: 100%;
+      font-size: 24px;
+    }
+    p {
+      font-size: 12px;
+    }
+    button {
+      white-space: nowrap;
+      // margin-left: 100px !important;
+    }
+  }
+}
+
+/** MOBILE RESPONSIVENESS STYLES FOR MEDIUM SCREENS */

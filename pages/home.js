@@ -21,7 +21,7 @@ function Home() {
               Create an account
             </button>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 mt-2">
             <img src={images.hunt} className="img-fluid" alt="hunterswall" />
           </div>
         </div>
