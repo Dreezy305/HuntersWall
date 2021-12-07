@@ -78,12 +78,12 @@ export default function Header() {
         </label>
       </div>
 
-      <div className="nav-links me-5">
+      <div className="nav-links me-5 ">
         <a
           href="/"
           as={Link}
           rel="noreferrer"
-          className="color me-lg-4 padMobile"
+          className="color me-lg-4 padMobile headerlinks"
         >
           Home
         </a>
@@ -91,7 +91,7 @@ export default function Header() {
           href="/aboutUs"
           as={Link}
           rel="noreferrer"
-          className="color me-lg-4 padMobile"
+          className="color me-lg-4 padMobile headerlinks"
         >
           About us
         </a>
@@ -99,7 +99,7 @@ export default function Header() {
           href="/services"
           as={Link}
           rel="noreferrer"
-          className="color me-lg-4 padMobile"
+          className="color me-lg-4 padMobile headerlinks"
         >
           Services
         </a>
@@ -107,7 +107,7 @@ export default function Header() {
           href="/catalogue"
           as={Link}
           rel="noreferrer"
-          className="color me-lg-4 padMobile"
+          className="color me-lg-4 padMobile headerlinks"
         >
           Catalogue
         </a>
@@ -115,7 +115,7 @@ export default function Header() {
           href="/faq"
           as={Link}
           rel="noreferrer"
-          className="color me-lg-4 padMobile"
+          className="color me-lg-4 padMobile headerlinks hover"
         >
           FAQ
         </a>

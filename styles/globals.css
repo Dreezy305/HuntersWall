@@ -70,6 +70,29 @@ body {
   display: none;
 }
 
+.headerlinks {
+  text-decoration: none;
+  position: relative;
+}
+
+.headerlinks::after {
+  content: "";
+  transition: all 0.2s ease-in;
+  width: 100%;
+  height: 3px;
+  background-color: #2081f9;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  border-radius: 20px;
+}
+
+.headerlinks:hover::after {
+  transition: all 0.2s ease-in;
+  transform: scaleX(1);
+}
+
 @media (max-width: 600px) {
   .nav > .nav-btn {
     display: inline-block;
