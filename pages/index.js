@@ -6,7 +6,7 @@ import Home from "./home";
 export default function Index() {
   return (
     <Layout>
-      {/* <Home /> */}
+      <Home />
       {/* <AboutUs /> */}
     </Layout>
   );

@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <div className="nav">
+    <div className="nav mb-lg-4">
       <input type="checkbox" id="nav-check" />
       <div className="nav-header ms-lg-5">
         <div className="nav-title nav-headline">HuntersWall</div>
@@ -80,7 +80,7 @@ export default function Header() {
 
       <div className="nav-links me-5 ">
         <a
-          href="/"
+          href="/home"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks"
