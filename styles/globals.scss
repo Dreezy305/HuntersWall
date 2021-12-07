@@ -49,6 +49,23 @@
   }
 }
 
+.assets {
+  h6 {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 29px;
+    color: #000000;
+    width: auto;
+    text-align: end;
+  }
+  img {
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    padding: 10px;
+  }
+}
+
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
 @media screen and (max-width: 600px) {
   .home {
@@ -59,7 +76,7 @@
       font-size: 24px;
     }
     p {
-      font-size: 12px;
+      font-size: 15px;
     }
     button {
       white-space: nowrap;
