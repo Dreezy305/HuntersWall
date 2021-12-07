@@ -79,17 +79,27 @@ export default function Header() {
       </div>
 
       <div className="nav-links me-5">
-        <a href="/" as={Link} rel="noreferrer" className="color me-lg-4">
+        <a
+          href="/"
+          as={Link}
+          rel="noreferrer"
+          className="color me-lg-4 padMobile"
+        >
           Home
         </a>
-        <a href="/aboutUs" as={Link} rel="noreferrer" className="color me-lg-4">
+        <a
+          href="/aboutUs"
+          as={Link}
+          rel="noreferrer"
+          className="color me-lg-4 padMobile"
+        >
           About us
         </a>
         <a
           href="/services"
           as={Link}
           rel="noreferrer"
-          className="color me-lg-4"
+          className="color me-lg-4 padMobile"
         >
           Services
         </a>
@@ -97,17 +107,22 @@ export default function Header() {
           href="/catalogue"
           as={Link}
           rel="noreferrer"
-          className="color me-lg-4"
+          className="color me-lg-4 padMobile"
         >
           Catalogue
         </a>
-        <a href="/faq" as={Link} rel="noreferrer" className="color me-lg-4">
+        <a
+          href="/faq"
+          as={Link}
+          rel="noreferrer"
+          className="color me-lg-4 padMobile"
+        >
           FAQ
         </a>
 
         <a
           href="/login"
-          className="login color me-lg-3 p-lg-2 pt-lg-1"
+          className="login color me-lg-3 p-lg-2 pt-lg-1 padMobile"
           rel="noreferrer"
         >
           <span className="px-lg-3 px-3">Login</span>
