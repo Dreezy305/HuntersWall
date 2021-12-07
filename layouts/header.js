@@ -23,9 +23,9 @@ export default function Header() {
   };
 
   return (
-    <div className="nav mb-lg-4">
+    <div className="nav mb-lg-4 my-2">
       <input type="checkbox" id="nav-check" />
-      <div className="nav-header ms-lg-5">
+      <div className="nav-header">
         <div className="nav-title nav-headline">HuntersWall</div>
       </div>
       <div className="nav-btn">
@@ -78,7 +78,7 @@ export default function Header() {
         </label>
       </div>
 
-      <div className="nav-links me-5 ">
+      <div className="nav-links ">
         <a
           href="/home"
           as={Link}

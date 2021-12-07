@@ -14,7 +14,7 @@ body {
   width: 100%;
   background-color: #ffffff;
   position: relative;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .nav > .nav-header {
@@ -106,6 +106,10 @@ body {
     height: 50px;
     padding: 13px;
   }
+  .nav > .nav-header {
+    display: inline;
+    margin-right: auto;
+  }
   .nav > .nav-btn > label:hover,
   .nav #nav-check:checked ~ .nav-btn > label {
     background-color: #ffffff;
@@ -165,6 +169,10 @@ body {
     height: 50px;
     padding: 13px;
   }
+  .nav > .nav-header {
+    display: inline;
+    margin-right: auto;
+  }
   .nav > .nav-btn > label:hover,
   .nav #nav-check:checked ~ .nav-btn > label {
     background-color: #ffffff;
@@ -206,4 +214,7 @@ body {
     height: 57px;
     float: initial;
   }
+}
+
+@media screen and (max-width: 1024px) {
 }
