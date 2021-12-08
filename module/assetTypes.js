@@ -11,7 +11,10 @@ function AssetTypes() {
     <section className="mt-5 assets">
       <div className="container">
         <div className="row text-center justify-content-sm-center assetRow">
-          <div className="col-lg-2 assets_col" style={{ width: "25%" }}>
+          <div
+            className="col-lg-2 assets_col assetHover"
+            style={{ width: "25%" }}
+          >
             <img
               src={assets.realEstate}
               className=""
@@ -20,7 +23,10 @@ function AssetTypes() {
             />
             <h6 className="mt-1 text-center">Real Estate</h6>
           </div>
-          <div className="col-lg-2 assets_col" style={{ width: "25%" }}>
+          <div
+            className="col-lg-2 assets_col assetHover"
+            style={{ width: "25%" }}
+          >
             <img
               src={assets.commodities}
               className=""
@@ -29,7 +35,10 @@ function AssetTypes() {
             />
             <h6 className="mt-1 text-center">Commodities</h6>
           </div>
-          <div className="col-lg-2 assets_col" style={{ width: "25%" }}>
+          <div
+            className="col-lg-2 assets_col assetHover"
+            style={{ width: "25%" }}
+          >
             <img
               src={assets.innovation}
               className=""
@@ -38,7 +47,10 @@ function AssetTypes() {
             />
             <h6 className="mt-1 text-center">Innovation</h6>
           </div>
-          <div className="col-lg-2 assets_col" style={{ width: "25%" }}>
+          <div
+            className="col-lg-2 assets_col assetHover"
+            style={{ width: "25%" }}
+          >
             <img
               src={assets.portfolio}
               className=""

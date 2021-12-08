@@ -46,6 +46,10 @@
     color: #ffffff;
     border: none;
     white-space: nowrap;
+    &:hover {
+      transform: scale(1.2) !important;
+      transition: all 0.5s ease-in-out;
+    }
   }
 }
 
@@ -66,12 +70,23 @@
   }
 }
 
+.assetHover {
+  &:hover {
+    transform: scale(1.2) !important;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover:after {
+    // transform: scale(1.2) !important;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
 @media screen and (max-width: 600px) {
   .home {
     h1 {
       line-height: 29px;
-      // width: 365px;
+
       width: 100%;
       font-size: 24px;
     }
@@ -80,12 +95,11 @@
     }
     button {
       white-space: nowrap;
-      // margin-left: 100px !important;
     }
   }
   .assets {
     h6 {
-      font-size: 15px;
+      font-size: 13px;
     }
     &_col {
       width: 40% !important;
