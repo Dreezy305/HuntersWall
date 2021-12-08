@@ -61,7 +61,7 @@
     text-align: end;
   }
   img {
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    // transform: matrix(1, 0, 0, -1, 0, 0);
     padding: 10px;
   }
 }
@@ -82,6 +82,17 @@
       white-space: nowrap;
       // margin-left: 100px !important;
     }
+  }
+  .assets {
+    h6 {
+      font-size: 15px;
+    }
+    &_col {
+      width: 40% !important;
+    }
+  }
+  .assetRow {
+    justify-content: center !important;
   }
 }
 
