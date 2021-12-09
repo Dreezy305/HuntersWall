@@ -86,14 +86,17 @@
   .home {
     h1 {
       line-height: 29px;
-
-      width: 100%;
-      font-size: 24px;
+      width: 100vw;
+      font-size: 21px;
+      margin-bottom: 20px;
     }
     p {
-      font-size: 15px;
+      font-size: 20px;
+      width: 80vw;
+      margin-bottom: 20px;
     }
     button {
+      margin-top: 20px;
       white-space: nowrap;
     }
   }
@@ -111,3 +114,42 @@
 }
 
 /** MOBILE RESPONSIVENESS STYLES FOR MEDIUM SCREENS */
+@media screen and (max-width: 768px) {
+  .home {
+    h1 {
+      line-height: 29px;
+      width: 100vw;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      width: 80vw;
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 20px;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    h1 {
+      line-height: 32px;
+      width: 85%;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      width: 88%;
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 20px;
+      white-space: nowrap;
+    }
+  }
+}
