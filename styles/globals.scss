@@ -86,7 +86,7 @@
   .home {
     h1 {
       line-height: 29px;
-      width: 100vw;
+      width: 100vw !important;
       font-size: 21px;
       margin-bottom: 20px;
     }
@@ -118,7 +118,7 @@
   .home {
     h1 {
       line-height: 29px;
-      width: 100vw;
+      width: 100vw !important;
       font-size: 24px;
       margin-bottom: 20px;
     }
@@ -132,13 +132,18 @@
       white-space: nowrap;
     }
   }
+  .assets {
+    h6 {
+      font-size: 13px;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .home {
     h1 {
       line-height: 32px;
-      width: 85%;
+      width: 85% !important;
       font-size: 24px;
       margin-bottom: 20px;
     }
