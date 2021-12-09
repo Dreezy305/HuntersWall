@@ -1,10 +1,11 @@
-export const Services = [
+export const serviceData = [
   {
     id: 1,
     title: "Real Estate",
     content:
       "It has become a norm to believe a landed property is for the rich. HuntersWall makes it possible for everyone irrespective of your financial worth, to have a fraction of a landed property digitally. These digital assets are backed up by real assets but controlled by the subscribers digitally.",
     image: "/img/housing.png",
+    space: "my-2",
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ export const Services = [
 palm oil; and precious metals which include gold, silver, diamond, and platinum can be acquired and possessed digitally on this platform either by direct buying, or through initial
 offering fund.`,
     image: "/img/goods.png",
+    space: "my-5",
   },
   {
     id: 3,
@@ -20,6 +22,7 @@ offering fund.`,
     content:
       "Our researchers, analysts and strategists work all round the clock, ensuring we invest on safe and low risk asset, with greater reward in return on investment over long term period. We invest in shares of rewarding companies in different industries.",
     image: "/img/port.png",
+    space: "my-1",
   },
   {
     id: 4,
@@ -29,5 +32,6 @@ strong commitment and great interest in disruptive-innovation startups. We have 
 understanding what disruptive innovations truly are, that why  we position early and take part
 of the great ...`,
     image: "/img/innovate.png",
+    space: "my-5",
   },
 ];
