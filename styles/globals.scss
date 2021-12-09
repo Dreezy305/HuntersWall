@@ -141,6 +141,18 @@
   }
 }
 
+.services {
+  background: #f1f7ff;
+  h1 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    color: #000000;
+  }
+}
+
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
 @media screen and (max-width: 600px) {
   .home {

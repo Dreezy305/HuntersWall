@@ -1,6 +1,7 @@
 import React from "react";
 import AssetTypes from "../module/assetTypes";
 import AboutUs from "./aboutUs";
+import Services from "./services";
 
 function Home() {
   const images = {
@@ -34,6 +35,7 @@ function Home() {
       </section>
       <AssetTypes />
       <AboutUs />
+      <Services />
     </>
   );
 }
