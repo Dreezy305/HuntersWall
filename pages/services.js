@@ -7,7 +7,7 @@ function Services() {
   };
   return (
     <section className="services pt-5">
-      <h1 className="text-center mb-5">Services</h1>
+      <h1 className="text-center mb-5 mt-4">Services</h1>
       <div className="container">
         <div className="row">
           {serviceData.map((item) => (
