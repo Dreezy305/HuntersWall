@@ -1,5 +1,6 @@
 import React from "react";
 import AssetTypes from "../module/assetTypes";
+import AboutUs from "./aboutUs";
 
 function Home() {
   const images = {
@@ -32,6 +33,7 @@ function Home() {
         </div>
       </section>
       <AssetTypes />
+      <AboutUs />
     </>
   );
 }
