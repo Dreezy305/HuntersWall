@@ -151,6 +151,35 @@
     line-height: 43px;
     color: #000000;
   }
+  &_card {
+    h5 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+    }
+    p {
+      text-align: justify;
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 40px;
+      color: #000000;
+    }
+    button {
+      background: #f99820;
+      border: none;
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #ffffff;
+    }
+  }
 }
 
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
