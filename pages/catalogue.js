@@ -9,7 +9,7 @@ function Catalogue() {
       <section className="catalogue pt-4">
         <h1 className="text-center catalogue_title">Catalogue</h1>
         <div className="container">
-          <div className="pt-5 pb-4 pe-lg-5 d-flex flex-row justify-content-between catalogue_row">
+          <div className="pt-5 pb-4 pe-lg-5 pt-5 pb-4 pe-lg-5 d-lg-flex flex-lg-row justify-content-lg-between catalogue_row d-md-flex flex-md-row justify-content-md-between">
             <h6 className="tabs">All</h6>
 
             <h6 className="tabs">Real estate</h6>
