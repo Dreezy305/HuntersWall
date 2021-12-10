@@ -262,6 +262,27 @@
       cursor: pointer;
     }
   }
+  &_filter {
+    input {
+      width: 400px;
+      border-radius: 2px;
+      outline: none;
+      border: 1px solid #2081f9;
+      box-sizing: border-box;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      &::placeholder {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+      }
+    }
+  }
 }
 
 .tabs {
