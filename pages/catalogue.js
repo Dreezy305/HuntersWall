@@ -3,6 +3,7 @@ import Layout from "../layouts";
 import Card from "../components/card";
 
 function Catalogue() {
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <Layout>
       <section className="catalogue pt-4">
@@ -13,7 +14,7 @@ function Catalogue() {
 
             <h6 className="tabs">Real estate</h6>
 
-            <h6 className="tabs">Innovaion</h6>
+            <h6 className="tabs">Innovation</h6>
 
             <h6 className="tabs">Commodities</h6>
 
@@ -25,9 +26,13 @@ function Catalogue() {
         </div>
         <div className="container pb-5">
           <div className="row">
-            <div className="col-lg-4">
-              <Card />
-            </div>
+            {arr.map((item) => (
+              <>
+                <div className="col-lg-4 my-2">
+                  <Card />
+                </div>
+              </>
+            ))}
           </div>
         </div>
       </section>

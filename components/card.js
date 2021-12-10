@@ -50,11 +50,13 @@ const Card = ({
             <span className="cardBody_details-span1">Offer Time left</span>:{" "}
             {offertime}
           </h6>{" "}
-          <h6 className="my-3">(to acquire, click on the below button)</h6>
+          <h6 className="my-3">(to acquire, click on the button below)</h6>
         </div>
-        <button type="button" className="btn btn-primary float-start my-3">
-          New
-        </button>
+        <div className="cardBody_buttonBig d-flex justify-content-center">
+          <button type="button" className="float-start my-3 px-3">
+            More details
+          </button>
+        </div>
       </div>
     </div>
   );
