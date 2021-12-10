@@ -4,7 +4,7 @@ import Image from "next/image";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container pt-4">
+      <div className="container pt-5">
         <div className="row justify-content-between align-items-center">
           <div className="col-lg-2 footer_col1">
             <h1 className="">HuntersWall</h1>
@@ -18,7 +18,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <hr />
+      <hr style={{ border: "1px solid #75B1FB" }} />
       <div className="container pt-2">
         <div className="row footer_p">
           <p>
@@ -31,7 +31,7 @@ function Footer() {
           </p>
         </div>
       </div>
-      <hr />
+      <hr style={{ border: "1px solid #75B1FB" }} />
       <div className="container pt-2">
         <div className="row text-center footer_h1 align-items-stretch">
           <h6 className="pb-3"> Privacy Policy. Terms & Conditions.</h6>
