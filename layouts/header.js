@@ -80,7 +80,7 @@ export default function Header() {
 
       <div className="nav-links ">
         <a
-          href=""
+          href="#"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks"
@@ -88,7 +88,7 @@ export default function Header() {
           Home
         </a>
         <a
-          href=""
+          href="#"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks"
@@ -96,7 +96,7 @@ export default function Header() {
           About us
         </a>
         <a
-          href=""
+          href="#"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks"
@@ -104,7 +104,7 @@ export default function Header() {
           Services
         </a>
         <a
-          href=""
+          href="#"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks"
@@ -112,7 +112,7 @@ export default function Header() {
           Catalogue
         </a>
         <a
-          href=""
+          href="#"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks hover"
