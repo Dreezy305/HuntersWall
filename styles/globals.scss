@@ -182,6 +182,30 @@
   }
 }
 
+.footer {
+  background: #2081f9;
+  &_col1 {
+    h1 {
+      font-family: $typografix;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 46px;
+      color: #ffffff;
+    }
+  }
+  &_col2 {
+    h5 {
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #e5e5f4;
+    }
+  }
+}
+
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
 @media screen and (max-width: 600px) {
   .home {
