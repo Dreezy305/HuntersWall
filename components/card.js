@@ -23,22 +23,32 @@ const Card = ({
         <h4 className="mt-3 cardBody_title">Asset Code: {AssetCode}</h4>
         <div className="cardBody_details">
           <h6 className="my-3">
-            <span>Asset code</span>: {assetCode}
+            <span className="cardBody_details-span1">Asset code</span>:{" "}
+            {assetCode}
           </h6>{" "}
           <h6 className="my-3">
-            <span>Initial Offer Value (IOV)</span>: {Iov}
+            <span className="cardBody_details-span1">
+              Initial Offer Value (IOV)
+            </span>
+            : {Iov}
           </h6>{" "}
           <h6 className="my-3">
-            <span>Asset Claiming Time</span>: {AssetClaimTime}
+            <span className="cardBody_details-span1">Asset Claiming Time</span>:{" "}
+            {AssetClaimTime}
           </h6>{" "}
           <h6 className="my-3">
-            <span>Asset Content: BNB: Binance Coin, SOL</span>: {AssetContent}
+            <span className="cardBody_details-span1">
+              Asset Content: BNB: Binance Coin, SOL
+            </span>
+            : {AssetContent}
           </h6>{" "}
           <h6 className="my-3">
-            <span>Subscription so far</span>: {subscriptions}
+            <span className="cardBody_details-span1">Subscription so far</span>:{" "}
+            {subscriptions}
           </h6>{" "}
           <h6 className="my-3">
-            <span>Offer Time left</span>: {offertime}
+            <span className="cardBody_details-span1">Offer Time left</span>:{" "}
+            {offertime}
           </h6>{" "}
           <h6 className="my-3">(to acquire, click on the below button)</h6>
         </div>

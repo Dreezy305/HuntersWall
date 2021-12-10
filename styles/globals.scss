@@ -334,6 +334,24 @@
     line-height: 30px;
     color: #000000;
   }
+  &_details {
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      color: #000000;
+    }
+    &-span1 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 40px;
+      color: #2081f9;
+    }
+  }
 }
 
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
