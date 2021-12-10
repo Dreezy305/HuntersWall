@@ -204,6 +204,27 @@
       color: #e5e5f4;
     }
   }
+  &_p {
+    p {
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 35px;
+      text-align: justify;
+      color: #e5e5f4;
+    }
+  }
+  &_h1 {
+    h6 {
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      color: #e5e5f4;
+    }
+  }
 }
 
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
