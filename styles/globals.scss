@@ -327,27 +327,6 @@
       }
     }
   }
-  .footer {
-    &_col1 {
-      h1 {
-        margin-bottom: 25px;
-      }
-    }
-    &_col2 {
-      margin-bottom: 25px;
-      margin-top: 25px;
-      h5 {
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-    }
-    &_p {
-      p {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-  }
 }
 
 /** MOBILE RESPONSIVENESS STYLES FOR MEDIUM SCREENS */
@@ -438,27 +417,6 @@
         line-height: 22px;
         border: none;
         margin-right: -200px;
-      }
-    }
-  }
-  .footer {
-    &_col1 {
-      h1 {
-        margin-bottom: 25px;
-      }
-    }
-    &_col2 {
-      margin-bottom: 25px;
-      margin-top: 25px;
-      h5 {
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-    }
-    &_p {
-      p {
-        padding-top: 20px;
-        padding-bottom: 20px;
       }
     }
   }
