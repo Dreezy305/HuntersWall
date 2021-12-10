@@ -1,7 +1,7 @@
 @import "./variable";
 @import "./fontFamily.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Jost:wght@200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@100;300;500;700;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Jost:wght@200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@100;300;500;700;900&display=swap");
 
 .nav-headline {
   font-family: $typografix;
@@ -10,7 +10,7 @@
 .home {
   background: #f1f7ff;
   h1 {
-    font-family: "Lato";
+    font-family: $lato;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;

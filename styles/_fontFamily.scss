@@ -3,4 +3,10 @@
   src: url(/fonts/typografix/Typografix.ttf.woff);
 }
 
+@font-face {
+  font-family: Lato;
+  src: url(/public/fonts/Lato/Lato-Black.ttf);
+}
+
 $typografix: "typografix";
+$lato: "Lato";
