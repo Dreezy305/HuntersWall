@@ -13,9 +13,9 @@ const Card = ({
 }) => {
   return (
     <div className="card px-1 py-1">
-      <div className="card-body d-flex flex-column">
-        <div>
-          <button type="button" className="btn btn-primary float-end">
+      <div className={`card-body d-flex flex-column ${styles.cardBody}`}>
+        <div className="cardBody_button">
+          <button type="button" className="float-end">
             New
           </button>
         </div>
