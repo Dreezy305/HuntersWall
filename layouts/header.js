@@ -88,7 +88,7 @@ export default function Header() {
           Home
         </a>
         <a
-          href="#"
+          href="/aboutUs"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks"

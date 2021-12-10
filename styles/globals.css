@@ -82,7 +82,7 @@ body {
   height: 3px;
   background-color: #2081f9;
   position: absolute;
-  bottom: -2px;
+  bottom: 2px;
   left: 0;
   transform: scaleX(0);
   border-radius: 20px;

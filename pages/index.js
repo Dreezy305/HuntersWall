@@ -7,7 +7,6 @@ export default function Index() {
   return (
     <Layout>
       <Home />
-      {/* <AboutUs /> */}
     </Layout>
   );
 }
