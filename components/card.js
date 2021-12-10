@@ -20,8 +20,8 @@ const Card = ({
           </button>
         </div>
 
-        <h4 className="mt-3">Asset Code: {AssetCode}</h4>
-        <div>
+        <h4 className="mt-3 cardBody_title">Asset Code: {AssetCode}</h4>
+        <div className="cardBody_details">
           <h6 className="my-3">
             <span>Asset code</span>: {assetCode}
           </h6>{" "}
