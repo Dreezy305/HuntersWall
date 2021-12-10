@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/globals.scss";
-import "../styles/Home.module.scss";
+import styles from "../styles/Home.module.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

@@ -1,4 +1,11 @@
-@import "./variable";
+@import "./variable.scss";
+@import "./fontFamily.scss";
+
+.cardBody {
+  &_button {
+    width: 88px;
+  }
+}
 
 @media (max-width: 600px) {
   .grid {

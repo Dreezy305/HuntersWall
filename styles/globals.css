@@ -145,6 +145,7 @@ body {
     left: 0px;
     text-align: start;
     padding-left: 40%;
+    z-index: 20;
   }
   .nav > .nav-links > a {
     display: block;
