@@ -9,16 +9,17 @@ function AboutUs() {
     <Layout>
       <section className=" aboutUs">
         <div className="text-center aboutUs_content pt-5">
-          <h1>
-            <span>Are you cash-strapped?</span>{" "}
-            <span className="ms-2">We got you!</span>
+          <h1 style={{ color: "#2081f9" }}>
+            About Us
+            {/* <span>Are you cash-strapped?</span>{" "} */}
+            {/* <span className="ms-2">We got you!</span> */}
           </h1>
-          <p className="text-center mx-auto mt-3">
+          {/* <p className="text-center mx-auto mt-3">
             <span>Acquired asset on this platform can be used to secure a</span>{" "}
             <span>loan with monthly interest of 1.2%.</span>{" "}
             <span>Low interest, right?</span>{" "}
             <span className="ms-1">We are after your smile</span>
-          </p>
+          </p> */}
         </div>
         <div className="container mt-lg-3 text-center">
           <div className="row justify-content-between align-items-center">
@@ -30,7 +31,7 @@ function AboutUs() {
               />
             </div>
             <div className="col-lg-4 aboutUs_col2">
-              <h1 className="mb-5">About us</h1>
+              {/* <h1 className="mb-5">About us</h1> */}
               <h6 className="mb-4">
                 We are a team of stategists, researchers and analysts that held
                 strong positions from various fileds such as real estate,
