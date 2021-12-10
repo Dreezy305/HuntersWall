@@ -8,8 +8,8 @@ function Services() {
   return (
     <section className="services pt-5">
       <h1 className="text-center mb-5 mt-4">Services</h1>
-      <div className="container">
-        <div className="row">
+      <div className="container pb-5 services_container">
+        <div className="row pb-5">
           {serviceData.map((item) => (
             <>
               <div className={`col-lg-6 pt-4 ${item.space}`}>
