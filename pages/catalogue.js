@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../layouts";
+import Card from "../components/card";
 
 function Catalogue() {
   return (
@@ -25,44 +26,7 @@ function Catalogue() {
         <div className="container pb-5">
           <div className="row">
             <div className="col-lg-4">
-              <div className="card px-1 py-1">
-                <div className="card-body d-flex flex-column">
-                  <div>
-                    <button type="button" className="btn btn-primary float-end">
-                      New
-                    </button>
-                  </div>
-
-                  <h4 className="mt-3">Asset Code: REE-076489</h4>
-                  <div>
-                    <h6 className="my-3">
-                      <span>Asset code</span>: DIV-076489
-                    </h6>{" "}
-                    <h6 className="my-3">
-                      <span>Initial Offer Value (IOV)</span>: N500,000
-                    </h6>{" "}
-                    <h6 className="my-3">
-                      <span>Asset Claiming Time</span>: 730 Days Minimum
-                    </h6>{" "}
-                    <h6 className="my-3">
-                      <span>Asset Content: BNB: Binance Coin, SOL</span>: Solana
-                      Blockchain Coin and TSLA: Tesla Incorporations.
-                    </h6>{" "}
-                    <h6 className="my-3">
-                      <span>Subscription so far</span>: N310,000
-                    </h6>{" "}
-                    <h6 className="my-3">
-                      <span>Offer Time left</span>: 29days; 12hours; 36mins.
-                    </h6>{" "}
-                    <h6 className="my-3">
-                      (to acquire, click on the below button)
-                    </h6>
-                  </div>
-                  <button type="button" className="btn btn-primary float-start">
-                    New
-                  </button>
-                </div>
-              </div>
+              <Card />
             </div>
           </div>
         </div>
