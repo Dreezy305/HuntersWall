@@ -1,7 +1,7 @@
 @import "./variable";
 @import "./fontFamily.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Jost:wght@200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@100;300;500;700;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Jost:wght@200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@100;300;500;700;900&display=swap");
 
 .nav-headline {
   font-family: $typografix;
@@ -149,7 +149,7 @@
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
-    color: #000000;
+    color: #2081f9;
   }
   &_card {
     h5 {
@@ -234,6 +234,17 @@
       line-height: 22px;
       color: #e5e5f4;
     }
+  }
+}
+
+.catalogue {
+  h1 {
+    font-family: $lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    color: #2081f9;
   }
 }
 
