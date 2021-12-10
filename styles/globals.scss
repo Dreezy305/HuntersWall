@@ -308,6 +308,26 @@
   transform: scaleX(1);
 }
 
+/** CARD COMPONENT STYLES GOES HERE */
+.cardBody {
+  &_buttonSmall {
+    button {
+      height: 37px;
+      background: #2081f9;
+      border: none;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
+
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
 @media screen and (max-width: 600px) {
   .home {
