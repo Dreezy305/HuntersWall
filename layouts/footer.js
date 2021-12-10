@@ -33,9 +33,11 @@ function Footer() {
       </div>
       <hr />
       <div className="container pt-2">
-        <div className="row text-center footer_h1">
-          <h6> Privacy Policy. Terms & Conditions.</h6>
-          <h6>Copyright 2022. Hunterswall Strategies Limited (RC: 1843219)</h6>
+        <div className="row text-center footer_h1 align-items-stretch">
+          <h6 className="pb-3"> Privacy Policy. Terms & Conditions.</h6>
+          <h6 className="pb-5">
+            Copyright 2022. Hunterswall Strategies Limited (RC: 1843219)
+          </h6>
         </div>
       </div>
     </footer>
