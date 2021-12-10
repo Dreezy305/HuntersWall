@@ -1,10 +1,13 @@
 import React from "react";
+import Layout from "../layouts";
 
 function Catalogue() {
   return (
-    <div>
-      <h1>Catalogue</h1>
-    </div>
+    <Layout>
+      <section>
+        <h1>Catalogue</h1>
+      </section>
+    </Layout>
   );
 }
 

@@ -80,7 +80,7 @@ export default function Header() {
 
       <div className="nav-links ">
         <a
-          href="#"
+          href="/"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks"
@@ -96,7 +96,7 @@ export default function Header() {
           About us
         </a>
         <a
-          href="#"
+          href="/services"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks"

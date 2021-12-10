@@ -1,13 +1,14 @@
 import React from "react";
+import Layout from "../layouts";
 
 function AboutUs() {
   const images = {
     about: "/img/aboutus.png",
   };
   return (
-    <>
-      <section className="mt-5 pt-5 aboutUs">
-        <div className="text-center aboutUs_content">
+    <Layout>
+      <section className=" aboutUs">
+        <div className="text-center aboutUs_content pt-5">
           <h1>
             <span>Are you cash-strapped?</span>{" "}
             <span className="ms-2">We got you!</span>
@@ -46,7 +47,7 @@ function AboutUs() {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   );
 }
 
