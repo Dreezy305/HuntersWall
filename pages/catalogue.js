@@ -25,10 +25,10 @@ function Catalogue() {
           </div>
         </div>
         <div className="container pb-5">
-          <div className="row">
+          <div className="row pb-5">
             {arr.map((item) => (
               <>
-                <div className="col-lg-4 my-2">
+                <div className="col-lg-4 my-3">
                   <Card />
                 </div>
               </>
