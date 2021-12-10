@@ -13,7 +13,7 @@ function Services() {
           {serviceData.map((item) => (
             <>
               <div className={`col-lg-6 pt-4 ${item.space}`}>
-                <div className="card px-3 services_card">
+                <div className={`card px-3 services_card hoverEffect`}>
                   <img
                     src={item.image}
                     className="card-img-top py-3"

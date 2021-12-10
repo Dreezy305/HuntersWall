@@ -6,6 +6,7 @@ export const serviceData = [
       "It has become a norm to believe a landed property is for the rich. HuntersWall makes it possible for everyone irrespective of your financial worth, to have a fraction of a landed property digitally. These digital assets are backed up by real assets but controlled by the subscribers digitally.",
     image: "/img/housing.png",
     space: "my-2",
+    // effect: "cardHoverEffect",
   },
   {
     id: 2,
