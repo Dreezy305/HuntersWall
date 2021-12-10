@@ -16,12 +16,17 @@ function Catalogue() {
 
             <h6 className="tabs">Commodities</h6>
 
-            <h6 className="tabs" style={{ whiteSpace: "nowrap" }}>
-              Diversified portfolio
-            </h6>
+            <h6 className="tabs">Diversified portfolio</h6>
           </div>
           <div className="d-flex flex-row pb-4 pt-3 catalogue_filter">
             <input type="text" className="px-3 py-3" placeholder="Search" />
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="card">
+              <div className="card-body"></div>
+            </div>
           </div>
         </div>
       </section>
