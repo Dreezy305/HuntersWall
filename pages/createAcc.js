@@ -9,8 +9,8 @@ function CreateAcc() {
     <Layout>
       <section className="createAcc">
         <div className="container ">
-          <div className="row">
-            <div className="col-lg-6 pt-5 createAcc_rightCol">
+          <div className="row gx-lg-5">
+            <div className="col-lg-6 pt-5 px-lg-5 py-5 createAcc_rightCol">
               <img
                 src={image.img}
                 alt="create_account_illustration"
@@ -22,6 +22,38 @@ function CreateAcc() {
               <p className="mb-4">
                 We have fractionalized alternative assets for you.
               </p>
+              <form className="row g-4 py-5 createAcc_form">
+                <div className="col-md-12 col-sm-6 text-start">
+                  <label className="form-label pb-2">First Name</label>
+                  <br />
+                  <input type="text" className="px-3 py-3" />
+                </div>
+                <div className="col-md-12 col-sm-6 text-start">
+                  <label className="form-label pb-2">Last Name</label>
+                  <br />
+                  <input type="text" className="px-3 py-3" />
+                </div>
+                <div className="col-md-12 col-sm-6 text-start">
+                  <label className="form-label pb-2">Email</label>
+                  <br />
+                  <input type="text" className="px-3 py-3" />
+                </div>
+                <div className="col-md-12 col-sm-6 text-start">
+                  <label className="form-label pb-2">Phone Number</label>
+                  <br />
+                  <input type="text" className="px-3 py-3" />
+                </div>
+                <div className="col-md-12 col-sm-6 text-start">
+                  <label className="form-label pb-2">Confirm Password</label>
+                  <br />
+                  <input type="text" className="px-3 py-3" />
+                </div>
+                <div className="col-md-12 col-sm-6 text-center">
+                  <button type="button" className="px-3 py-3">
+                    Create account
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -31,6 +63,3 @@ function CreateAcc() {
 }
 
 export default CreateAcc;
-
-// background: white;
-// box-shadow: -112px 0px 0px 0px white

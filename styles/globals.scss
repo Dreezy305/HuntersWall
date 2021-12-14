@@ -386,9 +386,45 @@
       font-family: Lato;
       font-style: normal;
       font-weight: normal;
-      font-size: 24px;
+      font-size: 22px;
       line-height: 29px;
       color: #000000;
+    }
+  }
+  &_form {
+    div {
+      label {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: rgba(18, 18, 18, 0.6);
+      }
+      input {
+        background: #ffffff;
+        border: 1px solid #2081f9;
+        box-sizing: border-box;
+        width: 500px;
+        box-shadow: none;
+        outline: none;
+      }
+      button {
+        background: #f99820;
+        outline: none;
+        border: none;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+        width: 500px;
+      }
     }
   }
 }
