@@ -11,7 +11,7 @@ function RealEstate() {
     <>
       <div className="col-lg-6 realEstate_content">
         <h1 className="pb-3">Asset Code: - REE-076489</h1>
-        <h2 className="pb-5">Description</h2>
+        <h2 className="mb-5">Description</h2>
         <p className="">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor
           duis semper feugiat nec imperdiet fames felis. Odio at dui, erat sed.
