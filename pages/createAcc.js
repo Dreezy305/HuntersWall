@@ -48,7 +48,16 @@ function CreateAcc() {
                   <br />
                   <input type="text" className="px-3 py-3" />
                 </div>
-                <div className="col-md-12 col-sm-6 text-center">
+                <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between py-2">
+                  <input type="checkbox" className="" />
+                  <p>
+                    <span>
+                      By creating an account I have read and agreed to
+                    </span>
+                    <span>Terms and Conditions</span>
+                  </p>
+                </div>
+                <div className="col-md-12 col-sm-6 py-1 text-center">
                   <button type="button" className="px-3 py-3">
                     Create account
                   </button>

@@ -427,6 +427,21 @@
       }
     }
   }
+  &_terms {
+    input[type="checkbox"] {
+      width: 5%;
+    }
+    p {
+      width: 95%;
+      font-size: 15px;
+      line-height: 22px;
+      span {
+        &:nth-child(2) {
+          color: #2081f9;
+        }
+      }
+    }
+  }
 }
 
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
