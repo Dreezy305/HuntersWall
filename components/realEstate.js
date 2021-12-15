@@ -33,7 +33,7 @@ function RealEstate() {
       </div>
 
       <div className="container mt-5 pt-5 realEstate_content">
-        <h6>More view</h6>
+        <h6 className="mt-3 mb-4">More view</h6>
         <div className="row">
           <div className="col-lg-4">
             <img src={image.view1} alt="first_view" className="img-fluid" />
