@@ -26,35 +26,35 @@ function CreateAcc() {
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">First Name</label>
                   <br />
-                  <input type="text" className="px-3 py-3" />
+                  <input type="text" className="px-3 py-3" required />
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Last Name</label>
                   <br />
-                  <input type="text" className="px-3 py-3" />
+                  <input type="text" className="px-3 py-3" required />
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Email</label>
                   <br />
-                  <input type="text" className="px-3 py-3" />
+                  <input type="text" className="px-3 py-3" required />
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Phone Number</label>
                   <br />
-                  <input type="text" className="px-3 py-3" />
+                  <input type="text" className="px-3 py-3" required />
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Password</label>
                   <br />
-                  <input type="text" className="px-3 py-3" />
+                  <input type="text" className="px-3 py-3" required />
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Confirm Password</label>
                   <br />
-                  <input type="text" className="px-3 py-3" />
+                  <input type="text" className="px-3 py-3" required />
                 </div>
                 <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between py-2">
-                  <input type="checkbox" className="" />
+                  <input type="checkbox" className="" required />
                   <p>
                     <span>
                       By creating an account I have read and agreed to
