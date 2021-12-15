@@ -424,6 +424,10 @@
         text-align: center;
         color: #ffffff;
         width: 500px;
+        &:hover {
+          box-shadow: 0px 0px 15px 0px #f99820;
+          transition: all 0.5s ease-in-out;
+        }
       }
     }
   }
