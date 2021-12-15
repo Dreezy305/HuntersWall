@@ -1,4 +1,4 @@
-export const Faq = [
+export const Faqs = [
   {
     id: 1,
     title: `What do we mean by digitalized alternative assets?`,
@@ -40,6 +40,7 @@ months the loan is not liquidated.`,
     id: 5,
     title: `Are there any charges on this platform?`,
     content: `The following fees are charged on this platform.
+    
 • 1.9% processing fee on all deposits and withdrawers.
 • On asset liquidation, 20% commission fee is charged on profit only.
 No other hidden charges.`,
