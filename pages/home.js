@@ -3,6 +3,7 @@ import AssetTypes from "../module/assetTypes";
 import AboutUs from "./aboutUs";
 import Services from "./services";
 import { serviceData } from "../data/services";
+import Link from "next/link";
 
 function Home() {
   const image = {
@@ -32,9 +33,11 @@ function Home() {
               <p>
                 With small amount, equity stake in big assets is now possible
               </p>
-              <button type="button" className="px-2 p-2">
-                Create an account
-              </button>
+              <Link href="/createAcc">
+                <button type="button" className="px-2 p-2">
+                  Create an account
+                </button>
+              </Link>
             </div>
             <div className="col-lg-6 mt-2">
               <img src={images.hunt} className="img-fluid" alt="hunterswall" />
