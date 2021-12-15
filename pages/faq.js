@@ -6,7 +6,7 @@ function Faq() {
   return (
     <Layout>
       <section className="pt-4 py-3 FAQ">
-        <h1 className="text-center mx-auto py-3 pb-5">FAQ Page</h1>
+        <h1 className="text-center mx-auto py-3 pb-4">FAQ Page</h1>
 
         {/* FAQ cards */}
         {Faqs.map((item) => (
