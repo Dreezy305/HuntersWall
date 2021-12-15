@@ -35,15 +35,10 @@ function Login() {
                   <br />
                   <input type="text" className="px-3 py-3" />
                 </div>
-                <div className="col-md-12 col-sm-6 text-start">
-                  <label className="form-label pb-2">Confirm Password</label>
-                  <br />
-                  <input type="text" className="px-3 py-3" />
-                </div>
 
                 <div className="col-md-12 col-sm-6 py-1 text-center">
                   <button type="button" className="px-3 py-3">
-                    Create account
+                    Login
                   </button>
                 </div>
                 <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between py-2">
