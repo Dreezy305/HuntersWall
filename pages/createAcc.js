@@ -44,6 +44,11 @@ function CreateAcc() {
                   <input type="text" className="px-3 py-3" />
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
+                  <label className="form-label pb-2">Password</label>
+                  <br />
+                  <input type="text" className="px-3 py-3" />
+                </div>
+                <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Confirm Password</label>
                   <br />
                   <input type="text" className="px-3 py-3" />
