@@ -3,7 +3,6 @@ import Layout from "../layouts";
 import { Faqs } from "../data/faq";
 
 function Faq() {
-  const arr = [1, 2, 3, 4];
   return (
     <Layout>
       <section className="pt-4 py-3 FAQ">
