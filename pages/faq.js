@@ -16,7 +16,9 @@ function Faq() {
               <div className="container">
                 <div className="row">
                   <h5 className="pb-2">{item.title}</h5>
-                  <p className="pt-1">{item.content}</p>
+                  <p className="pt-1" style={{ whiteSpace: `${item.space}` }}>
+                    {item.content}
+                  </p>
                 </div>
               </div>
             </div>
