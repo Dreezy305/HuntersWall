@@ -6,6 +6,8 @@ function Faq() {
     <Layout>
       <section className="pt-4 py-3 FAQ">
         <h1 className="text-center mx-auto py-3 pb-5">FAQ Page</h1>
+
+        {/* FAQ cards */}
       </section>
     </Layout>
   );
