@@ -1,10 +1,13 @@
 import React from "react";
+import Layout from "../layouts";
 
 function Faq() {
   return (
-    <div>
-      <h1>FAQ Page</h1>
-    </div>
+    <Layout>
+      <section>
+        <h1>FAQ Page</h1>
+      </section>
+    </Layout>
   );
 }
 

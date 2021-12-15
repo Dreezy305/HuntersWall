@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
+/* eslint-disable @next/next/no-img-element */
+
 import Link from "next/link";
 import React, { useState } from "react";
 import Layout from "../layouts";
@@ -45,7 +46,11 @@ function Login() {
                   <p className="text-center mx-auto">
                     <span>Not yet registered?</span>
                     <span>
-                      <a href="/createAcc" style={{ textDecoration: "none" }}>
+                      <a
+                        href="/createAcc"
+                        as={Link}
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         create an account
                       </a>
