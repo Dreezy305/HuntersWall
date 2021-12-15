@@ -112,7 +112,7 @@ export default function Header() {
           Catalogue
         </a>
         <a
-          href="#"
+          href="/faq"
           as={Link}
           rel="noreferrer"
           className="color me-lg-4 padMobile headerlinks hover"
