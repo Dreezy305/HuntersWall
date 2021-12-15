@@ -3,6 +3,9 @@ import React from "react";
 function RealEstate() {
   const image = {
     estate: "/img/realestate.png",
+    view1: "/img/view1.png",
+    view2: "/img/view2.png",
+    view3: "/img/view3.png",
   };
   return (
     <>
@@ -27,6 +30,21 @@ function RealEstate() {
       </div>
       <div className="col-lg-6">
         <img src={image.estate} className="img-fluid" alt="real_estate" />
+      </div>
+
+      <div className="container mt-5 pt-5 realEstate_content">
+        <h6>More view</h6>
+        <div className="row">
+          <div className="col-lg-4">
+            <img src={image.view1} alt="first_view" className="img-fluid" />
+          </div>
+          <div className="col-lg-4">
+            <img src={image.view1} alt="first_view" className="img-fluid" />
+          </div>
+          <div className="col-lg-4">
+            <img src={image.view1} alt="first_view" className="img-fluid" />
+          </div>
+        </div>
       </div>
     </>
   );
