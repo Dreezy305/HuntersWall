@@ -17,7 +17,7 @@ export const All = [
     AssetClaimTime: "365 Days Minimum",
     AssetContent: `Palm Oil, Logistics & Storage Charges`,
     subscriptions: "N820,000",
-    offertime: "46days; 16hours; 5mins",
+    offertime: "46days; 16hours; 56mins",
   },
   {
     id: 3,

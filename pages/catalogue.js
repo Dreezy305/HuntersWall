@@ -2,9 +2,11 @@ import React from "react";
 import Layout from "../layouts";
 import Card from "../components/card";
 import { All } from "../data/all";
+import AllAssets from "../components/allAssets";
 
 function Catalogue() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
   return (
     <Layout>
       <section className="catalogue pt-4">
@@ -27,6 +29,7 @@ function Catalogue() {
         </div>
         <div className="container pb-5">
           <div className="row pb-5">
+            {/* <AllAssets /> */}
             {All.map((item) => (
               <>
                 <div className="col-lg-4 my-3" key={item.id}>
