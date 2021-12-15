@@ -45,7 +45,7 @@ export const All = [
     assetCode: "REE-076489",
     Iov: "N500,000",
     AssetClaimTime: "730 Days Minimum",
-    AssetContent: `Land, Building and Hotel`,
+    AssetContent: `Land, Building, Hotel and transport`,
     subscriptions: "N310,000",
     offertime: "29days; 12hours; 36mins",
   },
