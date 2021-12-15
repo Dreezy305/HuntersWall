@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../layouts";
 
 function CreateAcc() {
@@ -40,6 +40,11 @@ function CreateAcc() {
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Phone Number</label>
+                  <br />
+                  <input type="text" className="px-3 py-3" />
+                </div>
+                <div className="col-md-12 col-sm-6 text-start">
+                  <label className="form-label pb-2">Password</label>
                   <br />
                   <input type="text" className="px-3 py-3" />
                 </div>
