@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../layouts";
 import Card from "../components/card";
+import { All } from "../data/all";
 
 function Catalogue() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -26,10 +27,18 @@ function Catalogue() {
         </div>
         <div className="container pb-5">
           <div className="row pb-5">
-            {arr.map((item) => (
+            {All.map((item) => (
               <>
-                <div className="col-lg-4 my-3">
-                  <Card />
+                <div className="col-lg-4 my-3" key={item.id}>
+                  <Card
+                    AssetCode={item.AssetCode}
+                    assetCode={item.assetCode}
+                    Iov={item.Iov}
+                    AssetClaimTime={item.AssetClaimTime}
+                    subscriptions={item.subscriptions}
+                    offertime={item.offertime}
+                    AssetContent={item.AssetContent}
+                  />
                 </div>
               </>
             ))}
