@@ -66,6 +66,11 @@ body {
   height: 46px;
 }
 
+.login:hover {
+  background-color: #f99820;
+  color: #ffffff !important;
+}
+
 .nav > #nav-check {
   display: none;
 }
