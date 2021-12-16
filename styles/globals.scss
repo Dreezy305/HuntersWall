@@ -874,6 +874,17 @@
       }
     }
   }
+  .realEstate_content {
+    // p {
+    //   line-height: 17px;
+    // }
+    img {
+      width: 100%;
+    }
+  }
+  .img1 {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -971,6 +982,11 @@
           }
         }
       }
+    }
+  }
+  .realEstate_content {
+    p {
+      line-height: 17px;
     }
   }
 }

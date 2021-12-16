@@ -29,19 +29,19 @@ function RealEstate() {
         </p>
       </div>
       <div className="col-lg-6">
-        <img src={image.estate} className="img-fluid" alt="real_estate" />
+        <img src={image.estate} className="img-fluid img1" alt="real_estate" />
       </div>
 
       <div className="container mt-5 pt-5 realEstate_content">
         <h6 className="mt-3 mb-4">More view</h6>
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-4 my-3">
             <img src={image.view1} alt="first_view" className="img-fluid" />
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 my-3">
             <img src={image.view1} alt="first_view" className="img-fluid" />
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 my-3">
             <img src={image.view1} alt="first_view" className="img-fluid" />
           </div>
         </div>
