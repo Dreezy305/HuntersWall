@@ -525,6 +525,11 @@
   }
 }
 
+.svg {
+  // right: 30px;
+  // top: 50px;
+}
+
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
 @media screen and (max-width: 600px) {
   .home {
@@ -885,6 +890,10 @@
   .img1 {
     width: 100%;
   }
+  .svg {
+    right: 60px;
+    top: 50px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -988,5 +997,9 @@
     p {
       line-height: 17px;
     }
+  }
+  .svg {
+    top: 50px;
+    right: 30px;
   }
 }
