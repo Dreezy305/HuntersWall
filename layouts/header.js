@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <div className="nav mb-lg-4 my-2">
+    <div className="nav mb-lg-4 my-2 sticky-top ">
       <input type="checkbox" id="nav-check" />
       <div className="nav-header">
         <div className="nav-title nav-headline">HuntersWall</div>
