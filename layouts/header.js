@@ -26,7 +26,14 @@ export default function Header() {
     <div className="nav mb-lg-4 my-2 sticky-top ">
       <input type="checkbox" id="nav-check" />
       <div className="nav-header">
-        <div className="nav-title nav-headline">HuntersWall</div>
+        <div
+          className="nav-title nav-headline"
+          style={{ textDecoration: "none" }}
+        >
+          <a href="/" style={{ textDecoration: "none" }}>
+            HuntersWall
+          </a>
+        </div>
       </div>
       <div className="nav-btn">
         <label htmlFor="nav-check" id="nav-icon">
