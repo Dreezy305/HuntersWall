@@ -186,7 +186,9 @@ function CreateAcc() {
                     <span>
                       By creating an account I have read and agreed to
                     </span>
-                    <span>Terms and Conditions</span>
+                    <span style={{ cursor: "pointer" }}>
+                      Terms and Conditions
+                    </span>
                   </p>
                 </div>
                 <div className="col-md-12 col-sm-6 py-1 text-center">
