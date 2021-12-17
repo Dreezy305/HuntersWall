@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 
@@ -7,6 +8,7 @@ import Layout from "../layouts";
 
 function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
+  const [eyeOpen, setEyeOpen] = useState(null);
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -48,32 +50,58 @@ function Login() {
                     className="px-3 py-3"
                     required
                   />
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="position-absolute svg"
-                    onClick={() => togglePasswordVisiblity()}
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
-                      stroke="black"
-                      strokeOpacity="0.5"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
-                      stroke="black"
-                      strokeOpacity="0.5"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  {!eyeOpen ? (
+                    <>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="icon icon-tabler icon-tabler-eye"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        className="position-absolute svg"
+                        style={{ top: "53px", right: "60px" }}
+                        onClick={() => {
+                          setEyeOpen(!eyeOpen);
+                          togglePasswordVisiblity();
+                        }}
+                        strokeWidth="1.5"
+                        stroke="black"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <circle cx="12" cy="12" r="2" />
+                        <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                      </svg>
+                    </>
+                  ) : (
+                    <>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="icon icon-tabler icon-tabler-eye-off"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        className="position-absolute svg"
+                        style={{ top: "53px", right: "60px" }}
+                        onClick={() => {
+                          setEyeOpen(!eyeOpen);
+                          togglePasswordVisiblity();
+                        }}
+                        strokeWidth="1.5"
+                        stroke="black"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="3" y1="3" x2="21" y2="21" />
+                        <path d="M10.584 10.587a2 2 0 0 0 2.828 2.83" />
+                        <path d="M9.363 5.365a9.466 9.466 0 0 1 2.637 -.365c4 0 7.333 2.333 10 7c-.778 1.361 -1.612 2.524 -2.503 3.488m-2.14 1.861c-1.631 1.1 -3.415 1.651 -5.357 1.651c-4 0 -7.333 -2.333 -10 -7c1.369 -2.395 2.913 -4.175 4.632 -5.341" />
+                      </svg>
+                    </>
+                  )}
                 </div>
 
                 <div className="col-md-12 col-sm-6 py-1 text-center">

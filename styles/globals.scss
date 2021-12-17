@@ -891,8 +891,8 @@
     width: 100%;
   }
   .svg {
-    right: 60px;
-    top: 50px;
+    right: 60px !important;
+    top: 50px !important;
   }
 }
 
@@ -999,7 +999,7 @@
     }
   }
   .svg {
-    top: 50px;
-    right: 30px;
+    top: 50px !important;
+    right: 30px !important;
   }
 }
