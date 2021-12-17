@@ -39,7 +39,12 @@ function Login() {
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Email</label>
                   <br />
-                  <input type="text" className="px-3 py-3" required />
+                  <input
+                    type="text"
+                    className="px-3 py-3"
+                    autoComplete="on"
+                    required
+                  />
                 </div>
 
                 <div className="col-md-12 col-sm-6 text-start position-relative pass-wrapper">
@@ -48,6 +53,7 @@ function Login() {
                   <input
                     type={passwordShown ? "text" : "password"}
                     className="px-3 py-3"
+                    autoComplete="on"
                     required
                   />
                   {!eyeOpen ? (
