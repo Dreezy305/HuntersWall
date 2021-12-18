@@ -5,10 +5,14 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Layout from "../layouts";
+import { auth } from "../auth/config/firebase.config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
   const [eyeOpen, setEyeOpen] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -17,6 +21,31 @@ function Login() {
   const image = {
     img: "/img/createacc.png",
   };
+
+  const signUpData = {
+    email,
+    password,
+  };
+
+  const signUp = async () => {
+    console.log(email, password);
+    return await createUserWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        return response;
+      })
+      .catch((error) => {
+        return { error };
+      });
+  };
+
+  const handleSubmit = async (signUpData) => {
+    return await signUp(signUpData).then((user) => {
+      console.log(user);
+    });
+  };
+
+  // console.log(em, pass);
+
   return (
     <Layout>
       <section className="createAcc">
@@ -41,6 +70,8 @@ function Login() {
                   <br />
                   <input
                     type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="px-3 py-3"
                     autoComplete="on"
                     required
@@ -52,6 +83,8 @@ function Login() {
                   <br />
                   <input
                     type={passwordShown ? "text" : "password"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="px-3 py-3"
                     autoComplete="on"
                     required
@@ -111,7 +144,11 @@ function Login() {
                 </div>
 
                 <div className="col-md-12 col-sm-6 py-1 text-center">
-                  <button type="button" className="px-3 py-3">
+                  <button
+                    type="button"
+                    className="px-3 py-3"
+                    onClick={() => handleSubmit()}
+                  >
                     Login
                   </button>
                 </div>

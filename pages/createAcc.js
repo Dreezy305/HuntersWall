@@ -1,12 +1,15 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState } from "react";
 import Layout from "../layouts";
+import { auth } from "../auth/config/firebase.config";
 
 function CreateAcc() {
   const [passwordShown, setPasswordShown] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const [eyeOpen, setEyeOpen] = useState(null);
   const [open, setOpen] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -19,6 +22,24 @@ function CreateAcc() {
   const image = {
     img: "/img/createacc.png",
   };
+
+  const signUpData = {
+    email,
+    password,
+  };
+
+  const signUp = async ({ name, email, password }) => {
+    try {
+      const response = auth.createUserWithEmailAndPassword(email, password);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+      return error;
+    }
+  };
+
+  const handleSubmit = () => {};
+
   return (
     <Layout>
       <section className="createAcc">
@@ -62,6 +83,8 @@ function CreateAcc() {
                   <br />
                   <input
                     type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="px-3 py-3"
                     autoComplete="on"
                     required
@@ -82,6 +105,8 @@ function CreateAcc() {
                   <br />
                   <input
                     type={passwordShown ? "text" : "password"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="px-3 py-3"
                     autoComplete="on"
                     required

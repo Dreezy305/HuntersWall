@@ -23,8 +23,24 @@ export default function useFirebaseAuth() {
     }
 
     setLoading(true);
+
     const formattedUser = formatAuthUser(authState);
+
     setAuthUser(formattedUser);
+
     setLoading(false);
+  };
+
+  // listen for changes in authentication
+  useEffect(() => {
+    const unsubscribe = firebaseConfig
+      .auth()
+      .onAuthStateChanged(authStateChanged);
+    return () => unsubscribe();
+  }, []);
+
+  return {
+    authUser,
+    loading,
   };
 }

@@ -21,7 +21,9 @@ function AssetTypes() {
               alt=""
               style={{ background: "rgba(32, 129, 249, 0.4)" }}
             />
-            <h6 className="mt-1 text-center">Real Estate</h6>
+            <h6 className="mt-1 text-center" style={{ textAlign: "end" }}>
+              Real Estate
+            </h6>
           </div>
           <div
             className="col-lg-2 assets_col assetHover"
@@ -33,7 +35,9 @@ function AssetTypes() {
               alt=""
               style={{ background: "rgba(230, 71, 40, 0.4)" }}
             />
-            <h6 className="mt-1 text-center">Commodities</h6>
+            <h6 className="mt-1 text-center" style={{ textAlign: "end" }}>
+              Commodities
+            </h6>
           </div>
           <div
             className="col-lg-2 assets_col assetHover"
@@ -45,7 +49,9 @@ function AssetTypes() {
               alt=""
               style={{ background: "rgba(244, 160, 35, 0.4)" }}
             />
-            <h6 className="mt-1 text-center">Innovation</h6>
+            <h6 className="mt-1 text-center" style={{ textAlign: "end" }}>
+              Innovation
+            </h6>
           </div>
           <div
             className="col-lg-2 assets_col assetHover"

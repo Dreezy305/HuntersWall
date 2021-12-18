@@ -1,5 +1,8 @@
 import firebase from "firebase/app";
-import "firebase/analytics";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 export const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -19,3 +22,17 @@ if (!firebaseConfig.appId.length) {
     }
   }
 }
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth();
+
+const db = getFirestore();
+
+const storage = getStorage(app);
+
+// const a = firebase.firestore.Timestamp.now().toDate().toString();
+
+export { app, auth, db, storage };
+
+// console.log(app.name ? "Firebase Mode Activated!" : "Firebase not working :(");
