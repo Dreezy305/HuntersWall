@@ -5,7 +5,6 @@ import Layout from "../layouts";
 import { auth, db } from "../auth/config/firebase.config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore";
-import { async } from "@firebase/util";
 
 function CreateAcc() {
   const [passwordShown, setPasswordShown] = useState(false);
