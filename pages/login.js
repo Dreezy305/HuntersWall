@@ -5,7 +5,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Layout from "../layouts";
-import { auth } from "../auth/config/firebase.config";
+import { auth, db } from "../auth/config/firebase.config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 function Login() {
@@ -22,13 +22,7 @@ function Login() {
     img: "/img/createacc.png",
   };
 
-  const signUpData = {
-    email,
-    password,
-  };
-
   const signUp = async () => {
-    console.log(email, password);
     return await createUserWithEmailAndPassword(auth, email, password)
       .then((response) => {
         return response;
@@ -39,12 +33,8 @@ function Login() {
   };
 
   const handleSubmit = async (signUpData) => {
-    return await signUp(signUpData).then((user) => {
-      console.log(user);
-    });
+    return await signUp(signUpData).then((user) => {});
   };
-
-  // console.log(em, pass);
 
   return (
     <Layout>
@@ -74,6 +64,7 @@ function Login() {
                     onChange={(e) => setEmail(e.target.value)}
                     className="px-3 py-3"
                     autoComplete="on"
+                    autoFocus
                     required
                   />
                 </div>

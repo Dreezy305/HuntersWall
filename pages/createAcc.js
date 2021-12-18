@@ -1,15 +1,23 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState } from "react";
 import Layout from "../layouts";
-import { auth } from "../auth/config/firebase.config";
+import { auth, db } from "../auth/config/firebase.config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { collection, addDoc } from "firebase/firestore";
+import { async } from "@firebase/util";
 
 function CreateAcc() {
   const [passwordShown, setPasswordShown] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const [eyeOpen, setEyeOpen] = useState(null);
   const [open, setOpen] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -24,21 +32,70 @@ function CreateAcc() {
   };
 
   const signUpData = {
+    firstName,
+    lastName,
+    phoneNumber,
     email,
     password,
+    confirmPassword,
   };
 
-  const signUp = async ({ name, email, password }) => {
+  const createUser = async () => {
+    const {
+      firstName,
+      lastName,
+      phoneNumber,
+      email,
+      password,
+      confirmPassword,
+    } = signUpData;
     try {
-      const response = auth.createUserWithEmailAndPassword(email, password);
-      console.log(response);
+      const docRef = await addDoc(collection(db, "users"), {
+        firstName,
+        lastName,
+        phoneNumber,
+        email,
+        password,
+        confirmPassword,
+      });
     } catch (error) {
-      console.log(error);
       return error;
     }
   };
 
-  const handleSubmit = () => {};
+  const signUp = async () => {
+    const {
+      firstName,
+      lastName,
+      phoneNumber,
+      email,
+      password,
+      confirmPassword,
+    } = signUpData;
+
+    return await createUserWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        return [
+          createUser({
+            uid: response.user.uid,
+            email,
+            firstName,
+            lastName,
+            phoneNumber,
+            email,
+            password,
+            confirmPassword,
+          }),
+        ];
+      })
+      .catch((error) => {
+        return { error };
+      });
+  };
+
+  const handleSubmit = async (signUpData) => {
+    return await signUp(signUpData).then((user) => {});
+  };
 
   return (
     <Layout>
@@ -64,7 +121,10 @@ function CreateAcc() {
                   <input
                     type="text"
                     className="px-3 py-3"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                     autoComplete="on"
+                    autoFocus
                     required
                   />
                 </div>
@@ -74,7 +134,10 @@ function CreateAcc() {
                   <input
                     type="text"
                     className="px-3 py-3"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                     autoComplete="on"
+                    autoFocus
                     required
                   />
                 </div>
@@ -87,6 +150,7 @@ function CreateAcc() {
                     onChange={(e) => setEmail(e.target.value)}
                     className="px-3 py-3"
                     autoComplete="on"
+                    autoFocus
                     required
                   />
                 </div>
@@ -96,7 +160,10 @@ function CreateAcc() {
                   <input
                     type="text"
                     className="px-3 py-3"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                     autoComplete="on"
+                    autoFocus
                     required
                   />
                 </div>
@@ -109,6 +176,7 @@ function CreateAcc() {
                     onChange={(e) => setPassword(e.target.value)}
                     className="px-3 py-3"
                     autoComplete="on"
+                    autoFocus
                     required
                   />
                   {!eyeOpen ? (
@@ -171,7 +239,10 @@ function CreateAcc() {
                   <input
                     type={confirm ? "text" : "password"}
                     className="px-3 py-3"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     autoComplete="on"
+                    autoFocus
                     required
                   />
                   {!open ? (
@@ -239,7 +310,11 @@ function CreateAcc() {
                   </p>
                 </div>
                 <div className="col-md-12 col-sm-6 py-1 text-center">
-                  <button type="button" className="px-3 py-3">
+                  <button
+                    type="button"
+                    className="px-3 py-3"
+                    onClick={() => handleSubmit()}
+                  >
                     Create account
                   </button>
                 </div>
