@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-duplicate-props */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../layouts";
 import { useAuth } from "../auth/useAuth";
-import { useValidation } from "../hooks/validation";
+// import { useValidation } from "../hooks/validation";
 
 // validation hooks
 
@@ -20,6 +20,11 @@ function CreateAcc() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isPasswordValid, setIsPasswordValid] = useState(false);
+  const [checkPass, setCheckPass] = useState(false);
+  const [checkBox, setCheckBox] = useState(false);
+  const [terms, setTerms] = useState(false);
+  const [first, setCheckFirst] = useState(false);
+  const [last, setCheckLast] = useState(false);
 
   const auth = useAuth();
 
@@ -35,6 +40,59 @@ function CreateAcc() {
     img: "/img/createacc.png",
   };
 
+  const validateEmail = (m) => {
+    const EmailRegexp =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    if (!EmailRegexp.test(m)) {
+      console.log(!EmailRegexp.test(m));
+      return setIsEmailValid(true);
+    } else {
+      return setIsEmailValid(false);
+    }
+  };
+
+  const validatePassword = (p) => {
+    const PasswordRegexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+    if (!PasswordRegexp.test(p)) {
+      console.log(!PasswordRegexp.test(p));
+      return setIsPasswordValid(true);
+    } else {
+      return setIsPasswordValid(false);
+    }
+  };
+
+  const matchPass = (pass, confirmPass) => {
+    if (pass !== confirmPass) {
+      setCheckPass(true);
+    } else {
+      setCheckPass(false);
+    }
+  };
+
+  const checkTermsAndCondition = (c) => {
+    if (c == false) {
+      setTerms(true);
+    } else {
+      setTerms(false);
+    }
+  };
+
+  const FirstandLast = (f, l) => {
+    if (f == "") {
+      setCheckFirst(true);
+    } else {
+      setCheckFirst(false);
+    }
+
+    if (l == "") {
+      setCheckLast(true);
+    } else {
+      setCheckLast(false);
+    }
+  };
+
   const signUpData = {
     firstName,
     lastName,
@@ -42,13 +100,28 @@ function CreateAcc() {
     email,
     password,
     confirmPassword,
+    Terms_and_Condition: checkBox,
   };
 
   const handleSubmit = async () => {
+    setLoading(true);
+
+    FirstandLast(signUpData.firstName, signUpData.lastName);
+
+    validateEmail(signUpData.email);
+
+    validatePassword(signUpData.password);
+
+    matchPass(signUpData.password, signUpData.confirmPassword);
+
+    checkTermsAndCondition(signUpData.Terms_and_Condition);
+
     return await auth.signUp(signUpData).then((response) => {
       return response;
     });
   };
+
+  console.log(checkBox, "tt");
 
   return (
     <Layout>
@@ -80,6 +153,11 @@ function CreateAcc() {
                     autoFocus
                     required
                   />
+                  {first && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Please enter your first name
+                    </p>
+                  )}
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Last Name</label>
@@ -93,6 +171,11 @@ function CreateAcc() {
                     autoFocus
                     required
                   />
+                  {first && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Please enter your last name
+                    </p>
+                  )}
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Email</label>
@@ -106,6 +189,11 @@ function CreateAcc() {
                     autoFocus
                     required
                   />
+                  {isEmailValid && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Please enter a valid email address
+                    </p>
+                  )}
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Phone Number</label>
@@ -132,6 +220,12 @@ function CreateAcc() {
                     autoFocus
                     required
                   />
+                  {isPasswordValid && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Min 8 characters, at least 1 uppercase letter, 1 lowercase
+                      letter and 1 number
+                    </p>
+                  )}
                   {!eyeOpen ? (
                     <>
                       <svg
@@ -198,6 +292,11 @@ function CreateAcc() {
                     autoFocus
                     required
                   />
+                  {checkPass && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Passwords do not match
+                    </p>
+                  )}
                   {!open ? (
                     <>
                       <svg
@@ -251,17 +350,31 @@ function CreateAcc() {
                     </>
                   )}
                 </div>
-                <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between py-2">
-                  <input type="checkbox" className="" required />
-                  <p>
-                    <span>
-                      By creating an account I have read and agreed to
-                    </span>
-                    <span style={{ cursor: "pointer" }}>
-                      Terms and Conditions
-                    </span>
-                  </p>
+                <div className="py-2">
+                  <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between pb-1 ">
+                    <input
+                      type="checkbox"
+                      value="terms"
+                      onClick={(e) => setCheckBox(!checkBox)}
+                      className=""
+                      required
+                    />
+                    <p>
+                      <span>
+                        By creating an account I have read and agreed to
+                      </span>
+                      <span style={{ cursor: "pointer" }}>
+                        Terms and Conditions
+                      </span>
+                    </p>
+                  </div>
+                  {terms && (
+                    <p className="error-text text-danger fst-italic fs-6 pt-1">
+                      kindly read the Terms and Conditions
+                    </p>
+                  )}
                 </div>
+
                 <div className="col-md-12 col-sm-6 py-1 text-center">
                   <button
                     type="button"

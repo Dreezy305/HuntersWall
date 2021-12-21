@@ -30,6 +30,7 @@ const useAuthProvider = () => {
       email,
       password,
       confirmPassword,
+      Terms_and_Condition,
     } = user;
     try {
       const docRef = await addDoc(collection(db, "users"), {
@@ -39,7 +40,7 @@ const useAuthProvider = () => {
         email,
         password,
         confirmPassword,
-        id,
+        Terms_and_Condition,
       });
       setUser(docRef);
       console.log(docRef);
@@ -70,6 +71,7 @@ const useAuthProvider = () => {
       email,
       password,
       confirmPassword,
+      Terms_and_Condition,
     } = user;
 
     return await createUserWithEmailAndPassword(auth, email, password)
@@ -84,6 +86,7 @@ const useAuthProvider = () => {
             email,
             password,
             confirmPassword,
+            Terms_and_Condition,
           }),
         ];
       })
