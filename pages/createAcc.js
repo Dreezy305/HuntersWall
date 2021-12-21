@@ -39,8 +39,8 @@ function CreateAcc() {
     confirmPassword,
   };
 
-  const handleSubmit = async (data = signUpData) => {
-    return await auth.signUp(data).then((response) => {
+  const handleSubmit = async () => {
+    return await auth.signUp(signUpData).then((response) => {
       return response;
     });
   };

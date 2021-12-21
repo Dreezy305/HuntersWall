@@ -1,6 +1,6 @@
 import React from "react";
-import { auth, db } from "./config/firebase.config";
-import { collection, addDoc } from "firebase/firestore";
+import { auth, db, firebaseConfig } from "./config/firebase.config";
+import { collection, addDoc, doc, getDoc } from "firebase/firestore";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -39,15 +39,28 @@ const useAuthProvider = () => {
         email,
         password,
         confirmPassword,
+        id,
       });
       setUser(docRef);
+      console.log(docRef);
       return docRef;
     } catch (error) {
       return error;
     }
   };
 
-  const getUserDisplayName = () => {};
+  const getUserDisplayName = (user) => {
+    return db
+      .collection("users")
+      .doc(user.uid)
+      .get()
+      .then((userData) => {
+        console.log(userData, "pp");
+        if (userData.data()) {
+          setUser(userData.data());
+        }
+      });
+  };
 
   const signUp = async (user) => {
     const {
@@ -61,8 +74,6 @@ const useAuthProvider = () => {
 
     return await createUserWithEmailAndPassword(auth, email, password)
       .then((response) => {
-        console.log(response, "ppx1");
-        auth.currentUser.sendEmailVerification();
         return [
           createUser({
             uid: response.user.uid,
@@ -86,8 +97,8 @@ const useAuthProvider = () => {
 
     return await signInWithEmailAndPassword(auth, email, password)
       .then((response) => {
-        // console.log(response, "ppx2");
         setUser(response.user);
+        getUserDisplayName(user);
         return response.user;
       })
       .catch((error) => {
