@@ -5,8 +5,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Layout from "../layouts";
-import { auth, db } from "../auth/config/firebase.config";
-import { signInWithEmailAndPassword } from "firebase/auth";
 
 function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -25,17 +23,6 @@ function Login() {
   const logInData = {
     email,
     password,
-  };
-
-  const signIn = async (logInData) => {
-    const { email, password } = logInData;
-    return await signInWithEmailAndPassword(auth, email, password)
-      .then((response) => {
-        return response;
-      })
-      .catch((error) => {
-        return { error };
-      });
   };
 
   const handleSubmit = async (logInData) => {

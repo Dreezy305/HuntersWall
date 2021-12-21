@@ -48,6 +48,7 @@ const useAuthProvider = () => {
   };
 
   const signUp = async (user) => {
+    console.log(user);
     const {
       firstName,
       lastName,
@@ -80,6 +81,7 @@ const useAuthProvider = () => {
 
   const signIn = async (user) => {
     const { email, password } = user;
+    console.log(user);
     return await signInWithEmailAndPassword(auth, email, password)
       .then((response) => {
         setUser(response.user);
@@ -90,5 +92,5 @@ const useAuthProvider = () => {
       });
   };
 
-  return { user, signUp };
+  return { user, signUp, signIn };
 };

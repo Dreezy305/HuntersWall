@@ -2,10 +2,7 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState } from "react";
 import Layout from "../layouts";
-import { auth, db } from "../auth/config/firebase.config";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { collection, addDoc } from "firebase/firestore";
-import {useAuth} from "../auth/useAuth"
+import { useAuth } from "../auth/useAuth";
 
 function CreateAcc() {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -18,6 +15,8 @@ function CreateAcc() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const auth = useAuth();
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -40,61 +39,10 @@ function CreateAcc() {
     confirmPassword,
   };
 
-  const createUser = async () => {
-    const {
-      firstName,
-      lastName,
-      phoneNumber,
-      email,
-      password,
-      confirmPassword,
-    } = signUpData;
-    try {
-      const docRef = await addDoc(collection(db, "users"), {
-        firstName,
-        lastName,
-        phoneNumber,
-        email,
-        password,
-        confirmPassword,
-      });
-    } catch (error) {
-      return error;
-    }
-  };
-
-  const signUp = async () => {
-    const {
-      firstName,
-      lastName,
-      phoneNumber,
-      email,
-      password,
-      confirmPassword,
-    } = signUpData;
-
-    return await createUserWithEmailAndPassword(auth, email, password)
-      .then((response) => {
-        return [
-          createUser({
-            uid: response.user.uid,
-            email,
-            firstName,
-            lastName,
-            phoneNumber,
-            email,
-            password,
-            confirmPassword,
-          }),
-        ];
-      })
-      .catch((error) => {
-        return { error };
-      });
-  };
-
-  const handleSubmit = async (signUpData) => {
-    return await signUp(signUpData).then((user) => {});
+  const handleSubmit = async () => {
+    return await auth.signUp(signUpData).then((response) => {
+      return response;
+    });
   };
 
   return (
