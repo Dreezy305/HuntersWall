@@ -6,7 +6,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Layout from "../layouts";
 import { auth, db } from "../auth/config/firebase.config";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -22,8 +22,14 @@ function Login() {
     img: "/img/createacc.png",
   };
 
-  const signUp = async () => {
-    return await createUserWithEmailAndPassword(auth, email, password)
+  const logInData = {
+    email,
+    password,
+  };
+
+  const signIn = async (logInData) => {
+    const { email, password } = logInData;
+    return await signInWithEmailAndPassword(auth, email, password)
       .then((response) => {
         return response;
       })
@@ -32,8 +38,8 @@ function Login() {
       });
   };
 
-  const handleSubmit = async (signUpData) => {
-    return await signUp(signUpData).then((user) => {});
+  const handleSubmit = async (logInData) => {
+    return await signIn(logInData).then((user) => {});
   };
 
   return (
