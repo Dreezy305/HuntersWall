@@ -1,7 +1,10 @@
 import React from "react";
 import { auth, db } from "./config/firebase.config";
 import { collection, addDoc } from "firebase/firestore";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 const authContext = React.createContext({ user: {} });
 
@@ -69,6 +72,18 @@ const useAuthProvider = () => {
             confirmPassword,
           }),
         ];
+      })
+      .catch((error) => {
+        return { error };
+      });
+  };
+
+  const signIn = async (user) => {
+    const { email, password } = user;
+    return await signInWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        setUser(response.user);
+        return response.user;
       })
       .catch((error) => {
         return { error };
