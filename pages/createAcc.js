@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Layout from "../layouts";
 import { useAuth } from "../auth/useAuth";
+import { useValidation } from "../hooks/validation";
+
+// validation hooks
 
 function CreateAcc() {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -15,6 +18,8 @@ function CreateAcc() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isPasswordValid, setIsPasswordValid] = useState(false);
 
   const auth = useAuth();
 
