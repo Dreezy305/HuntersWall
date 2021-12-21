@@ -2,8 +2,10 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 
-import Link from "next/link";
 import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useAuth } from "../auth/useAuth";
 import Layout from "../layouts";
 
 function Login() {
@@ -11,6 +13,9 @@ function Login() {
   const [eyeOpen, setEyeOpen] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const auth = useAuth();
+  const router = useRouter();
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -25,8 +30,10 @@ function Login() {
     password,
   };
 
-  const handleSubmit = async (logInData) => {
-    return await signIn(logInData).then((user) => {});
+  const handleSubmit = async (data = logInData) => {
+    return await auth.signIn(data).then((response) => {
+      return [response, router.push("/dashboard")];
+    });
   };
 
   return (
