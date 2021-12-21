@@ -47,6 +47,8 @@ const useAuthProvider = () => {
     }
   };
 
+  const getUserDisplayName = () => {};
+
   const signUp = async (user) => {
     const {
       firstName,
@@ -84,7 +86,7 @@ const useAuthProvider = () => {
 
     return await signInWithEmailAndPassword(auth, email, password)
       .then((response) => {
-        console.log(response, "ppx2");
+        // console.log(response, "ppx2");
         setUser(response.user);
         return response.user;
       })
