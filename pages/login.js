@@ -59,11 +59,16 @@ function Login() {
   };
 
   const handleSubmit = async (data = logInData) => {
+    setLoading(true);
+
     validateEmail(data.email);
 
     validatePassword(data.password);
 
     return await auth.signIn(data).then((response) => {
+      setEmail("");
+      setPassword("");
+      setLoading(false);
       return [response, router.push("/dashboard")];
     });
   };
@@ -99,6 +104,11 @@ function Login() {
                     autoFocus
                     required
                   />
+                  {isEmailValid && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Please enter a valid email address
+                    </p>
+                  )}
                 </div>
 
                 <div className="col-md-12 col-sm-6 text-start position-relative pass-wrapper">
@@ -112,6 +122,12 @@ function Login() {
                     autoComplete="on"
                     required
                   />
+                  {isPasswordValid && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Min 8 characters, at least 1 uppercase letter, 1 lowercase
+                      letter and 1 number
+                    </p>
+                  )}
                   {!eyeOpen ? (
                     <>
                       <svg
@@ -172,7 +188,7 @@ function Login() {
                     className="px-3 py-3"
                     onClick={() => handleSubmit()}
                   >
-                    Login
+                    {loading ? "Logging In..." : "Login"}
                   </button>
                 </div>
                 <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between py-2">
