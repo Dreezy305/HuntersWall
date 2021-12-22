@@ -25,6 +25,7 @@ function CreateAcc() {
   const [terms, setTerms] = useState(false);
   const [first, setCheckFirst] = useState(false);
   const [last, setCheckLast] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const auth = useAuth();
 
@@ -46,6 +47,7 @@ function CreateAcc() {
 
     if (!EmailRegexp.test(m)) {
       console.log(!EmailRegexp.test(m));
+      setLoading(false);
       return setIsEmailValid(true);
     } else {
       return setIsEmailValid(false);
@@ -57,6 +59,7 @@ function CreateAcc() {
 
     if (!PasswordRegexp.test(p)) {
       console.log(!PasswordRegexp.test(p));
+      setLoading(false);
       return setIsPasswordValid(true);
     } else {
       return setIsPasswordValid(false);
@@ -66,6 +69,7 @@ function CreateAcc() {
   const matchPass = (pass, confirmPass) => {
     if (pass !== confirmPass) {
       setCheckPass(true);
+      setLoading(false);
     } else {
       setCheckPass(false);
     }
@@ -74,6 +78,7 @@ function CreateAcc() {
   const checkTermsAndCondition = (c) => {
     if (c == false) {
       setTerms(true);
+      setLoading(false);
     } else {
       setTerms(false);
     }
@@ -82,12 +87,14 @@ function CreateAcc() {
   const FirstandLast = (f, l) => {
     if (f == "") {
       setCheckFirst(true);
+      setLoading(false);
     } else {
       setCheckFirst(false);
     }
 
     if (l == "") {
       setCheckLast(true);
+      setLoading(false);
     } else {
       setCheckLast(false);
     }
@@ -117,6 +124,14 @@ function CreateAcc() {
     checkTermsAndCondition(signUpData.Terms_and_Condition);
 
     return await auth.signUp(signUpData).then((response) => {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhoneNumber("");
+      setPassword("");
+      setConfirmPassword("");
+      setCheckBox(false);
+      setLoading(false);
       return response;
     });
   };
@@ -171,7 +186,7 @@ function CreateAcc() {
                     autoFocus
                     required
                   />
-                  {first && (
+                  {last && (
                     <p className="error-text text-danger my-2 fst-italic fs-6">
                       Please enter your last name
                     </p>
@@ -355,7 +370,7 @@ function CreateAcc() {
                     <input
                       type="checkbox"
                       value="terms"
-                      onClick={(e) => setCheckBox(!checkBox)}
+                      onClick={() => setCheckBox(!checkBox)}
                       className=""
                       required
                     />
@@ -381,7 +396,7 @@ function CreateAcc() {
                     className="px-3 py-3"
                     onClick={() => handleSubmit()}
                   >
-                    Create account
+                    {loading ? "Creating acount..." : "Create account"}
                   </button>
                 </div>
               </form>
