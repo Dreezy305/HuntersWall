@@ -85,7 +85,7 @@ function Login() {
 
               <form
                 className="row g-4 py-5 createAcc_form"
-                onSubmit={() => e.preventDefault()}
+                onSubmit={(e) => e.preventDefault()}
               >
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Email</label>
