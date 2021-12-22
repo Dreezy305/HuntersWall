@@ -136,8 +136,6 @@ function CreateAcc() {
     });
   };
 
-  console.log(checkBox, "tt");
-
   return (
     <Layout>
       <section className="createAcc">
