@@ -20,8 +20,6 @@ function Login() {
   const auth = useAuth();
   const router = useRouter();
 
-  // console.log(auth, "ppx3");
-
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
