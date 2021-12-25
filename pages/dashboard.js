@@ -1,13 +1,18 @@
 import React from "react";
 import { useAuth } from "../auth/useAuth";
+import LeftSide from "../components/dashboard/leftSide";
+import RightSide from "../components/dashboard/rightSide";
 
 function Dashboard() {
   const auth = useAuth();
-  // console.log(auth);
+  console.log(auth);
 
   return (
-    <div>
-      <h1>Hi Welcome to your Dashboard</h1>
+    <div className="container">
+      {/* <div className="row"> */}
+      <LeftSide />
+      <RightSide />
+      {/* </div> */}
     </div>
   );
 }

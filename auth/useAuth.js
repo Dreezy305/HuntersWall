@@ -50,17 +50,28 @@ const useAuthProvider = () => {
     }
   };
 
-  const getUserDisplayName = (user) => {
-    return db
-      .collection("users")
-      .doc(user.uid)
-      .get()
-      .then((userData) => {
-        console.log(userData, "pp");
-        if (userData.data()) {
-          setUser(userData.data());
-        }
-      });
+  const getUserDisplayName = async () => {
+    const citiesRef = getDoc(collection(db, "users"));
+    const snapshot = await citiesRef.where("email", "==", true).get();
+    console.log(snapshot, "pp");
+    if (snapshot.empty) {
+      console.log("No matching documents.");
+      return;
+    }
+    snapshot.forEach((doc) => {
+      console.log(doc, "pp");
+      console.log(doc.id, "=>", doc.data(), "pp");
+    });
+    // return db
+    //   .collection("users")
+    //   .doc(user.uid)
+    //   .get()
+    //   .then((userData) => {
+    //     console.log(userData, "pp");
+    //     if (userData.data()) {
+    //       setUser(userData.data());
+    //     }
+    //   });
   };
 
   const signUp = async (user) => {
@@ -100,8 +111,9 @@ const useAuthProvider = () => {
 
     return await signInWithEmailAndPassword(auth, email, password)
       .then((response) => {
+        console.log(response);
         setUser(response.user);
-        getUserDisplayName(user);
+        // getUserDisplayName();
         return response.user;
       })
       .catch((error) => {

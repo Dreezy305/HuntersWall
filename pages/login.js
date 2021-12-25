@@ -16,6 +16,7 @@ function Login() {
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isPasswordValid, setIsPasswordValid] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [userExist, setUserExist] = useState(false);
 
   const auth = useAuth();
   const router = useRouter();
@@ -50,7 +51,7 @@ function Login() {
     const PasswordRegexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
     if (!PasswordRegexp.test(p)) {
-      console.log(!PasswordRegexp.test(p));
+      // console.log(!PasswordRegexp.test(p), "Pp");
       setLoading(false);
       return setIsPasswordValid(true);
     } else {
@@ -65,13 +66,25 @@ function Login() {
 
     validatePassword(data.password);
 
-    return await auth.signIn(data).then((response) => {
-      setEmail("");
-      setPassword("");
-      setLoading(false);
-      return [response, router.push("/dashboard")];
-    });
+    return await auth
+      .signIn(data)
+      .then((response) => {
+        if (!response.error) {
+          setEmail("");
+          setPassword("");
+          setLoading(false);
+          return [response, router.push("/dashboard")];
+        } else if (response.error) {
+          setUserExist(true);
+        }
+      })
+      .catch((error) => {
+        console.log(error, "pp");
+        return error;
+      });
   };
+
+  // , router.push("/dashboard")
 
   return (
     <Layout>
@@ -92,6 +105,11 @@ function Login() {
                 className="row g-4 py-5 createAcc_form"
                 onSubmit={(e) => e.preventDefault()}
               >
+                {userExist && (
+                  <div className="col-md-12 col-sm-6 text-center text-danger fst-italic">
+                    User does not exist, Kindly proceed to create account
+                  </div>
+                )}
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Email</label>
                   <br />
