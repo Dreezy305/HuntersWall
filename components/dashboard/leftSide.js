@@ -1,6 +1,8 @@
-import React from "react";
+/* eslint-disable @next/next/no-img-element */
+import React, { useState } from "react";
 
 function LeftSide() {
+  const [hoverEffect, setHoverEffect] = useState(false);
   return (
     <div className="leftSideBar">
       <h1 className="mb-4 ps-3">HuntersWall</h1>
