@@ -531,13 +531,56 @@
 }
 
 .leftSideBar {
-  width: 20vw;
+  width: 25vw;
   background: #2081f9;
   padding: 20px;
+  max-height: 100%;
+
+  h1 {
+    font-family: $typografix;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 46px;
+    color: #ffffff;
+  }
+
+  &_menu {
+    ul {
+      cursor: pointer;
+
+      li {
+        // background-color: #ffffff;
+        // padding: 10px;
+        color: #ffffff;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        img {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  &_submenu {
+    ul {
+      li {
+        color: #ffffff;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+  }
 }
 
 .rightSideBar {
-  width: 80vw;
+  width: 75vw;
   background: #ffffff;
   padding: 20px;
 }
