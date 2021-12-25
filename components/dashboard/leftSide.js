@@ -4,7 +4,7 @@ function LeftSide() {
   return (
     <div className="leftSideBar">
       <h1 className="mb-4 ps-3">HuntersWall</h1>
-      <div className="leftSideBar_menu mt-3 pt-3">
+      <div className="leftSideBar_menu my-3 pt-3">
         <ul className="list-unstyled">
           <li className="ps-3 my-4">
             <img src="/img/user.svg" className="mb-1 me-3" alt="profile" />{" "}
@@ -32,7 +32,7 @@ function LeftSide() {
               className="mb-1 me-2"
               alt="loan_request"
             />{" "}
-            Loan Request
+            Loan request
           </li>
           <li className="ps-3 my-4">
             <img src="/img/market.svg" className="mb-1 me-3" alt="market" />{" "}
@@ -48,10 +48,10 @@ function LeftSide() {
           </li>
         </ul>
       </div>
-      <div className="leftSideBar_submenu mt-4 pt-4">
+      <div className="leftSideBar_submenu my-4 pt-4">
         <ul className="list-unstyled">
-          <li className="ps-3 my-3">
-            <img src="/img/setting.svg" className="mb-1 me-3" alt="profile" />{" "}
+          <li className="ps-3 my-4">
+            <img src="/img/settings.svg" className="mb-1 me-3" alt="profile" />{" "}
             Settings
           </li>
           <li className="ps-3 my-3">
