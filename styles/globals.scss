@@ -584,14 +584,33 @@
   background: #ffffff;
   padding: 20px;
   min-height: 100vh;
+  &_top {
+    h1 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 43px;
+      color: #2081f9;
+    }
 
-  h1 {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 43px;
-    color: #2081f9;
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 29px;
+      color: #000000;
+    }
+
+    p {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 10px;
+      color: #000000;
+    }
   }
 }
 
