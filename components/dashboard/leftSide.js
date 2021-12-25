@@ -2,7 +2,7 @@ import React from "react";
 
 function LeftSide() {
   return (
-    <div className="col-lg-2">
+    <div className="leftSideBar">
       <h1>left side bar</h1>
     </div>
   );

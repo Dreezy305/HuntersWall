@@ -530,6 +530,18 @@
   // top: 50px;
 }
 
+.leftSideBar {
+  width: 20vw;
+  background: #2081f9;
+  padding: 20px;
+}
+
+.rightSideBar {
+  width: 80vw;
+  background: #ffffff;
+  padding: 20px;
+}
+
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
 @media screen and (max-width: 600px) {
   .home {

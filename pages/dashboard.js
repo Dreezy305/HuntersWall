@@ -8,11 +8,9 @@ function Dashboard() {
   console.log(auth);
 
   return (
-    <div className="container">
-      {/* <div className="row"> */}
+    <div className="d-lg-flex">
       <LeftSide />
       <RightSide />
-      {/* </div> */}
     </div>
   );
 }
