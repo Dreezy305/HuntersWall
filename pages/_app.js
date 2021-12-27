@@ -1,5 +1,6 @@
 import "rsuite/dist/rsuite.min.css";
 import "../styles/globals.css";
+import "../styles/base.scss";
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/globals.scss";
 import { AuthProvider } from "../auth/useAuth";

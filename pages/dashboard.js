@@ -16,7 +16,7 @@ const headerStyles = {
   padding: 18,
   fontSize: 16,
   height: 56,
-  background: "#34c3ff",
+  background: "#2081f9",
   color: " #fff",
   whiteSpace: "nowrap",
   overflow: "hidden",
@@ -67,7 +67,7 @@ function Dashboard() {
 
   return (
     <div className="show-fake-browser sidebar-page">
-      <Container>
+      <Container className="leftSideBar">
         <Sidebar
           style={{
             display: "flex",
@@ -76,10 +76,13 @@ function Dashboard() {
           }}
           width={expand ? 260 : 56}
           collapsible
+          className="_sidebar"
         >
           <Sidenav.Header>
-            <div style={headerStyles}>
-              <span style={{ marginLeft: 12 }}>HuntersWall</span>
+            <div className="leftSideBar_header" style={headerStyles}>
+              <span className="" style={{ marginLeft: 12 }}>
+                HuntersWall
+              </span>
             </div>
           </Sidenav.Header>
           <Sidenav
@@ -132,7 +135,7 @@ function Dashboard() {
           <NavToggle expand={expand} onChange={() => setExpand(!expand)} />
         </Sidebar>
 
-        <Container>
+        <Container style={{ background: "#ffffff" }}>
           <Header>
             <h2>Page Title</h2>
           </Header>

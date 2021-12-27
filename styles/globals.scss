@@ -533,67 +533,65 @@
 // DASHBOARD STYLES STARTS HERE
 
 .leftSideBar {
-  width: 25vw;
   background: #2081f9;
-  padding: 20px;
-  min-height: 100vh;
-
-  h1 {
-    font-family: $typografix;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 46px;
-    color: #ffffff;
+  &_header {
+    span {
+      font-family: $typografix;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 46px;
+      color: #ffffff;
+    }
   }
+}
 
-  &_menu {
-    ul {
-      cursor: pointer;
+_menu {
+  ul {
+    cursor: pointer;
 
-      li {
-        // background-color: #ffffff;
-        // padding: 10px;
-        color: #ffffff;
-        font-family: Lato;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 29px;
+    li {
+      // background-color: #ffffff;
+      // padding: 10px;
+      color: #ffffff;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
 
-        img {
-          padding-right: 10px;
-        }
+      img {
+        padding-right: 10px;
+      }
 
-        &:hover {
-          background: #ffffff;
-          color: #2081f9;
-          box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
-            20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
-            -10px 0px 0px 10px #ffffff;
-        }
+      &:hover {
+        background: #ffffff;
+        color: #2081f9;
+        box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
+          20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
+          -10px 0px 0px 10px #ffffff;
       }
     }
   }
+}
 
-  &_submenu {
-    ul {
-      li {
-        color: #ffffff;
-        font-family: Lato;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 29px;
-        cursor: pointer;
+-submenu {
+  ul {
+    li {
+      color: #ffffff;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      cursor: pointer;
 
-        &:hover {
-          background: #ffffff;
-          color: #2081f9;
-          box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
-            20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
-            -10px 0px 0px 10px #ffffff;
-        }
+      &:hover {
+        background: #ffffff;
+        color: #2081f9;
+        box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
+          20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
+          -10px 0px 0px 10px #ffffff;
       }
     }
   }
@@ -1011,7 +1009,7 @@
   .hide {
     display: none;
   }
-  .rightSideBar {
+  .SideBar {
     width: auto;
   }
 }

@@ -73,7 +73,7 @@ function Login() {
           setEmail("");
           setPassword("");
           setLoading(false);
-          return [response, router.push("/dashboard")];
+          return [response, router.push("/profile")];
         } else if (response.error) {
           setUserExist(true);
         }
