@@ -1,14 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 function LeftSide() {
   const [hoverEffect, setHoverEffect] = useState(false);
+
+  const router = useRouter();
+  // console.log(router.asPath);
+
   return (
-    <div className="leftSideBar">
+    <div className="leftSideBar hide">
       <h1 className="mb-4 ps-3">HuntersWall</h1>
       <div className="leftSideBar_menu my-3 pt-3">
         <ul className="list-unstyled">
-          <li className="ps-3 my-4">
+          <li className="ps-3 my-4" onClick={() => router.push("/profile")}>
             <img src="/img/user.svg" className="mb-1 me-3" alt="profile" />{" "}
             Profile
           </li>
@@ -50,7 +55,7 @@ function LeftSide() {
           </li>
         </ul>
       </div>
-      <div className="leftSideBar_submenu my-4 pt-4">
+      <div className="leftSideBar_submenu my-4 pt-4 ">
         <ul className="list-unstyled">
           <li className="ps-3 my-4">
             <img src="/img/settings.svg" className="mb-1 me-3" alt="profile" />{" "}

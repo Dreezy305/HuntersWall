@@ -1,4 +1,5 @@
 import React from "react";
+import Profile from "../../pages/profile";
 
 function RightSide() {
   return (
@@ -9,6 +10,9 @@ function RightSide() {
           <h6>User Name</h6>
           <p>ID: Hun023475</p>
         </div>
+      </div>
+      <div className="container">
+        <div className="row">{/* <Profile /> */}</div>
       </div>
     </div>
   );
