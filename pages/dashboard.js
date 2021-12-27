@@ -69,7 +69,11 @@ function Dashboard() {
     <div className="show-fake-browser sidebar-page">
       <Container>
         <Sidebar
-          style={{ display: "flex", flexDirection: "column" }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textDecoration: "none",
+          }}
           width={expand ? 260 : 56}
           collapsible
         >
@@ -88,7 +92,12 @@ function Dashboard() {
               <Nav></Nav>
               <Nav></Nav>
               <Nav>
-                <Nav.Item eventKey="1" active icon={<DashboardIcon />}>
+                <Nav.Item
+                  eventKey="1"
+                  href="/profile"
+                  active
+                  icon={<DashboardIcon />}
+                >
                   Profile
                 </Nav.Item>
                 <Nav.Item eventKey="2" icon={<PeoplesIcon />}>

@@ -10,7 +10,6 @@ import PeoplesIcon from "@rsuite/icons/Peoples";
 import CheckOutlineIcon from "@rsuite/icons/CheckOutline";
 import ArrowLeftLineIcon from "@rsuite/icons/ArrowLeftLine";
 import ArrowRightLineIcon from "@rsuite/icons/ArrowRightLine";
-import { Profile } from "../components/icons";
 
 const headerStyles = {
   padding: 18,
@@ -61,7 +60,7 @@ const NavToggle = ({ expand, onChange }) => {
   );
 };
 
-function UserProfile() {
+function Wallet() {
   const auth = useAuth();
   const [expand, setExpand] = useState(true);
 
@@ -134,7 +133,7 @@ function UserProfile() {
 
         <Container>
           <Header>
-            <h2>Profile</h2>
+            <h2>Wallet</h2>
           </Header>
           <Content>Content</Content>
         </Container>
@@ -143,4 +142,4 @@ function UserProfile() {
   );
 }
 
-export default UserProfile;
+export default Wallet;
