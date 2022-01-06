@@ -1,5 +1,11 @@
 import React from "react";
-import { ProfileIcon, WalletIcon } from "../components/icon";
+import {
+  MarketIcon,
+  NairaIcon,
+  ProfileIcon,
+  ShoppingIcon,
+  WalletIcon,
+} from "../components/icon";
 // import WalletIcon from "../components/walletIcon";
 
 function SideBar() {
@@ -13,7 +19,7 @@ function SideBar() {
             Profile
           </li>
           <li className="d-flex align-items-center mb-3">
-            <WalletIcon
+            <ShoppingIcon
               fill="none"
               marginRight={3}
               stylesObj={{ fontSize: "16px" }}
@@ -28,8 +34,22 @@ function SideBar() {
             />
             Portfolio
           </li>
-          <li className="d-flex align-items-center mb-3">Loan request</li>
-          <li className="d-flex align-items-center mb-3">Market</li>
+          <li className="d-flex align-items-center mb-3">
+            <NairaIcon
+              fill="none"
+              marginRight={3}
+              stylesObj={{ fontSize: "16px" }}
+            />
+            Loan request
+          </li>
+          <li className="d-flex align-items-center mb-3">
+            <MarketIcon
+              fill="none"
+              marginRight={3}
+              stylesObj={{ fontSize: "16px" }}
+            />
+            Market
+          </li>
           <li className="d-flex align-items-center mb-3">
             Transaction History
           </li>
