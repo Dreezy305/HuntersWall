@@ -4,6 +4,7 @@ import {
   NairaIcon,
   ProfileIcon,
   ShoppingIcon,
+  TransactionIcon,
   WalletIcon,
 } from "../components/icon";
 // import WalletIcon from "../components/walletIcon";
@@ -51,6 +52,11 @@ function SideBar() {
             Market
           </li>
           <li className="d-flex align-items-center mb-3">
+            <TransactionIcon
+              fill="none"
+              marginRight={3}
+              stylesObj={{ fontSize: "16px" }}
+            />
             Transaction History
           </li>
         </ul>
