@@ -1,7 +1,13 @@
 /* eslint-disable react/no-unknown-property */
 import PropTypes from "prop-types";
 
-export const ProfileIcon = ({ fill, marginRight, padding, stylesObj }) => {
+export const ProfileIcon = ({
+  fill,
+  marginRight,
+  padding,
+  stylesObj,
+  onMouseOver,
+}) => {
   return (
     <svg
       width="24"
@@ -10,6 +16,7 @@ export const ProfileIcon = ({ fill, marginRight, padding, stylesObj }) => {
       fill={fill}
       className={`me-${marginRight} p-${padding}`}
       style={stylesObj}
+      onMouseOver={onMouseOver}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -35,6 +42,7 @@ ProfileIcon.propTypes = {
   marginRight: PropTypes.number,
   padding: PropTypes.number,
   stylesObj: PropTypes.object,
+  onMouseOver: PropTypes.func,
 };
 
 export const WalletIcon = ({ fill, marginRight, padding, stylesObj }) => {
