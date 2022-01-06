@@ -1,5 +1,12 @@
 .sidebar {
-  color: red;
-  flex: 1;
-  position: fixed;
+  background: #2081f9;
+  padding: 20px;
+  &_top {
+    ul {
+      list-style-type: none;
+    }
+  }
+
+  &_bottom {
+  }
 }

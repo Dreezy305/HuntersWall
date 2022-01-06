@@ -1,6 +1,12 @@
 .dashboard {
   display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-  position: relative;
+  height: 100vh;
+  // max-height: 100%;
+  &_left {
+    flex: 1;
+    background: #2081f9;
+  }
+  &_right {
+    flex: 4;
+  }
 }

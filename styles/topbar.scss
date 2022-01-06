@@ -1,3 +1,16 @@
 .topbar {
-  color: blue;
+  width: 100%;
+  display: flex;
+  &_left {
+    h4 {
+    }
+  }
+  &_right {
+    display: flex;
+    flex-direction: column;
+    h6 {
+    }
+    p {
+    }
+  }
 }
