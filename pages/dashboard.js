@@ -27,7 +27,7 @@ function dashboard() {
     <>
       <div className="dashboard">
         <div className="dashboard_left">
-          <SideBar onClick={() => setCounter(counter + 1)} />
+          <SideBar onClick={() => setCounter((prev) => prev + 1)} />
         </div>
 
         <div className="dashboard_right">
