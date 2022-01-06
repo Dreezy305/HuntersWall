@@ -18,17 +18,6 @@ function dashboard() {
 
   const router = useRouter();
 
-  const Titles = [
-    "Profile",
-    "Wallet",
-    "Portfolio",
-    "Loan request",
-    "Market",
-    "Transaction History",
-    "Settings",
-    "Log Out",
-  ];
-
   const Pages = [
     {
       title: "Profile",
@@ -36,52 +25,49 @@ function dashboard() {
       link: "/profile",
     },
     {
-      title: "Profile",
+      title: "Wallet",
       component: <Wallet />,
-      link: "/profile",
+      link: "/wallet",
     },
     {
-      title: "Profile",
+      title: "Portfolio",
       component: <Portfolio />,
-      link: "/profile",
+      link: "/portfolio",
     },
     {
-      title: "Profile",
+      title: "Loan Request",
       component: <LoanRequest />,
-      link: "/profile",
+      link: "/loanRequest",
     },
     {
-      title: "Profile",
+      title: "Market",
       component: <Market />,
-      link: "/profile",
+      link: "/market",
     },
     {
-      title: "Profile",
+      title: "Transaction History",
       component: <TransactionHistory />,
-      link: "/profile",
+      link: "/transaction",
     },
     {
-      title: "Profile",
+      title: "Settings",
       component: <Settings />,
-      link: "/profile",
+      link: "/settings",
     },
   ];
-
-  // const Pages = [<Profile />, <Wallet />];
 
   const handleClick = (x) => {
     if (x == 0) {
       setCounter(0);
-    } else if (x == Titles.length - 1) {
-      setCounter(Titles.length - 1);
+    } else if (x == Pages.length - 1) {
+      setCounter(Pages.length - 1);
     }
   };
 
   // else if (x >= 1 && x < Titles.length - 1) {
   // setCounter(counter + 1);
   // }
-
-  console.log(Titles.length - 1);
+  console.log(counter);
 
   return (
     <>
@@ -91,8 +77,9 @@ function dashboard() {
         </div>
 
         <div className="dashboard_right">
-          <TopBar title={Titles[counter]} />
+          <TopBar title={Pages[counter].title} />
           {Pages[counter].component}
+          {/* <Profile /> */}
         </div>
       </div>
     </>
