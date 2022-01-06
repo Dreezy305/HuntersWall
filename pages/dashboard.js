@@ -6,6 +6,11 @@ import SideBar from "../Dashboard/SideBar";
 import TopBar from "../Dashboard/TopBar";
 import Profile from "./profile";
 import Wallet from "./wallet";
+import Portfolio from "./portfolio";
+import LoanRequest from "./loanRequest";
+import Market from "./market";
+import TransactionHistory from "./transaction";
+import Settings from "./settings";
 
 function dashboard() {
   const [counter, setCounter] = useState(0);

@@ -10,6 +10,7 @@ import {
   TransactionIcon,
   WalletIcon,
 } from "../components/icon";
+import Link from "next/link";
 
 function SideBar({ handleClick }) {
   const [hover, setHover] = useState(false);
@@ -34,6 +35,7 @@ function SideBar({ handleClick }) {
             />
             Profile
           </li>
+
           <li
             className="d-flex align-items-center mb-3 py-1"
             onClick={() => handleClick(1)}

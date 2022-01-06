@@ -1,7 +1,7 @@
 import React from "react";
 
-function Transaction() {
+function TransactionHistory() {
   return <div>Transaction</div>;
 }
 
-export default Transaction;
+export default TransactionHistory;
