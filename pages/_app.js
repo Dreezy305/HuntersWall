@@ -6,6 +6,7 @@ import "../styles/sidebar.scss";
 import "../styles/topbar.scss";
 import "../styles/dashboard.scss";
 import "../styles/profile.scss";
+import "../styles/wallet.scss";
 import { AuthProvider } from "../auth/useAuth";
 
 function MyApp({ Component, pageProps }) {

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import {
   LogoutIcon,
   MarketIcon,
@@ -11,7 +12,7 @@ import {
 } from "../components/icon";
 // import WalletIcon from "../components/walletIcon";
 
-function SideBar() {
+function SideBar({ onClick }) {
   const [hover, setHover] = useState(false);
 
   const handleOver = () => {
@@ -23,7 +24,7 @@ function SideBar() {
       <h3 className="mb-5">HuntersWall</h3>
       <div className="sidebar_top mb-5">
         <ul className="list-unstyled">
-          <li className="d-flex align-items-center mb-3 py-1">
+          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
             <ProfileIcon
               marginRight={3}
               fill="#fff"
@@ -31,7 +32,7 @@ function SideBar() {
             />
             Profile
           </li>
-          <li className="d-flex align-items-center mb-3 py-1">
+          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
             <ShoppingIcon
               fill="none"
               marginRight={3}
@@ -40,7 +41,7 @@ function SideBar() {
             />
             Wallet
           </li>
-          <li className="d-flex align-items-center mb-3 py-1">
+          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
             <WalletIcon
               fill="none"
               marginRight={3}
@@ -48,7 +49,7 @@ function SideBar() {
             />
             Portfolio
           </li>
-          <li className="d-flex align-items-center mb-3 py-1">
+          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
             <NairaIcon
               fill="none"
               marginRight={3}
@@ -56,7 +57,7 @@ function SideBar() {
             />
             Loan request
           </li>
-          <li className="d-flex align-items-center mb-3 py-1">
+          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
             <MarketIcon
               fill="none"
               marginRight={3}
@@ -64,7 +65,7 @@ function SideBar() {
             />
             Market
           </li>
-          <li className="d-flex align-items-center mb-3 py-1">
+          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
             <TransactionIcon
               fill="none"
               marginRight={3}
@@ -77,7 +78,7 @@ function SideBar() {
 
       <div className="sidebar_bottom ">
         <ul className="list-unstyled">
-          <li className="d-flex align-items-center mb-3 py-2">
+          <li className="d-flex align-items-center mb-3 py-2" onClick={onClick}>
             <SettingIcon
               fill="none"
               marginRight={3}
@@ -85,7 +86,7 @@ function SideBar() {
             />
             Settings
           </li>
-          <li className="d-flex align-items-center mb-2 py-2">
+          <li className="d-flex align-items-center mb-2 py-2" onClick={onClick}>
             <LogoutIcon
               fill="none"
               marginRight={3}
@@ -100,3 +101,7 @@ function SideBar() {
 }
 
 export default SideBar;
+
+SideBar.propTypes = {
+  onClick: PropTypes.func,
+};
