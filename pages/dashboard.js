@@ -40,6 +40,31 @@ function dashboard() {
       component: <Wallet />,
       link: "/profile",
     },
+    {
+      title: "Profile",
+      component: <Portfolio />,
+      link: "/profile",
+    },
+    {
+      title: "Profile",
+      component: <LoanRequest />,
+      link: "/profile",
+    },
+    {
+      title: "Profile",
+      component: <Market />,
+      link: "/profile",
+    },
+    {
+      title: "Profile",
+      component: <TransactionHistory />,
+      link: "/profile",
+    },
+    {
+      title: "Profile",
+      component: <Settings />,
+      link: "/profile",
+    },
   ];
 
   // const Pages = [<Profile />, <Wallet />];
