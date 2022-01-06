@@ -1,12 +1,29 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
 .sidebar {
   background: #2081f9;
   padding: 20px;
   &_top {
+    h3 {
+      font-family: $typografix;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font36;
+      line-height: $line-height46;
+      color: #ffffff;
+    }
     ul {
       list-style-type: none;
+      li {
+        font-family: "Lato";
+      }
     }
   }
 
   &_bottom {
+    ul {
+      list-style-type: none;
+    }
   }
 }

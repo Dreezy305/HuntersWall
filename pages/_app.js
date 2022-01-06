@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import "../styles/base.scss";
+
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/globals.scss";
 import "../styles/sidebar.scss";

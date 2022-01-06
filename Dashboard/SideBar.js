@@ -10,7 +10,11 @@ function SideBar() {
         </ul>
       </div>
 
-      <div className="sidebar_bottom"></div>
+      <div className="sidebar_bottom">
+        <ul className="">
+          <li></li>
+        </ul>
+      </div>
     </div>
   );
 }
