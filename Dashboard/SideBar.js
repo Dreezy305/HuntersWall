@@ -1,8 +1,10 @@
 import React from "react";
 import {
+  LogoutIcon,
   MarketIcon,
   NairaIcon,
   ProfileIcon,
+  SettingIcon,
   ShoppingIcon,
   TransactionIcon,
   WalletIcon,
@@ -63,9 +65,23 @@ function SideBar() {
       </div>
 
       <div className="sidebar_bottom">
-        <ul className="">
-          <li>Settings</li>
-          <li>Log Out</li>
+        <ul className="list-unstyled">
+          <li className="d-flex align-items-center mb-3">
+            <SettingIcon
+              fill="none"
+              marginRight={3}
+              stylesObj={{ fontSize: "16px" }}
+            />
+            Settings
+          </li>
+          <li className="d-flex align-items-center mb-3">
+            <LogoutIcon
+              fill="none"
+              marginRight={3}
+              stylesObj={{ fontSize: "16px" }}
+            />
+            Log Out
+          </li>
         </ul>
       </div>
     </div>
