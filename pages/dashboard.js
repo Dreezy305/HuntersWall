@@ -8,7 +8,7 @@ import Wallet from "./wallet";
 
 function dashboard() {
   const [counter, setCounter] = useState(0);
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState("Profile");
 
   const Titles = [
     "Profile",
@@ -23,11 +23,25 @@ function dashboard() {
 
   const Pages = [<Profile />, <Wallet />];
 
+  const handleClick = (x) => {
+    if (x == 0) {
+      setCounter(0);
+    } else if (x == Titles.length - 1) {
+      setCounter(Titles.length - 1);
+    }
+  };
+
+  // else if (x >= 1 && x < Titles.length - 1) {
+  // setCounter(counter + 1);
+  // }
+
+  console.log(Titles.length - 1);
+
   return (
     <>
       <div className="dashboard">
         <div className="dashboard_left">
-          <SideBar onClick={() => setCounter((prev) => prev + 1)} />
+          <SideBar handleClick={(t) => handleClick(t)} />
         </div>
 
         <div className="dashboard_right">

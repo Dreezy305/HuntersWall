@@ -10,9 +10,8 @@ import {
   TransactionIcon,
   WalletIcon,
 } from "../components/icon";
-// import WalletIcon from "../components/walletIcon";
 
-function SideBar({ onClick }) {
+function SideBar({ handleClick }) {
   const [hover, setHover] = useState(false);
 
   const handleOver = () => {
@@ -24,7 +23,10 @@ function SideBar({ onClick }) {
       <h3 className="mb-5">HuntersWall</h3>
       <div className="sidebar_top mb-5">
         <ul className="list-unstyled">
-          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
+          <li
+            className="d-flex align-items-center mb-3 py-1"
+            onClick={() => handleClick(0)}
+          >
             <ProfileIcon
               marginRight={3}
               fill="#fff"
@@ -32,7 +34,10 @@ function SideBar({ onClick }) {
             />
             Profile
           </li>
-          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
+          <li
+            className="d-flex align-items-center mb-3 py-1"
+            onClick={() => handleClick(1)}
+          >
             <ShoppingIcon
               fill="none"
               marginRight={3}
@@ -41,7 +46,10 @@ function SideBar({ onClick }) {
             />
             Wallet
           </li>
-          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
+          <li
+            className="d-flex align-items-center mb-3 py-1"
+            onClick={() => handleClick(2)}
+          >
             <WalletIcon
               fill="none"
               marginRight={3}
@@ -49,7 +57,10 @@ function SideBar({ onClick }) {
             />
             Portfolio
           </li>
-          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
+          <li
+            className="d-flex align-items-center mb-3 py-1"
+            onClick={() => handleClick(3)}
+          >
             <NairaIcon
               fill="none"
               marginRight={3}
@@ -57,7 +68,10 @@ function SideBar({ onClick }) {
             />
             Loan request
           </li>
-          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
+          <li
+            className="d-flex align-items-center mb-3 py-1"
+            onClick={() => handleClick(4)}
+          >
             <MarketIcon
               fill="none"
               marginRight={3}
@@ -65,7 +79,10 @@ function SideBar({ onClick }) {
             />
             Market
           </li>
-          <li className="d-flex align-items-center mb-3 py-1" onClick={onClick}>
+          <li
+            className="d-flex align-items-center mb-3 py-1"
+            onClick={() => handleClick(5)}
+          >
             <TransactionIcon
               fill="none"
               marginRight={3}
@@ -78,7 +95,10 @@ function SideBar({ onClick }) {
 
       <div className="sidebar_bottom ">
         <ul className="list-unstyled">
-          <li className="d-flex align-items-center mb-3 py-2" onClick={onClick}>
+          <li
+            className="d-flex align-items-center mb-3 py-2"
+            onClick={() => handleClick(6)}
+          >
             <SettingIcon
               fill="none"
               marginRight={3}
@@ -86,7 +106,10 @@ function SideBar({ onClick }) {
             />
             Settings
           </li>
-          <li className="d-flex align-items-center mb-2 py-2" onClick={onClick}>
+          <li
+            className="d-flex align-items-center mb-2 py-2"
+            onClick={() => handleClick(7)}
+          >
             <LogoutIcon
               fill="none"
               marginRight={3}
@@ -102,6 +125,10 @@ function SideBar({ onClick }) {
 
 export default SideBar;
 
+SideBar.defaultProps = {
+  handleClick: () => {},
+};
+
 SideBar.propTypes = {
-  onClick: PropTypes.func,
+  handleClick: PropTypes.func,
 };
