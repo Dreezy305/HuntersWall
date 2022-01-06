@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import SideBar from "../Dashboard/SideBar";
 import TopBar from "../Dashboard/TopBar";
 import Profile from "./profile";
@@ -9,6 +10,8 @@ import Wallet from "./wallet";
 function dashboard() {
   const [counter, setCounter] = useState(0);
   const [title, setTitle] = useState("Profile");
+
+  const router = useRouter();
 
   const Titles = [
     "Profile",
@@ -21,7 +24,20 @@ function dashboard() {
     "Log Out",
   ];
 
-  const Pages = [<Profile />, <Wallet />];
+  const Pages = [
+    {
+      title: "Profile",
+      component: <Profile />,
+      link: "/profile",
+    },
+    {
+      title: "Profile",
+      component: <Wallet />,
+      link: "/profile",
+    },
+  ];
+
+  // const Pages = [<Profile />, <Wallet />];
 
   const handleClick = (x) => {
     if (x == 0) {
@@ -46,7 +62,7 @@ function dashboard() {
 
         <div className="dashboard_right">
           <TopBar title={Titles[counter]} />
-          <Profile />
+          {Pages[counter].component}
         </div>
       </div>
     </>
