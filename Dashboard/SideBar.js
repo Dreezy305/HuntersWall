@@ -20,7 +20,14 @@ function SideBar() {
             />
             Wallet
           </li>
-          <li className="d-flex align-items-center mb-3">Portfolio</li>
+          <li className="d-flex align-items-center mb-3">
+            <WalletIcon
+              fill="none"
+              marginRight={3}
+              stylesObj={{ fontSize: "16px" }}
+            />
+            Portfolio
+          </li>
           <li className="d-flex align-items-center mb-3">Loan request</li>
           <li className="d-flex align-items-center mb-3">Market</li>
           <li className="d-flex align-items-center mb-3">
