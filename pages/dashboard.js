@@ -60,12 +60,18 @@ function dashboard() {
       setCounter(0);
     } else if (x == Pages.length - 1) {
       setCounter(Pages.length - 1);
+    } else if (x == 1) {
+      setCounter(1);
+    } else if (x == 2) {
+      setCounter(2);
+    } else if (x == 3) {
+      setCounter(3);
+    } else if (x == 4) {
+      setCounter(4);
+    } else if (x == 5) {
+      setCounter(5);
     }
   };
-
-  // else if (x >= 1 && x < Pages.length - 1) {
-  // setCounter(counter + 1);
-  // }
 
   return (
     <>

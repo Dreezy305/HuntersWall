@@ -7,8 +7,10 @@ function TopBar({ title = "" }) {
         <h4 className="">{title}</h4>
       </div>
       <div className="topbar_right">
-        <h6>firstname lastname</h6>
-        <p>id: number</p>
+        <h6 className="d-flex flex-column align-items-end">
+          <span>firstname lastname</span>
+          <span>id: number</span>
+        </h6>
       </div>
     </div>
   );

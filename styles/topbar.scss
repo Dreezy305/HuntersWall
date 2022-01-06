@@ -1,19 +1,41 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
 .topbar {
   width: 100%;
-  padding: 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   &_left {
     h4 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: $font36;
+      line-height: $line-height43;
+      color: #2081f9;
     }
   }
   &_right {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
     h6 {
-    }
-    p {
+      span {
+        &:nth-child(1) {
+          font-family: Lato;
+          font-style: normal;
+          font-weight: normal;
+          font-size: $font24;
+          line-height: $line-height29;
+          color: #000000;
+        }
+        &:nth-child(2) {
+          font-family: Lato;
+          font-style: normal;
+          font-weight: normal;
+          font-size: $font18;
+          line-height: $line-height22;
+          color: #000000;
+        }
+      }
     }
   }
 }
