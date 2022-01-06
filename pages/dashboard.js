@@ -14,7 +14,6 @@ import Settings from "./settings";
 
 function dashboard() {
   const [counter, setCounter] = useState(0);
-  const [title, setTitle] = useState("Profile");
 
   const router = useRouter();
 
@@ -64,10 +63,9 @@ function dashboard() {
     }
   };
 
-  // else if (x >= 1 && x < Titles.length - 1) {
+  // else if (x >= 1 && x < Pages.length - 1) {
   // setCounter(counter + 1);
   // }
-  console.log(counter);
 
   return (
     <>
@@ -79,7 +77,6 @@ function dashboard() {
         <div className="dashboard_right">
           <TopBar title={Pages[counter].title} />
           {Pages[counter].component}
-          {/* <Profile /> */}
         </div>
       </div>
     </>

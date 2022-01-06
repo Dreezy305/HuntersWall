@@ -108,10 +108,7 @@ function SideBar({ handleClick }) {
             />
             Settings
           </li>
-          <li
-            className="d-flex align-items-center mb-2 py-2"
-            onClick={() => handleClick(7)}
-          >
+          <li className="d-flex align-items-center mb-2 py-2">
             <LogoutIcon
               fill="none"
               marginRight={3}
