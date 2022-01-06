@@ -2,26 +2,28 @@
 @import "./fontFamily.scss";
 
 .sidebar {
-  background: #2081f9;
   padding: 20px;
+  position: fixed;
+
+  h3 {
+    font-family: $typografix;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font36;
+    line-height: $line-height46;
+    color: #ffffff;
+  }
+
   &_top {
-    h3 {
-      font-family: $typografix;
-      font-style: normal;
-      font-weight: normal;
-      font-size: $font36;
-      line-height: $line-height46;
-      color: #ffffff;
-    }
     ul {
       list-style-type: none;
       li {
         font-family: "Lato";
         font-style: normal;
         font-weight: normal;
-        font-size: $font24;
+        font-size: $font20;
         line-height: $line-height29;
-        color: #2081f9;
+        color: #ffffff;
       }
     }
   }
@@ -29,6 +31,14 @@
   &_bottom {
     ul {
       list-style-type: none;
+      li {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font20;
+        line-height: $line-height29;
+        color: #ffffff;
+      }
     }
   }
 }
