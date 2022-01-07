@@ -1,4 +1,5 @@
 import React from "react";
+import PersonalInfo from "../components/personalInfo";
 
 function Profile() {
   return (
@@ -8,7 +9,9 @@ function Profile() {
         <h6 className="tabs ms-5">Bank Account Details</h6>
       </div>
 
-      <div></div>
+      <div className="mt-4">
+        <PersonalInfo />
+      </div>
     </div>
   );
 }
