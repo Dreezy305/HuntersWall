@@ -6,9 +6,11 @@
     flex: 1;
     background: #2081f9;
     position: relative;
+    overflow: hidden;
   }
   &_right {
     flex: 4;
     padding: 10px;
+    overflow: auto;
   }
 }

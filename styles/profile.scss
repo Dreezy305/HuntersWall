@@ -19,6 +19,7 @@
   &_personalInfo {
     font-family: Lato;
     &-names {
+      cursor: pointer;
       label {
         font-family: Lato;
         font-style: normal;
@@ -44,7 +45,6 @@
   background: #f1f7ff;
   border: 1px solid #2081f9;
   box-sizing: border-box;
-  width: 200px;
   height: 56px;
 }
 
