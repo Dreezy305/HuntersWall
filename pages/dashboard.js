@@ -82,6 +82,7 @@ function dashboard() {
 
         <div className="dashboard_right">
           <TopBar title={Pages[counter].title} />
+          <div className="position-sticky"></div>
           {Pages[counter].component}
         </div>
       </div>
