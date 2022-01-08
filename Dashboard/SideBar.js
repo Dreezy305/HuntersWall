@@ -28,21 +28,6 @@ function SideBar({ handleClick }) {
     <div className="sidebar">
       <h3 className="mb-5">HuntersWall</h3>
 
-      {mobile && (
-        <svg
-          width="32"
-          height="21"
-          viewBox="0 0 32 21"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          onClick={() => toggle()}
-        >
-          <rect y="0.120117" width="32" height="4" rx="2" fill="#2081F9" />
-          <rect y="8.44019" width="32" height="4" rx="2" fill="#2081F9" />
-          <rect y="16.76" width="32" height="4" rx="2" fill="#2081F9" />
-        </svg>
-      )}
-
       <div className="sidebar_top mb-5">
         <ul className="list-unstyled">
           <li
