@@ -1,4 +1,6 @@
 /* eslint-disable react/jsx-key */
+/* eslint-disable react/jsx-key */
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import PersonalInfo from "../components/personalInfo";
 import BankAccountDetails from "../components/bankAccountDetails";

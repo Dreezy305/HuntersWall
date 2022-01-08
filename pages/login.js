@@ -39,7 +39,7 @@ function Login() {
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
     if (!EmailRegexp.test(m)) {
-      console.log(!EmailRegexp.test(m));
+      // console.log(!EmailRegexp.test(m));
       setLoading(false);
       return setIsEmailValid(true);
     } else {
@@ -79,7 +79,7 @@ function Login() {
         }
       })
       .catch((error) => {
-        console.log(error, "pp");
+        // console.log(error, "pp");
         return error;
       });
   };

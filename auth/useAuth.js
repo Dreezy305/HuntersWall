@@ -43,7 +43,7 @@ const useAuthProvider = () => {
         Terms_and_Condition,
       });
       setUser(docRef);
-      console.log(docRef);
+      // console.log(docRef);
       return docRef;
     } catch (error) {
       return error;
@@ -53,14 +53,14 @@ const useAuthProvider = () => {
   const getUserDisplayName = async () => {
     const citiesRef = getDoc(collection(db, "users"));
     const snapshot = await citiesRef.where("email", "==", true).get();
-    console.log(snapshot, "pp");
+    // console.log(snapshot, "pp");
     if (snapshot.empty) {
-      console.log("No matching documents.");
+      // console.log("No matching documents.");
       return;
     }
     snapshot.forEach((doc) => {
-      console.log(doc, "pp");
-      console.log(doc.id, "=>", doc.data(), "pp");
+      // console.log(doc, "pp");
+      // console.log(doc.id, "=>", doc.data(), "pp");
     });
     // return db
     //   .collection("users")
@@ -111,7 +111,7 @@ const useAuthProvider = () => {
 
     return await signInWithEmailAndPassword(auth, email, password)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setUser(response.user);
         // getUserDisplayName();
         return response.user;

@@ -46,7 +46,7 @@ function CreateAcc() {
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
     if (!EmailRegexp.test(m)) {
-      console.log(!EmailRegexp.test(m));
+      // console.log(!EmailRegexp.test(m));
       setLoading(false);
       return setIsEmailValid(true);
     } else {
@@ -58,7 +58,7 @@ function CreateAcc() {
     const PasswordRegexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
     if (!PasswordRegexp.test(p)) {
-      console.log(!PasswordRegexp.test(p));
+      // console.log(!PasswordRegexp.test(p));
       setLoading(false);
       return setIsPasswordValid(true);
     } else {
