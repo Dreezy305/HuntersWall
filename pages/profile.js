@@ -1,8 +1,7 @@
 /* eslint-disable react/jsx-key */
-import React from "react";
+import React, { useState } from "react";
 import PersonalInfo from "../components/personalInfo";
 import BankAccountDetails from "../components/bankAccountDetails";
-import { useState } from "react/cjs/react.development";
 import { Tab } from "bootstrap";
 
 function Profile() {
