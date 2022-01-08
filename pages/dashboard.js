@@ -84,6 +84,7 @@ function dashboard() {
   return (
     <>
       <div className="dashboard">
+        {/* <div className="mobileFirst"></div> */}
         <div className="mobile" style={{ background: mobileBg }}>
           <div className="left_text">
             <h3 className="mb-5" style={{ color: mobileColor }}>
@@ -101,7 +102,7 @@ function dashboard() {
                 onClick={() => {
                   toggle();
                   setMobileBg("#2081f9");
-                  // setMobileMenu(true);
+                  setMobileMenu(true);
                   setMobileColor("#ffffff");
                 }}
               >
@@ -125,7 +126,7 @@ function dashboard() {
                 onClick={() => {
                   toggle();
                   setMobileBg("");
-                  // setMobileMenu(false);
+                  setMobileMenu(false);
                   setMobileColor("#2081f9");
                 }}
               >
@@ -150,16 +151,6 @@ function dashboard() {
               </svg>
             )}
           </div>
-          {mobileMenu && (
-            <div className="mt-3">
-              <ul style={{ color: "#fff" }}>
-                <li>hello</li>
-                <li>hello</li>
-                <li>hello</li>
-                <li>hello</li>
-              </ul>
-            </div>
-          )}
         </div>
         <div className="dashboard_left">
           <SideBar handleClick={(t) => handleClick(t)} />

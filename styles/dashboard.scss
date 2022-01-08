@@ -28,6 +28,11 @@
     display: none;
   }
 
+  .mobileFirst {
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+  }
   .mobile {
     display: flex;
     justify-content: space-between;
@@ -37,7 +42,7 @@
     width: 100%;
     margin-top: 0px;
     padding: 10px 25px;
-    // height: 100vh;
+    height: auto;
     z-index: 99;
 
     h3 {
