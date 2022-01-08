@@ -16,10 +16,10 @@ function Profile() {
   return (
     <div className="profile">
       <div className="profile_top d-flex align-items-center justify-content-start">
-        <h6 className="tabs me-5" onClick={() => setToggle(0)}>
+        <h6 className="tabs me-5 h6" onClick={() => setToggle(0)}>
           Personal Information
         </h6>
-        <h6 className="tabs ms-5" onClick={() => setToggle(1)}>
+        <h6 className="tabs ms-5 h6" onClick={() => setToggle(1)}>
           Bank Account Details
         </h6>
       </div>
