@@ -4,10 +4,9 @@
 import React, { useState } from "react";
 import PersonalInfo from "../components/personalInfo";
 import BankAccountDetails from "../components/bankAccountDetails";
-import { Tab } from "bootstrap";
 
 function Profile() {
-  const [tab, setTab] = useState(0);
+  const [tgoggle, setToggle] = useState(0);
 
   const Tabs = [
     { id: 1, component: <PersonalInfo /> },
@@ -17,15 +16,15 @@ function Profile() {
   return (
     <div className="profile">
       <div className="profile_top d-flex align-items-center justify-content-start">
-        <h6 className="tabs me-5" onClick={() => setTab(0)}>
+        <h6 className="tabs me-5" onClick={() => setToggle(0)}>
           Personal Information
         </h6>
-        <h6 className="tabs ms-5" onClick={() => setTab(1)}>
+        <h6 className="tabs ms-5" onClick={() => setToggle(1)}>
           Bank Account Details
         </h6>
       </div>
 
-      <div className="mt-4">{Tabs[tab].component}</div>
+      <div className="mt-4">{Tabs[tgoggle].component}</div>
     </div>
   );
 }
