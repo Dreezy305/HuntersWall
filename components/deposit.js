@@ -9,8 +9,9 @@ function Deposit() {
 
           <div className="row align-items-center">
             <div className="text-start col-lg-12">
-              <div className="p-3 profileNames">
-                <p>Olagbeni</p>
+              <div className="p-3 depositActs ">
+                <span className="pe-3 items ">NGN</span>{" "}
+                <span className="ps-3"></span>
               </div>
             </div>
           </div>
