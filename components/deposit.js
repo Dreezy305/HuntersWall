@@ -3,15 +3,41 @@ import React from "react";
 function Deposit() {
   return (
     <div className="deposit">
-      <div className="card deposit_card w-50">
-        <div className="card-body">
-          <h6 className="mt-3 mb-3">How much do you want to deposit</h6>
+      <div className="card deposit_card">
+        <div className="card-body text-center">
+          <h5 className="mt-2 mb-3">Deposit</h5>
+          <h6 className="mt-3 mb-5">How much do you want to deposit</h6>
 
           <div className="row align-items-center">
-            <div className="text-start col-lg-12">
+            <div className="text-start col-lg-12 px-5">
               <div className="p-3 depositActs ">
                 <span className="pe-3 items ">NGN</span>{" "}
                 <span className="ps-3"></span>
+              </div>
+            </div>
+          </div>
+
+          <div className="row align-items-center mt-5">
+            <div className="text-start col-lg-12 px-5">
+              <div className="d-lg-flex flex-lg-row justify-content-lg-between">
+                <label>
+                  <input
+                    type="radio"
+                    id="oneTime"
+                    name="payment"
+                    className="radio"
+                  />
+                  <span className="ms-2 align-top">One Time</span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    id="recurring"
+                    name="payment"
+                    className="radio"
+                  />
+                  <span className="ms-2 align-top">Recurring</span>
+                </label>
               </div>
             </div>
           </div>
