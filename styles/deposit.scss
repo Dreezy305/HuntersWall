@@ -1,0 +1,14 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
+.deposit {
+  font-family: Lato;
+  &_card {
+    h6 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}

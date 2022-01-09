@@ -36,4 +36,25 @@
       font-weight: bold;
     }
   }
+
+  &_activity {
+    cursor: pointer;
+    font-family: Lato;
+
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wallet {
+    &_card {
+      width: 300px;
+    }
+  }
 }
