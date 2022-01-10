@@ -2,13 +2,24 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 
-import Link from "next/link";
 import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useAuth } from "../auth/useAuth";
 import Layout from "../layouts";
 
 function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
   const [eyeOpen, setEyeOpen] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isPasswordValid, setIsPasswordValid] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [userExist, setUserExist] = useState(false);
+
+  const auth = useAuth();
+  const router = useRouter();
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -17,6 +28,64 @@ function Login() {
   const image = {
     img: "/img/createacc.png",
   };
+
+  const logInData = {
+    email,
+    password,
+  };
+
+  const validateEmail = (m) => {
+    const EmailRegexp =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    if (!EmailRegexp.test(m)) {
+      // console.log(!EmailRegexp.test(m));
+      setLoading(false);
+      return setIsEmailValid(true);
+    } else {
+      return setIsEmailValid(false);
+    }
+  };
+
+  const validatePassword = (p) => {
+    const PasswordRegexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+    if (!PasswordRegexp.test(p)) {
+      // console.log(!PasswordRegexp.test(p), "Pp");
+      setLoading(false);
+      return setIsPasswordValid(true);
+    } else {
+      return setIsPasswordValid(false);
+    }
+  };
+
+  const handleSubmit = async (data = logInData) => {
+    setLoading(true);
+
+    validateEmail(data.email);
+
+    validatePassword(data.password);
+
+    return await auth
+      .signIn(data)
+      .then((response) => {
+        if (!response.error) {
+          setEmail("");
+          setPassword("");
+          setLoading(false);
+          return [response, router.push("/dashboard")];
+        } else if (response.error) {
+          setUserExist(true);
+        }
+      })
+      .catch((error) => {
+        // console.log(error, "pp");
+        return error;
+      });
+  };
+
+  // , router.push("/dashboard")
+
   return (
     <Layout>
       <section className="createAcc">
@@ -34,12 +103,30 @@ function Login() {
 
               <form
                 className="row g-4 py-5 createAcc_form"
-                onSubmit={() => e.preventDefault()}
+                onSubmit={(e) => e.preventDefault()}
               >
+                {userExist && (
+                  <div className="col-md-12 col-sm-6 text-center text-danger fst-italic">
+                    User does not exist, Kindly proceed to create account
+                  </div>
+                )}
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Email</label>
                   <br />
-                  <input type="text" className="px-3 py-3" required />
+                  <input
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="px-3 py-3"
+                    autoComplete="on"
+                    autoFocus
+                    required
+                  />
+                  {isEmailValid && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Please enter a valid email address
+                    </p>
+                  )}
                 </div>
 
                 <div className="col-md-12 col-sm-6 text-start position-relative pass-wrapper">
@@ -47,9 +134,18 @@ function Login() {
                   <br />
                   <input
                     type={passwordShown ? "text" : "password"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="px-3 py-3"
+                    autoComplete="on"
                     required
                   />
+                  {isPasswordValid && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Min 8 characters, at least 1 uppercase letter, 1 lowercase
+                      letter and 1 number
+                    </p>
+                  )}
                   {!eyeOpen ? (
                     <>
                       <svg
@@ -105,8 +201,12 @@ function Login() {
                 </div>
 
                 <div className="col-md-12 col-sm-6 py-1 text-center">
-                  <button type="button" className="px-3 py-3">
-                    Login
+                  <button
+                    type="button"
+                    className="px-3 py-3"
+                    onClick={() => handleSubmit()}
+                  >
+                    {loading ? "Logging In..." : "Login"}
                   </button>
                 </div>
                 <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between py-2">

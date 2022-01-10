@@ -1,12 +1,33 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-duplicate-props */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../layouts";
+import { useAuth } from "../auth/useAuth";
+// import { useValidation } from "../hooks/validation";
+
+// validation hooks
 
 function CreateAcc() {
   const [passwordShown, setPasswordShown] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const [eyeOpen, setEyeOpen] = useState(null);
   const [open, setOpen] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isPasswordValid, setIsPasswordValid] = useState(false);
+  const [checkPass, setCheckPass] = useState(false);
+  const [checkBox, setCheckBox] = useState(false);
+  const [terms, setTerms] = useState(false);
+  const [first, setCheckFirst] = useState(false);
+  const [last, setCheckLast] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const auth = useAuth();
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -19,6 +40,102 @@ function CreateAcc() {
   const image = {
     img: "/img/createacc.png",
   };
+
+  const validateEmail = (m) => {
+    const EmailRegexp =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    if (!EmailRegexp.test(m)) {
+      // console.log(!EmailRegexp.test(m));
+      setLoading(false);
+      return setIsEmailValid(true);
+    } else {
+      return setIsEmailValid(false);
+    }
+  };
+
+  const validatePassword = (p) => {
+    const PasswordRegexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+    if (!PasswordRegexp.test(p)) {
+      // console.log(!PasswordRegexp.test(p));
+      setLoading(false);
+      return setIsPasswordValid(true);
+    } else {
+      return setIsPasswordValid(false);
+    }
+  };
+
+  const matchPass = (pass, confirmPass) => {
+    if (pass !== confirmPass) {
+      setCheckPass(true);
+      setLoading(false);
+    } else {
+      setCheckPass(false);
+    }
+  };
+
+  const checkTermsAndCondition = (c) => {
+    if (c == false) {
+      setTerms(true);
+      setLoading(false);
+    } else {
+      setTerms(false);
+    }
+  };
+
+  const FirstandLast = (f, l) => {
+    if (f == "") {
+      setCheckFirst(true);
+      setLoading(false);
+    } else {
+      setCheckFirst(false);
+    }
+
+    if (l == "") {
+      setCheckLast(true);
+      setLoading(false);
+    } else {
+      setCheckLast(false);
+    }
+  };
+
+  const signUpData = {
+    firstName,
+    lastName,
+    phoneNumber,
+    email,
+    password,
+    confirmPassword,
+    Terms_and_Condition: checkBox,
+  };
+
+  const handleSubmit = async () => {
+    setLoading(true);
+
+    FirstandLast(signUpData.firstName, signUpData.lastName);
+
+    validateEmail(signUpData.email);
+
+    validatePassword(signUpData.password);
+
+    matchPass(signUpData.password, signUpData.confirmPassword);
+
+    checkTermsAndCondition(signUpData.Terms_and_Condition);
+
+    return await auth.signUp(signUpData).then((response) => {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhoneNumber("");
+      setPassword("");
+      setConfirmPassword("");
+      setCheckBox(false);
+      setLoading(false);
+      return response;
+    });
+  };
+
   return (
     <Layout>
       <section className="createAcc">
@@ -36,35 +153,95 @@ function CreateAcc() {
               <p className="mb-4">
                 We have fractionalized alternative assets for you.
               </p>
-              <form className="row g-4 py-5 createAcc_form">
+              <form
+                className="row g-4 py-5 createAcc_form"
+                onSubmit={(e) => e.preventDefault()}
+              >
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">First Name</label>
                   <br />
-                  <input type="text" className="px-3 py-3" required />
+                  <input
+                    type="text"
+                    className="px-3 py-3"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    autoComplete="on"
+                    autoFocus
+                    required
+                  />
+                  {first && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Please enter your first name
+                    </p>
+                  )}
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Last Name</label>
                   <br />
-                  <input type="text" className="px-3 py-3" required />
+                  <input
+                    type="text"
+                    className="px-3 py-3"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    autoComplete="on"
+                    autoFocus
+                    required
+                  />
+                  {last && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Please enter your last name
+                    </p>
+                  )}
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Email</label>
                   <br />
-                  <input type="text" className="px-3 py-3" required />
+                  <input
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="px-3 py-3"
+                    autoComplete="on"
+                    autoFocus
+                    required
+                  />
+                  {isEmailValid && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Please enter a valid email address
+                    </p>
+                  )}
                 </div>
                 <div className="col-md-12 col-sm-6 text-start">
                   <label className="form-label pb-2">Phone Number</label>
                   <br />
-                  <input type="text" className="px-3 py-3" required />
+                  <input
+                    type="text"
+                    className="px-3 py-3"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    autoComplete="on"
+                    autoFocus
+                    required
+                  />
                 </div>
                 <div className="col-md-12 col-sm-6 text-start position-relative">
                   <label className="form-label pb-2">Password</label>
                   <br />
                   <input
                     type={passwordShown ? "text" : "password"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="px-3 py-3"
+                    autoComplete="on"
+                    autoFocus
                     required
                   />
+                  {isPasswordValid && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Min 8 characters, at least 1 uppercase letter, 1 lowercase
+                      letter and 1 number
+                    </p>
+                  )}
                   {!eyeOpen ? (
                     <>
                       <svg
@@ -125,8 +302,17 @@ function CreateAcc() {
                   <input
                     type={confirm ? "text" : "password"}
                     className="px-3 py-3"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    autoComplete="on"
+                    autoFocus
                     required
                   />
+                  {checkPass && (
+                    <p className="error-text text-danger my-2 fst-italic fs-6">
+                      Passwords do not match
+                    </p>
+                  )}
                   {!open ? (
                     <>
                       <svg
@@ -180,20 +366,38 @@ function CreateAcc() {
                     </>
                   )}
                 </div>
-                <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between py-2">
-                  <input type="checkbox" className="" required />
-                  <p>
-                    <span>
-                      By creating an account I have read and agreed to
-                    </span>
-                    <span style={{ cursor: "pointer" }}>
-                      Terms and Conditions
-                    </span>
-                  </p>
+                <div className="py-2">
+                  <div className="col-md-12 col-sm-6 text-start createAcc_terms d-flex flex-row align-items-baseline justify-content-between pb-1 ">
+                    <input
+                      type="checkbox"
+                      value="terms"
+                      onClick={() => setCheckBox(!checkBox)}
+                      className=""
+                      required
+                    />
+                    <p>
+                      <span>
+                        By creating an account I have read and agreed to
+                      </span>
+                      <span style={{ cursor: "pointer" }}>
+                        Terms and Conditions
+                      </span>
+                    </p>
+                  </div>
+                  {terms && (
+                    <p className="error-text text-danger fst-italic fs-6 pt-1">
+                      kindly read the Terms and Conditions
+                    </p>
+                  )}
                 </div>
+
                 <div className="col-md-12 col-sm-6 py-1 text-center">
-                  <button type="button" className="px-3 py-3">
-                    Create account
+                  <button
+                    type="button"
+                    className="px-3 py-3"
+                    onClick={() => handleSubmit()}
+                  >
+                    {loading ? "Creating acount..." : "Create account"}
                   </button>
                 </div>
               </form>

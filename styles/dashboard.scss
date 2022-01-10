@@ -1,0 +1,66 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  // max-height: 100%;
+  position: relative;
+  &_left {
+    flex: 1;
+    background: #2081f9;
+    position: relative;
+    overflow: hidden;
+  }
+  &_right {
+    flex: 4;
+    padding: 10px;
+    overflow: auto;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .dashboard_left {
+    display: none;
+  }
+
+  .mobileFirst {
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+  }
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    margin-top: 0px;
+    padding: 10px 25px;
+    height: auto;
+    z-index: 99;
+
+    h3 {
+      font-family: $typografix;
+      // color: #2081f9;
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+
+  .svg {
+    padding: 0px 10px;
+  }
+
+  .dashboard_right {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}

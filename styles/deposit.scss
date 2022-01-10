@@ -1,0 +1,41 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
+.deposit {
+  font-family: Lato;
+  &_card {
+    width: 600px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    h6 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+.depositActs {
+  background: #f1f7ff;
+  border: 1px solid #2081f9;
+  box-sizing: border-box;
+  height: 56px;
+}
+
+.items {
+  border-right: 1px solid #2081f9;
+}
+
+.radio {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .deposit {
+    &_card {
+      width: 270px;
+    }
+  }
+}

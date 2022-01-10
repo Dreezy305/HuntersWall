@@ -1,0 +1,73 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
+.sidebar {
+  padding: 20px;
+  position: fixed;
+
+  h3 {
+    font-family: $typografix;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font36;
+    line-height: $line-height46;
+    color: #ffffff;
+  }
+
+  &_top {
+    ul {
+      list-style-type: none;
+      li {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font20;
+        line-height: $line-height29;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:hover {
+          background: #ffffff;
+          color: #2081f9;
+          box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
+            20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
+            -10px 0px 0px 10px #ffffff, 26px 0px 0px 10px #ffffff;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &_bottom {
+    ul {
+      list-style-type: none;
+      li {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font20;
+        line-height: $line-height29;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:hover {
+          background: #ffffff;
+          color: #2081f9;
+          box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
+            20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
+            -10px 0px 0px 10px #ffffff, 26px 0px 0px 10px #ffffff;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.icon {
+  color: #2081f9;
+}
+
+@media screen and (max-width: 600px) {
+}

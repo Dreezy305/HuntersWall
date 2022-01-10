@@ -62,7 +62,7 @@
     line-height: 29px;
     color: #000000;
     width: auto;
-    text-align: end;
+    // text-align: end;
   }
   img {
     // transform: matrix(1, 0, 0, -1, 0, 0);
@@ -530,6 +530,108 @@
   // top: 50px;
 }
 
+// DASHBOARD STYLES STARTS HERE
+
+.leftSideBar {
+  background: #2081f9;
+  &_header {
+    span {
+      font-family: $typografix;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 46px;
+      color: #ffffff;
+    }
+  }
+}
+
+_menu {
+  ul {
+    cursor: pointer;
+
+    li {
+      // background-color: #ffffff;
+      // padding: 10px;
+      color: #ffffff;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+
+      img {
+        padding-right: 10px;
+      }
+
+      &:hover {
+        background: #ffffff;
+        color: #2081f9;
+        box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
+          20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
+          -10px 0px 0px 10px #ffffff;
+      }
+    }
+  }
+}
+
+-submenu {
+  ul {
+    li {
+      color: #ffffff;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      cursor: pointer;
+
+      &:hover {
+        background: #ffffff;
+        color: #2081f9;
+        box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
+          20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
+          -10px 0px 0px 10px #ffffff;
+      }
+    }
+  }
+}
+
+.rightSideBar {
+  width: 75vw;
+  background: #ffffff;
+  padding: 20px;
+  min-height: 100vh;
+  &_top {
+    h1 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 43px;
+      color: #2081f9;
+    }
+
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 29px;
+      color: #000000;
+    }
+
+    p {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 10px;
+      color: #000000;
+    }
+  }
+}
+
 /** MOBILE RESPONSIVENESS STYLES FOR SMALL SCREENS */
 @media screen and (max-width: 600px) {
   .home {
@@ -706,6 +808,14 @@
         }
       }
     }
+  }
+
+  // DASHBOARD STYLES
+  .hide {
+    display: none;
+  }
+  .rightSideBar {
+    width: auto;
   }
 }
 
@@ -893,6 +1003,14 @@
   .svg {
     right: 60px !important;
     top: 50px !important;
+  }
+
+  // DASHBOARD STYLES
+  .hide {
+    display: none;
+  }
+  .SideBar {
+    width: auto;
   }
 }
 
