@@ -35,5 +35,3 @@ const storage = getStorage(app);
 // const a = firebase.firestore.Timestamp.now().toDate().toString();
 
 export { app, auth, db, storage };
-
-// console.log(app.name ? "Firebase Mode Activated!" : "Firebase not working :(");
