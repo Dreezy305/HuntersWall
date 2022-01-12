@@ -84,7 +84,7 @@ function dashboard() {
   return (
     <>
       <div className="dashboard">
-        {/* <div className="mobileFirst"></div> */}
+        {/* <div className="" style={{ background: mobileBg }}> */}
         <div className="mobile" style={{ background: mobileBg }}>
           <div className="left_text">
             <h3 className="mb-5" style={{ color: mobileColor }}>
@@ -151,7 +151,18 @@ function dashboard() {
               </svg>
             )}
           </div>
+
+          {mobileMenu && (
+            <>
+              <ul className="list-unstyled">
+                <li>Profile</li>
+                <li>Wallet</li>
+                <li>Loan request</li>
+              </ul>
+            </>
+          )}
         </div>
+
         <div className="dashboard_left">
           <SideBar handleClick={(t) => handleClick(t)} />
         </div>

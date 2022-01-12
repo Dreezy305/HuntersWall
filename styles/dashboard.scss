@@ -29,10 +29,18 @@
   }
 
   .mobileFirst {
-    display: flex;
-    flex-direction: column;
-    z-index: 99;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: baseline;
+    // position: absolute;
+    // top: 0px;
+    // width: 100%;
+    // margin-top: 0px;
+    // padding: 10px 25px;
+    // height: auto;
+    // z-index: 99;
   }
+
   .mobile {
     display: flex;
     justify-content: space-between;
