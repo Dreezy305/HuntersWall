@@ -141,8 +141,8 @@ function Deposit() {
             </div>
           </div>
 
-          <div className="m-auto">
-            <button>Make Payment</button>
+          <div className="m-auto deposit_btn my-3">
+            <button className="px-3 py-3 mt-4">Make Payment</button>
           </div>
         </div>
       </div>
