@@ -78,27 +78,71 @@ function Deposit() {
           </div>
 
           <div className="deposit_paymentMethod mt-4">
-            <h6 className="">Choose a Payment Method</h6>
+            <h6 className="mt-3">Choose a Payment Method</h6>
 
-            <div className="methodContainer my-3 col-lg-8 m-auto px-5 d-flex flex-row justify-content-between py-3">
-              <div className="d-flex justify-content-between px-3">
+            <div className="methodContainer my-4 col-lg-11 m-auto px-5 d-flex flex-row justify-content-between py-3">
+              <div className="d-flex">
                 <input
                   type="radio"
-                  id="oneTime"
-                  name="payment"
-                  className="radio"
-                  value=""
+                  id="credit-card"
+                  name="credit-card"
+                  className="radio me-3"
+                  value="credit-card"
                 />
 
                 <img
                   src={paymentsIcons.creditCard}
                   alt="credit/card"
-                  className="methodContainer_Img"
+                  className="methodContainer_Img ms-3"
                 />
               </div>
 
               <span className="px-3">Credit/Debit Card</span>
             </div>
+
+            <div className="methodContainer my-4 col-lg-11 m-auto px-5 d-flex flex-row justify-content-between py-3">
+              <div className="d-flex">
+                <input
+                  type="radio"
+                  id="bank-acc"
+                  name="bank-acc"
+                  className="radio me-3"
+                  value="bank-acc"
+                />
+
+                <img
+                  src={paymentsIcons.bankAcc}
+                  alt="Bank Acc"
+                  className="methodContainer_Img ms-3"
+                />
+              </div>
+
+              <span className="px-3">Pay with Account</span>
+            </div>
+
+            <div className="methodContainer my-4 col-lg-11 m-auto px-5 d-flex flex-row justify-content-between py-3">
+              <div className="d-flex">
+                <input
+                  type="radio"
+                  id="bank-transfer"
+                  name="bank-transfer"
+                  className="radio me-3"
+                  value="bank-transfer"
+                />
+
+                <img
+                  src={paymentsIcons.bankTransfer}
+                  alt="Bank transfer"
+                  className="methodContainer_Img ms-3"
+                />
+              </div>
+
+              <span className="px-3">Bank Transfer</span>
+            </div>
+          </div>
+
+          <div className="m-auto">
+            <button>Make Payment</button>
           </div>
         </div>
       </div>
