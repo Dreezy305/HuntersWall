@@ -1,6 +1,9 @@
 import React from "react";
 
 function Deposit() {
+  const paymentMethods = () => {
+    return <div className="methodContainer"></div>;
+  };
   return (
     <div className="deposit">
       <div className="card deposit_card">
@@ -40,6 +43,10 @@ function Deposit() {
                 </label>
               </div>
             </div>
+          </div>
+
+          <div className="deposit_paymentMethod">
+            <h6 className="">Choose a Payment Method</h6>
           </div>
         </div>
       </div>
