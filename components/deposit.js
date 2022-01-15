@@ -3,9 +3,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Deposit() {
-  const paymentsIcons = {};
+  const paymentsIcons = {
+    creditCard: "/img/credit-card.svg",
+    bankAcc: "/img/bank-account.svg",
+    bankTransfer: "/img/bank.svg",
+  };
 
-  const paymentMethods = ({ image, alt, methodType = "" }) => {
+  function paymentMethods({ image, alt, methodType }) {
     return (
       <div className="methodContainer my-3 d-flex flex-row justify-content-around">
         <input
@@ -21,12 +25,13 @@ function Deposit() {
         <p className="">{methodType}</p>
       </div>
     );
-  };
+  }
 
   paymentMethods.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string,
     methodType: PropTypes.string,
+    value: PropTypes.string,
   };
 
   return (
@@ -75,7 +80,25 @@ function Deposit() {
           <div className="deposit_paymentMethod mt-4">
             <h6 className="">Choose a Payment Method</h6>
 
-            <paymentMethods methodType="" />
+            <div className="methodContainer my-3 col-lg-12 px-5 d-flex flex-row justify-content-between py-3">
+              <div className="d-flex justify-content-between px-3">
+                <input
+                  type="radio"
+                  id="oneTime"
+                  name="payment"
+                  className="radio"
+                  value=""
+                />
+
+                <img
+                  src={paymentsIcons.creditCard}
+                  alt="credit/card"
+                  className="methodContainer_Img"
+                />
+              </div>
+
+              <span className="px-3">Credit/Debit Card</span>
+            </div>
           </div>
         </div>
       </div>
