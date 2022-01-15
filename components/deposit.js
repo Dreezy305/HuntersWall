@@ -1,7 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Deposit() {
-  const paymentMethods = ({ value = "" }) => {
+  const paymentsIcons = {};
+
+  const paymentMethods = ({ image, alt, methodType = "" }) => {
     return (
       <div className="methodContainer my-3 d-flex flex-row justify-content-around">
         <input
@@ -11,9 +14,20 @@ function Deposit() {
           className="radio"
           value={value}
         />
+
+        <img src={image} alt={alt} className="methodContainer_Img" />
+
+        <p className="">{methodType}</p>
       </div>
     );
   };
+
+  paymentMethods.propTypes = {
+    image: PropTypes.string,
+    alt: PropTypes.string,
+    methodType: PropTypes.string,
+  };
+
   return (
     <div className="deposit">
       <div className="card deposit_card">
@@ -59,6 +73,8 @@ function Deposit() {
 
           <div className="deposit_paymentMethod mt-4">
             <h6 className="">Choose a Payment Method</h6>
+
+            <paymentMethods methodType="" />
           </div>
         </div>
       </div>
