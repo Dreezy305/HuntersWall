@@ -80,7 +80,7 @@ function Deposit() {
           <div className="deposit_paymentMethod mt-4">
             <h6 className="">Choose a Payment Method</h6>
 
-            <div className="methodContainer my-3 col-lg-12 px-5 d-flex flex-row justify-content-between py-3">
+            <div className="methodContainer my-3 col-lg-8 m-auto px-5 d-flex flex-row justify-content-between py-3">
               <div className="d-flex justify-content-between px-3">
                 <input
                   type="radio"
