@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Portfolio() {
-  return <div className="portfolio">Portfolio</div>;
+  const [tgoggle, setToggle] = useState(0);
+
+  return (
+    <div className="profile">
+      <div className="profile_top d-flex align-items-center justify-content-start">
+        <h6 className="tabs me-5 h6" onClick={() => setToggle(0)}>
+          Cash value invested
+        </h6>
+        <h6 className="tabs ms-5 h6" onClick={() => setToggle(1)}>
+          Asset Performance
+        </h6>
+      </div>
+
+      <div className="mt-4">{Tabs[tgoggle].component}</div>
+    </div>
+  );
 }
 
 export default Portfolio;
