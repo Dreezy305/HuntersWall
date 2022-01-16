@@ -4,8 +4,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-// import { useRouter } from "next/router";
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 import { useAuth } from "../auth/useAuth";
 import Layout from "../layouts";
 
@@ -20,8 +19,7 @@ function Login() {
   const [userExist, setUserExist] = useState(false);
 
   const auth = useAuth();
-  // const router = useRouter();
-  const history = useHistory();
+  const router = useRouter();
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -82,7 +80,7 @@ function Login() {
           setLoading(false);
           return [
             response,
-            history.push({ pathname: "/dashboard", query: userObj }),
+            router.push({ pathname: "/dashboard", query: userObj }),
           ];
         } else if (response.error) {
           setUserExist(true);
