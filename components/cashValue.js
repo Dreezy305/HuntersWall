@@ -48,17 +48,24 @@ function CashValue() {
               </tr>
 
               <tr>
-                <td>DIV-098635: N40,000</td>
-                <td>REE-124372: N20,000</td>
-                <td>INN-984272: N90,000</td>
-                <td>COM-090321: N55,000</td>
+                <td>DIV-273860: N20,000</td>
+                <td>REE-198732: N50,000</td>
+                <td>INN-124382: N50,000</td>
+                <td>COM-120942: N60,000</td>
               </tr>
 
               <tr>
-                <td>DIV-098635: N40,000</td>
-                <td>REE-124372: N20,000</td>
-                <td>INN-984272: N90,000</td>
-                <td>COM-090321: N55,000</td>
+                <td>DIV-323417: N80,000</td>
+                <td>REE-287432: N70,000</td>
+                <td>INN-008232: N220,000</td>
+                <td>COM-092213: N20,000</td>
+              </tr>
+
+              <tr>
+                <td>Total: N320,000</td>
+                <td>Total: N330,000 </td>
+                <td>Total: N570,000 </td>
+                <td>Total: N303,000</td>
               </tr>
             </tbody>
           </table>
