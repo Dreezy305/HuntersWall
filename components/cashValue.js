@@ -7,7 +7,16 @@ function CashValue() {
 
       <div className="container">
         <div className="row">
-          <table className="table"></table>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">Diversified Portfolio</th>
+                <th scope="col">Real Estate</th>
+                <th scope="col">Innovation</th>
+                <th scope="col">Commodities</th>
+              </tr>
+            </thead>
+          </table>
         </div>
       </div>
     </div>
