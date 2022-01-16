@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 // import { useLocation } from "react-router-dom";
 import SideBar from "../Dashboard/SideBar";
@@ -21,9 +21,11 @@ function dashboard() {
   const [mobileColor, setMobileColor] = useState("#2081f9");
 
   const router = useRouter();
-  // const location = useLocation();
+  // setFirst(router.query.firstName);
+  // setLast(router.query.lastName);
+  console.log(router.query.firstName, "pp");
 
-  // console.log(location, "pp");
+  // useEffect(() => {}, []);
 
   const Pages = [
     {
@@ -172,7 +174,12 @@ function dashboard() {
         </div>
 
         <div className="dashboard_right">
-          <TopBar title={Pages[counter].title} />
+          <TopBar
+            title={Pages[counter].title}
+            firstName={router.query.firstName}
+            lastName={router.query.lastName}
+            ID={router.query.userId}
+          />
           <div className="position-sticky"></div>
           {Pages[counter].component}
         </div>

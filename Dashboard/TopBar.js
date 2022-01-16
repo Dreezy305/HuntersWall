@@ -1,6 +1,6 @@
 import React from "react";
 
-function TopBar({ title = "", firstName = "", lastName = "" }) {
+function TopBar({ title = "", firstName = "", lastName = "", ID = "" }) {
   return (
     <div className="topbar">
       <div className="topbar_left">
@@ -8,8 +8,10 @@ function TopBar({ title = "", firstName = "", lastName = "" }) {
       </div>
       <div className="topbar_right">
         <h6 className="d-flex flex-column align-items-end">
-          <span>firstname lastname</span>
-          <span>id: number</span>
+          <span>
+            {firstName} {lastName}
+          </span>
+          <span>ID: {ID}</span>
         </h6>
       </div>
     </div>
