@@ -1,2 +1,18 @@
 @import "./variable";
 @import "./fontFamily.scss";
+
+.portfolio {
+  flex: 4;
+  padding: 0px 20px;
+  &_top {
+    cursor: pointer;
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+    }
+  }
+}

@@ -4,8 +4,8 @@ function Portfolio() {
   const [tgoggle, setToggle] = useState(0);
 
   return (
-    <div className="profile">
-      <div className="profile_top d-flex align-items-center justify-content-start">
+    <div className="portfolio">
+      <div className="portfolio_top d-flex align-items-center justify-content-start">
         <h6 className="tabs me-5 h6" onClick={() => setToggle(0)}>
           Cash value invested
         </h6>
@@ -14,7 +14,7 @@ function Portfolio() {
         </h6>
       </div>
 
-      <div className="mt-4">{Tabs[tgoggle].component}</div>
+      {/* <div className="mt-4">{Tabs[tgoggle].component}</div> */}
     </div>
   );
 }
