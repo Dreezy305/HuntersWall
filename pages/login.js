@@ -4,7 +4,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
+import { useHistory } from "react-router-dom";
 import { useAuth } from "../auth/useAuth";
 import Layout from "../layouts";
 
@@ -19,7 +20,8 @@ function Login() {
   const [userExist, setUserExist] = useState(false);
 
   const auth = useAuth();
-  const router = useRouter();
+  // const router = useRouter();
+  const history = useHistory();
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -59,6 +61,11 @@ function Login() {
     }
   };
 
+  const userObj = {
+    firstName: "Ifeoluwa",
+    lastName: "Olagbemi",
+  };
+
   const handleSubmit = async (data = logInData) => {
     setLoading(true);
 
@@ -73,7 +80,10 @@ function Login() {
           setEmail("");
           setPassword("");
           setLoading(false);
-          return [response, router.push("/dashboard")];
+          return [
+            response,
+            history.push({ pathname: "/dashboard", query: userObj }),
+          ];
         } else if (response.error) {
           setUserExist(true);
         }

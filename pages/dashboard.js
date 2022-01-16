@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+// import {}
 import SideBar from "../Dashboard/SideBar";
 import TopBar from "../Dashboard/TopBar";
 import Profile from "./profile";
@@ -20,6 +21,8 @@ function dashboard() {
   const [mobileColor, setMobileColor] = useState("#2081f9");
 
   const router = useRouter();
+
+  console.log(router, "pp");
 
   const Pages = [
     {
