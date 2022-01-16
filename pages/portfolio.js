@@ -1,7 +1,14 @@
 import React, { useState } from "react";
+import CashValue from "../components/cashValue";
+import AssetPerformance from "../components/assetPerformance";
 
 function Portfolio() {
   const [tgoggle, setToggle] = useState(0);
+
+  const Tabs = [
+    { id: 1, component: <CashValue /> },
+    { id: 2, component: <AssetPerformance /> },
+  ];
 
   return (
     <div className="portfolio">
@@ -14,7 +21,7 @@ function Portfolio() {
         </h6>
       </div>
 
-      {/* <div className="mt-4">{Tabs[tgoggle].component}</div> */}
+      <div className="mt-4">{Tabs[tgoggle].component}</div>
     </div>
   );
 }
