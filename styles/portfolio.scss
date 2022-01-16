@@ -26,4 +26,30 @@
     line-height: 29px;
     color: #2081f9;
   }
+
+  &_row {
+    table {
+      thead {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+
+        tr {
+        }
+      }
+
+      tbody {
+        border-top: none !important;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+      }
+    }
+  }
 }

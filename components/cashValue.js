@@ -7,7 +7,7 @@ function CashValue() {
       <h6 className="">Cash value invested per Asset</h6>
 
       <div className="container mt-4">
-        <div className="row">
+        <div className="row cashValue_row">
           <table className="table">
             <thead>
               <tr>
