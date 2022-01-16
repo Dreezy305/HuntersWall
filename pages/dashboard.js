@@ -21,11 +21,6 @@ function dashboard() {
   const [mobileColor, setMobileColor] = useState("#2081f9");
 
   const router = useRouter();
-  // setFirst(router.query.firstName);
-  // setLast(router.query.lastName);
-  console.log(router.query.firstName, "pp");
-
-  // useEffect(() => {}, []);
 
   const Pages = [
     {

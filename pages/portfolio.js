@@ -13,10 +13,18 @@ function Portfolio() {
   return (
     <div className="portfolio">
       <div className="portfolio_top d-flex align-items-center justify-content-start">
-        <h6 className="tabs me-5 mb-2 h6" onClick={() => setToggle(0)}>
+        <h6
+          className="tabs me-5 mb-2 h6"
+          onClick={() => setToggle(0)}
+          tabIndex="1"
+        >
           Cash value invested
         </h6>
-        <h6 className="tabs ms-5 mb-2 h6" onClick={() => setToggle(1)}>
+        <h6
+          className="tabs ms-5 mb-2 h6"
+          onClick={() => setToggle(1)}
+          tabIndex="1"
+        >
           Asset Performance
         </h6>
       </div>
