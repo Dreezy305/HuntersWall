@@ -1,7 +1,7 @@
 import React from "react";
 
 function LoanRequest() {
-  return <div>loan request</div>;
+  return <div className="loan">loan request</div>;
 }
 
 export default LoanRequest;
