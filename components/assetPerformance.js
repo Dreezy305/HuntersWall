@@ -167,7 +167,7 @@ function AssetPerformance() {
         {/* STAT 2 */}
         <div className="d-flex flex-row justify-content-start my-4">
           <div
-            className="card c2"
+            className="card c2 me-5"
             style={{ background: "#FFFFFF", borderRadius: "0px !important" }}
           >
             <div className="card-body">
@@ -183,7 +183,7 @@ function AssetPerformance() {
           </div>
 
           <div
-            className="card c2"
+            className="card c3"
             style={{ background: "#FFFFFF", borderRadius: "0px !important" }}
           >
             <div className="card-body">
