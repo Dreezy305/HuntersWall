@@ -87,7 +87,11 @@ function AssetPerformance() {
           <div className="card ms-4">
             <div className="card-body">
               <div className="d-flex flex-column">
-                <div className="assetListContainer"></div>
+                <div className="assetListContainer w-25">
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
               </div>
             </div>
           </div>
