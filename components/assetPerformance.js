@@ -52,7 +52,7 @@ function AssetPerformance() {
                 <div className="d-flex flex-column mt-3 me-5">
                   <div className="iconBox1 mb-3 m-auto" />
                   <div className="d-flex flex-column text-justify">
-                    <ul className="list-unstyled text-center">
+                    <ul className="list-unstyled text-center assetList mt-3">
                       <li className="my-2">N500,000</li>
                       <li className="my-2">Asset Initial Value</li>
                     </ul>
@@ -63,7 +63,7 @@ function AssetPerformance() {
                 <div className="d-flex flex-column mt-3 me-5">
                   <div className="iconBox2 mb-3 m-auto" />
                   <div className="d-flex flex-column text-justify">
-                    <ul className="list-unstyled text-center">
+                    <ul className="list-unstyled text-center assetList mt-3">
                       <li className="my-2">N500,000</li>
                       <li className="my-2">Asset’s Position</li>
                     </ul>
@@ -74,7 +74,7 @@ function AssetPerformance() {
                 <div className="d-flex flex-column mt-3">
                   <div className="iconBox1 mb-3 m-auto" />
                   <div className="d-flex flex-column text-justify">
-                    <ul className="list-unstyled text-center">
+                    <ul className="list-unstyled text-center assetList mt-3">
                       <li className="my-2">N500,000</li>
                       <li className="my-2">Asset Initial Value</li>
                     </ul>

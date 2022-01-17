@@ -150,3 +150,24 @@
   background: #75b1fb;
   border-radius: 10px;
 }
+
+.assetList {
+  li {
+    &:nth-child(1) {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      color: #000000;
+    }
+    &:nth-child(2) {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 15px;
+      color: #000000;
+    }
+  }
+}
