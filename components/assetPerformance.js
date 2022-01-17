@@ -114,7 +114,9 @@ function AssetPerformance() {
 
         <div className="card w-25">
           <div className="card-body">
-            <div className=""></div>
+            <div className="iconBox3 mb-3" />
+
+            <ul className="list-unstyled text-center"></ul>
           </div>
         </div>
       </div>
