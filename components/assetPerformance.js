@@ -40,7 +40,29 @@ function AssetPerformance() {
 
       {/* ASSET SUMMARY */}
       <div className="assetPerform_summary mt-2">
-        <h6>Asset Summary: DIV-076489</h6>
+        <h6 className="mb-3">Asset Summary: DIV-076489</h6>
+
+        <div className="mt-3 d-flex flex-row justify-content-start">
+          {/* set 2 */}
+          <div className="card me-4">
+            <div className="card-body">
+              <div className="d-flex flex-row justify-content-evenly">
+                <div className="d-flex flex-column">
+                  <div className="icon" />
+                  <div className="d-flex flex-column">
+                    <h6>N500,000</h6>
+                    <p>Asset Initial Value</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* set 3 */}
+          <div className="card ms-4">
+            <div className="card-body"></div>
+          </div>
+        </div>
       </div>
     </div>
   );
