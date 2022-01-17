@@ -87,6 +87,23 @@
       color: #ffffff;
     }
   }
+
+  &_card2 {
+    width: 400px;
+
+    h6 {
+    }
+  }
+}
+
+.iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #75b1fb;
+  background-image: url(../public/img/buffer.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .set {
