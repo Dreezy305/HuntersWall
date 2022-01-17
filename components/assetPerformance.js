@@ -46,7 +46,7 @@ function AssetPerformance() {
 
         <div className="mt-3 d-flex flex-row justify-content-start">
           {/* set 2 */}
-          <div className="card me-4">
+          <div className="card me-4 c1">
             <div className="card-body">
               <div className="d-flex flex-row justify-content-evenly">
                 {/* SET 3 */}
@@ -107,6 +107,7 @@ function AssetPerformance() {
       </div>
 
       {/* STATISTICS */}
+      <div className="assetPerform_stat"></div>
     </div>
   );
 }
