@@ -92,13 +92,19 @@
     width: 400px;
 
     h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 25px;
+      color: #000000;
     }
   }
 }
 
 .iconBox {
-  width: 56px;
-  height: 56px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: #75b1fb;
   background-image: url(../public/img/buffer.svg);

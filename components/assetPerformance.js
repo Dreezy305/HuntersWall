@@ -28,7 +28,7 @@ function AssetPerformance() {
         {/* CARD 2 */}
         <div className="card assetPerform_card2">
           <div className="card-body">
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between align-items-center">
               <h6>Asset Description:</h6>
               <div className="d-flex iconBox">
                 {/* <img src={assets.buffer} alt="buffer" className="" /> */}
