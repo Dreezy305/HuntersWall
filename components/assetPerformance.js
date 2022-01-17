@@ -181,6 +181,22 @@ function AssetPerformance() {
               </div>
             </div>
           </div>
+
+          <div
+            className="card c2"
+            style={{ background: "#FFFFFF", borderRadius: "0px !important" }}
+          >
+            <div className="card-body">
+              <div className="d-flex flex-column">
+                <div className="iconBox6 mb-3 align-self-end" />
+
+                <ul className="list-unstyled text-center assetStatList mt-3">
+                  <li className="mt-2">509 days</li>
+                  <li className="mt-3">Days Remaining</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
