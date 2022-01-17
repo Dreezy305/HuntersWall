@@ -107,7 +107,17 @@ function AssetPerformance() {
       </div>
 
       {/* STATISTICS */}
-      <div className="assetPerform_stat"></div>
+      <div className="assetPerform_stat mt-4">
+        <h6 className="mb-3 assetStat">Asset Summary: DIV-076489</h6>
+
+        <div className="d-flex flex-row justify-content-between"></div>
+
+        <div className="card w-25">
+          <div className="card-body">
+            <div className=""></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
