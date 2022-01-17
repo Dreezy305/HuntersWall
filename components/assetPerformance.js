@@ -114,9 +114,14 @@ function AssetPerformance() {
 
         <div className="card w-25">
           <div className="card-body">
-            <div className="iconBox3 mb-3" />
+            <div className="d-flex flex-column">
+              <div className="iconBox3 mb-3 align-self-end" />
 
-            <ul className="list-unstyled text-center"></ul>
+              <ul className="list-unstyled text-center">
+                <li> N720,000</li>
+                <li>Current Value</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
