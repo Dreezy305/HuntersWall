@@ -6,6 +6,27 @@ function AssetPerformance() {
     buffer: "/img/buffer.svg",
   };
 
+  const series = [44, 55, 41, 17, 15];
+
+  const options = {
+    chart: {
+      type: "donut",
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  };
+
   return (
     <div className="assetPerform">
       <div className="d-flex flex-row justify-content-start mb-4">
@@ -85,14 +106,18 @@ function AssetPerformance() {
           </div>
 
           {/* set 3 */}
-          <div className="card ms-4">
+          <div className="card ms-4 assetPerform_card3">
             <div className="card-body">
-              <div className="d-flex flex-column">
-                <div className="assetListContainer w-50">
-                  <p className="d-flex flex-column">
-                    1unit (BNB), 0.5unit (SOL), 0.2unit (Tesla)
+              <div className="d-flex flex-column my-3">
+                <div className="assetListContainer w-75 m-auto">
+                  <p className="d-flex flex-column px-3">
+                    <span className="py-2">1unit (BNB),</span>{" "}
+                    <span className="py-2">0.5unit (SOL),</span>{" "}
+                    <span className="py-2">0.2unit (Tesla)</span>
                   </p>
                 </div>
+
+                <span className="my-3 text-center">Asset Content</span>
               </div>
             </div>
           </div>
