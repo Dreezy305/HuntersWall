@@ -110,7 +110,7 @@ function AssetPerformance() {
       <div className="assetPerform_stat mt-4">
         <h6 className="mb-3 assetStat">Asset Summary: DIV-076489</h6>
 
-        <div className="d-flex flex-row justify-content-between">
+        <div className="d-flex flex-row justify-content-start">
           {/* ROW 1 */}
           <div
             className="card me-5 c2"
@@ -122,7 +122,7 @@ function AssetPerformance() {
 
                 <ul className="list-unstyled text-center assetStatList mt-3">
                   <li className="mt-2"> N720,000</li>
-                  <li>Current Value</li>
+                  <li className="mt-3">Current Value</li>
                 </ul>
               </div>
             </div>
@@ -139,7 +139,7 @@ function AssetPerformance() {
 
                 <ul className="list-unstyled text-center assetStatList mt-3">
                   <li className="mt-2"> N980,000</li>
-                  <li>Till date (Highest)</li>
+                  <li className="mt-3">Till date (Highest)</li>
                 </ul>
               </div>
             </div>
@@ -156,7 +156,7 @@ function AssetPerformance() {
 
                 <ul className="list-unstyled text-center assetStatList mt-3">
                   <li className="mt-2">N620,000</li>
-                  <li>Till date (Lowest)</li>
+                  <li className="mt-3">Till date (Lowest)</li>
                 </ul>
               </div>
             </div>
