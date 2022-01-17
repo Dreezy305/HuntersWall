@@ -47,11 +47,36 @@ function AssetPerformance() {
           <div className="card me-4">
             <div className="card-body">
               <div className="d-flex flex-row justify-content-evenly">
-                <div className="d-flex flex-column">
-                  <div className="icon" />
-                  <div className="d-flex flex-column">
-                    <h6>N500,000</h6>
-                    <p>Asset Initial Value</p>
+                {/* SET 3 */}
+                <div className="d-flex flex-column mt-3 me-4">
+                  <div className="iconBox1 mb-3 m-auto" />
+                  <div className="d-flex flex-column text-justify">
+                    <ul className="list-unstyled text-center">
+                      <li className="my-2">N500,000</li>
+                      <li className="my-2">Asset Initial Value</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* SET 4 */}
+                <div className="d-flex flex-column mt-3 me-4">
+                  <div className="iconBox1 mb-3 m-auto" />
+                  <div className="d-flex flex-column text-justify">
+                    <ul className="list-unstyled text-center">
+                      <li className="my-2">N500,000</li>
+                      <li className="my-2">Asset Initial Value</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* SET 5 */}
+                <div className="d-flex flex-column mt-3">
+                  <div className="iconBox1 mb-3 m-auto" />
+                  <div className="d-flex flex-column text-justify">
+                    <ul className="list-unstyled text-center">
+                      <li className="my-2">N500,000</li>
+                      <li className="my-2">Asset Initial Value</li>
+                    </ul>
                   </div>
                 </div>
               </div>

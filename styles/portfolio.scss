@@ -113,6 +113,16 @@
   background-position-y: 10px;
 }
 
+.iconBox1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #da73eb;
+  background-image: url(../public/img/NAIRA.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .set {
   &_1 {
     width: 110px;
