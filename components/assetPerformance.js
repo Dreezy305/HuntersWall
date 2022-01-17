@@ -117,8 +117,8 @@ function AssetPerformance() {
             <div className="d-flex flex-column">
               <div className="iconBox3 mb-3 align-self-end" />
 
-              <ul className="list-unstyled text-center">
-                <li> N720,000</li>
+              <ul className="list-unstyled text-center assetStatList mt-3">
+                <li className="mt-2"> N720,000</li>
                 <li>Current Value</li>
               </ul>
             </div>
