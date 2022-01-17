@@ -148,6 +148,26 @@
   background-position: center;
 }
 
+.iconBox4 {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #94f984;
+  background-image: url(../public/img/arrow-up-right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconBox5 {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ff8e8e;
+  background-image: url(../public/img/arrow-down-left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .set {
   &_1 {
     width: 110px;

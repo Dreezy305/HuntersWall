@@ -135,7 +135,7 @@ function AssetPerformance() {
           >
             <div className="card-body">
               <div className="d-flex flex-column">
-                <div className="iconBox3 mb-3 align-self-end" />
+                <div className="iconBox4 mb-3 align-self-end" />
 
                 <ul className="list-unstyled text-center assetStatList mt-3">
                   <li className="mt-2"> N980,000</li>
@@ -152,7 +152,7 @@ function AssetPerformance() {
           >
             <div className="card-body">
               <div className="d-flex flex-column">
-                <div className="iconBox3 mb-3 align-self-end" />
+                <div className="iconBox5 mb-3 align-self-end" />
 
                 <ul className="list-unstyled text-center assetStatList mt-3">
                   <li className="mt-2">N620,000</li>
