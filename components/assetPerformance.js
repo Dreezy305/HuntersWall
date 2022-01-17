@@ -7,7 +7,7 @@ function AssetPerformance() {
 
   return (
     <div className="assetPerform">
-      <div className="d-flex flex-row justify-content-start">
+      <div className="d-flex flex-row justify-content-start mb-4">
         {/* CARD 1 */}
         <div className="card assetPerform_card me-4" style={{}}>
           <div className="card-body">
@@ -39,7 +39,9 @@ function AssetPerformance() {
       </div>
 
       {/* ASSET SUMMARY */}
-      <div className="assetPerform_summary"></div>
+      <div className="assetPerform_summary mt-2">
+        <h6>Asset Summary: DIV-076489</h6>
+      </div>
     </div>
   );
 }
