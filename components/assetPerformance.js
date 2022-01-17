@@ -110,7 +110,8 @@ function AssetPerformance() {
       <div className="assetPerform_stat mt-4">
         <h6 className="mb-3 assetStat">Asset Summary: DIV-076489</h6>
 
-        <div className="d-flex flex-row justify-content-start">
+        {/* STAT 1 */}
+        <div className="d-flex flex-row justify-content-start my-3">
           {/* ROW 1 */}
           <div
             className="card me-5 c2"
@@ -160,6 +161,13 @@ function AssetPerformance() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* STAT 2 */}
+        <div className="d-flex flex-row justify-content-start my-4">
+          <div className="card">
+            <div className="card-body"></div>
           </div>
         </div>
       </div>
