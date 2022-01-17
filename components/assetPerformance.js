@@ -138,8 +138,8 @@ function AssetPerformance() {
                 <div className="iconBox3 mb-3 align-self-end" />
 
                 <ul className="list-unstyled text-center assetStatList mt-3">
-                  <li className="mt-2"> N720,000</li>
-                  <li>Current Value</li>
+                  <li className="mt-2"> N980,000</li>
+                  <li>Till date (Highest)</li>
                 </ul>
               </div>
             </div>
@@ -155,8 +155,8 @@ function AssetPerformance() {
                 <div className="iconBox3 mb-3 align-self-end" />
 
                 <ul className="list-unstyled text-center assetStatList mt-3">
-                  <li className="mt-2"> N720,000</li>
-                  <li>Current Value</li>
+                  <li className="mt-2">N620,000</li>
+                  <li>Till date (Lowest)</li>
                 </ul>
               </div>
             </div>
