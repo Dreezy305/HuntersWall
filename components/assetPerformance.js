@@ -1,6 +1,10 @@
 import React from "react";
 
 function AssetPerformance() {
+  const assets = {
+    buffer: "/img/buffer.svg",
+  };
+
   return (
     <div className="assetPerform">
       <div className="d-flex flex-row justify-content-between">
@@ -23,7 +27,12 @@ function AssetPerformance() {
 
         {/* CARD 2 */}
         <div className="card">
-          <div className="card-body"></div>
+          <div className="card-body">
+            <div className="d-flex justify-content-between">
+              <h6></h6>
+              <img />
+            </div>
+          </div>
         </div>
       </div>
     </div>
