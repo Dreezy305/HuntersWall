@@ -1,30 +1,9 @@
 import React from "react";
-import ApexCharts from "apexcharts";
+// import ApexCharts from "apexcharts";
 
 function AssetPerformance() {
   const assets = {
     buffer: "/img/buffer.svg",
-  };
-
-  const series = [44, 55, 41, 17, 15];
-
-  const options = {
-    chart: {
-      type: "donut",
-    },
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 200,
-          },
-          legend: {
-            position: "bottom",
-          },
-        },
-      },
-    ],
   };
 
   return (
