@@ -37,6 +37,9 @@ function AssetPerformance() {
           </div>
         </div>
       </div>
+
+      {/* ASSET SUMMARY */}
+      <div className="assetPerform_summary"></div>
     </div>
   );
 }
