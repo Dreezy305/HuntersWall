@@ -85,7 +85,11 @@ function AssetPerformance() {
 
           {/* set 3 */}
           <div className="card ms-4">
-            <div className="card-body"></div>
+            <div className="card-body">
+              <div className="d-flex flex-column">
+                <div className=""></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
