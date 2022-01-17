@@ -1,4 +1,5 @@
 import React from "react";
+import ApexCharts from "apexcharts";
 
 function AssetPerformance() {
   const assets = {
@@ -87,10 +88,10 @@ function AssetPerformance() {
           <div className="card ms-4">
             <div className="card-body">
               <div className="d-flex flex-column">
-                <div className="assetListContainer w-25">
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                <div className="assetListContainer w-50">
+                  <p className="d-flex flex-column">
+                    1unit (BNB), 0.5unit (SOL), 0.2unit (Tesla)
+                  </p>
                 </div>
               </div>
             </div>
