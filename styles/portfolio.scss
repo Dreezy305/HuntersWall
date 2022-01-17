@@ -149,6 +149,24 @@
 .assetListContainer {
   background: #75b1fb;
   border-radius: 10px;
+
+  &_p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+
+  &_span {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+  }
 }
 
 .assetList {

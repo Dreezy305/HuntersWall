@@ -88,15 +88,17 @@ function AssetPerformance() {
           <div className="card ms-4 assetPerform_card3">
             <div className="card-body">
               <div className="d-flex flex-column my-3">
-                <div className="assetListContainer w-75 m-auto">
-                  <p className="d-flex flex-column px-3">
+                <div className="assetListContainer w-75 m-auto mb-2">
+                  <p className="d-flex flex-column px-3 assetListContainer_p py-2">
                     <span className="py-2">1unit (BNB),</span>{" "}
                     <span className="py-2">0.5unit (SOL),</span>{" "}
                     <span className="py-2">0.2unit (Tesla)</span>
                   </p>
                 </div>
 
-                <span className="my-3 text-center">Asset Content</span>
+                <span className="my-3 text-center assetListContainer_span mt-3">
+                  Asset Content
+                </span>
               </div>
             </div>
           </div>
