@@ -3,15 +3,15 @@ import CashValue from "../components/cashValue";
 import AssetPerformance from "../components/assetPerformance";
 
 function Portfolio() {
-  const [tgoggle, setToggle] = useState(0);
+  const [toggle, setToggle] = useState(0);
 
   const Tabs = [
-    { id: 1, component: <CashValue /> },
-    { id: 2, component: <AssetPerformance /> },
+    { id: 1, component: <CashValue />, bg: "#fff" },
+    { id: 2, component: <AssetPerformance />, bg: "#f1f7ff" },
   ];
 
   return (
-    <div className="portfolio">
+    <div className="portfolio" style={{}}>
       <div className="portfolio_top d-flex align-items-center justify-content-start">
         <h6
           className="tabs me-5 mb-2 h6"
@@ -29,7 +29,7 @@ function Portfolio() {
         </h6>
       </div>
 
-      <div className="mt-4">{Tabs[tgoggle].component}</div>
+      <div className="mt-4">{Tabs[toggle].component}</div>
     </div>
   );
 }

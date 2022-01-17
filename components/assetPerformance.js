@@ -7,9 +7,9 @@ function AssetPerformance() {
 
   return (
     <div className="assetPerform">
-      <div className="d-flex flex-row justify-content-between">
+      <div className="d-flex flex-row justify-content-start">
         {/* CARD 1 */}
-        <div className="card assetPerform_card" style={{}}>
+        <div className="card assetPerform_card me-4" style={{}}>
           <div className="card-body">
             <h5 className="mb-4">Asset code: DIV-076489</h5>
 
@@ -26,7 +26,7 @@ function AssetPerformance() {
         </div>
 
         {/* CARD 2 */}
-        <div className="card assetPerform_card2">
+        <div className="card assetPerform_card2 ms-4">
           <div className="card-body">
             <div className="d-flex justify-content-between align-items-center">
               <h6>Asset Description:</h6>
