@@ -110,17 +110,55 @@ function AssetPerformance() {
       <div className="assetPerform_stat mt-4">
         <h6 className="mb-3 assetStat">Asset Summary: DIV-076489</h6>
 
-        <div className="d-flex flex-row justify-content-between"></div>
+        <div className="d-flex flex-row justify-content-between">
+          {/* ROW 1 */}
+          <div
+            className="card me-5 c2"
+            style={{ background: "#FFFFFF", borderRadius: "0px !important" }}
+          >
+            <div className="card-body">
+              <div className="d-flex flex-column">
+                <div className="iconBox3 mb-3 align-self-end" />
 
-        <div className="card w-25">
-          <div className="card-body">
-            <div className="d-flex flex-column">
-              <div className="iconBox3 mb-3 align-self-end" />
+                <ul className="list-unstyled text-center assetStatList mt-3">
+                  <li className="mt-2"> N720,000</li>
+                  <li>Current Value</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-              <ul className="list-unstyled text-center assetStatList mt-3">
-                <li className="mt-2"> N720,000</li>
-                <li>Current Value</li>
-              </ul>
+          {/* ROW 2 */}
+          <div
+            className="card me-5 c2"
+            style={{ background: "#FFFFFF", borderRadius: "0px !important" }}
+          >
+            <div className="card-body">
+              <div className="d-flex flex-column">
+                <div className="iconBox3 mb-3 align-self-end" />
+
+                <ul className="list-unstyled text-center assetStatList mt-3">
+                  <li className="mt-2"> N720,000</li>
+                  <li>Current Value</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* ROW 3 */}
+          <div
+            className="card c2"
+            style={{ background: "#FFFFFF", borderRadius: "0px !important" }}
+          >
+            <div className="card-body">
+              <div className="d-flex flex-column">
+                <div className="iconBox3 mb-3 align-self-end" />
+
+                <ul className="list-unstyled text-center assetStatList mt-3">
+                  <li className="mt-2"> N720,000</li>
+                  <li>Current Value</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
