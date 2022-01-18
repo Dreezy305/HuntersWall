@@ -35,7 +35,10 @@ function LoanRequest() {
               <span className="pe-3 items ">NGN</span>{" "}
               <span className="ps-3"></span>
             </div> */}
-            <select className="loan_select w-100" placeholder="Select an asset">
+            <select
+              className="loan_select w-100 px-3"
+              placeholder="Select an asset"
+            >
               <option value="" disabled selected hidden>
                 Select asset code (active asset code)
               </option>
