@@ -16,7 +16,7 @@ function LoanRequest() {
       <div className="w-75 loan_container text-center">
         <h6 className="py-3">Request for loan</h6>
 
-        <div className="row my-3 align-items-center justify-content-center mb-3">
+        <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
             <label className="form-label pb-2">Amount</label>
             <br />
@@ -27,7 +27,7 @@ function LoanRequest() {
           </div>
         </div>
 
-        <div className="row my-3 align-items-center justify-content-center mb-3">
+        <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
             <label className="form-label pb-2">Collateral</label>
             <br />
