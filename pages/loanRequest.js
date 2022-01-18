@@ -16,6 +16,7 @@ function LoanRequest() {
       <div className="w-75 loan_container text-center">
         <h6 className="py-3">Request for loan</h6>
 
+        {/* AMOUNT */}
         <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
             <label className="form-label pb-2">Amount</label>
@@ -27,6 +28,7 @@ function LoanRequest() {
           </div>
         </div>
 
+        {/* COLLATERAL */}
         <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
             <label className="form-label pb-2">Collateral</label>
@@ -43,6 +45,40 @@ function LoanRequest() {
               <option value="inn">Innovation</option>
               <option value="div">Diversified Portfolio</option>
             </select>
+          </div>
+        </div>
+
+        {/* BANK NAME */}
+        <div className="row my-4 align-items-center justify-content-center mb-3">
+          <div className="text-start col-lg-8">
+            <label className="form-label pb-2">Bank Name</label>
+            <br />
+
+            <input
+              className="w-100 px-3 loan_input"
+              type="text"
+              value=""
+              autoComplete="on"
+              autoFocus
+              required
+            />
+          </div>
+        </div>
+
+        {/* ACCOUNT NUMBER */}
+        <div className="row my-4 align-items-center justify-content-center mb-3">
+          <div className="text-start col-lg-8">
+            <label className="form-label pb-2">Account Number</label>
+            <br />
+
+            <input
+              className="w-100 px-3 loan_input"
+              type="text"
+              value=""
+              autoComplete="on"
+              autoFocus
+              required
+            />
           </div>
         </div>
       </div>

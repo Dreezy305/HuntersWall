@@ -59,6 +59,15 @@
       color: rgba(18, 18, 18, 0.6);
     }
   }
+
+  &_input {
+    background: #ffffff;
+    border: 1px solid #2081f9;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    height: 56px;
+  }
 }
 
 .loanCurrency {
