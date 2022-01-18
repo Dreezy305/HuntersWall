@@ -55,7 +55,18 @@ function TransactionHistory() {
               </tr>
 
               <tr>
-                <td className="py-3">09/10/2021</td>
+                <td className="py-3">10/10/2021</td>
+                <td className="py-3">4:45pm</td>
+                <td className="py-3">Loan request</td>
+                <td className="py-3">
+                  <span className="failure">Failure</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N70, 000 </td>
+              </tr>
+
+              <tr>
+                <td className="py-3">11/10/2021</td>
                 <td className="py-3">2:01am</td>
                 <td className="py-3">Loan request</td>
                 <td className="py-3">
@@ -66,25 +77,14 @@ function TransactionHistory() {
               </tr>
 
               <tr>
-                <td className="py-3">09/10/2021</td>
-                <td className="py-3">2:01am</td>
+                <td className="py-3">11/10/2021</td>
+                <td className="py-3">3:01am</td>
                 <td className="py-3">Loan request</td>
                 <td className="py-3">
                   <span className="success">Success</span>
                 </td>
-                <td className="py-3">Loan</td>
-                <td className="py-3">N50, 000 </td>
-              </tr>
-
-              <tr>
-                <td className="py-3">09/10/2021</td>
-                <td className="py-3">2:01am</td>
-                <td className="py-3">Loan request</td>
-                <td className="py-3">
-                  <span className="success">Success</span>
-                </td>
-                <td className="py-3">Loan</td>
-                <td className="py-3">N50, 000 </td>
+                <td className="py-3">REE-34567</td>
+                <td className="py-3">N80, 000 </td>
               </tr>
 
               <tr>
