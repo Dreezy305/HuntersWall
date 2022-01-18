@@ -13,9 +13,9 @@ function LoanRequest() {
         </span>
       </p>
 
-      <div className="row align-items-center profile_personalInfo-names mb-3">
+      <div className="row align-items-center mb-3">
         <div className="text-start col-lg-6">
-          <label className="form-label pb-2">User Id</label>
+          <label className="form-label pb-2">Amount</label>
           <br />
           <div className="p-3 profileNames">
             <p>Hun023475</p>
