@@ -98,6 +98,13 @@ function LoanRequest() {
             />
           </div>
         </div>
+
+        {/* APPLY */}
+        <div className="row my-4 align-items-center justify-content-center mb-3">
+          <div className="text-start col-lg-8">
+            <button className="loan_btn"></button>
+          </div>
+        </div>
       </div>
     </div>
   );
