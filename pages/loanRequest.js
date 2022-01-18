@@ -81,6 +81,23 @@ function LoanRequest() {
             />
           </div>
         </div>
+
+        {/* ACCOUNT NAME */}
+        <div className="row my-4 align-items-center justify-content-center mb-3">
+          <div className="text-start col-lg-8">
+            <label className="form-label pb-2">Account Name</label>
+            <br />
+
+            <input
+              className="w-100 px-3 loan_input"
+              type="text"
+              value=""
+              autoComplete="on"
+              autoFocus
+              required
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
