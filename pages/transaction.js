@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 function TransactionHistory() {
@@ -9,68 +10,114 @@ function TransactionHistory() {
             <thead>
               <tr>
                 <th scope="col" className="py-3">
-                  Diversified Portfolio
+                  <span className="me-1">Date</span>{" "}
+                  <span>
+                    <img src="/img/down3.svg" className="ms-1" alt="filter" />
+                  </span>
                 </th>
                 <th scope="col" className="py-3">
-                  Real Estate
+                  <span>Time</span>
                 </th>
                 <th scope="col" className="py-3">
-                  Innovation
+                  <span className="me-1">Transaction Type</span>{" "}
+                  <span>
+                    <img src="/img/down3.svg" className="ms-1" alt="filter" />
+                  </span>
                 </th>
                 <th scope="col" className="py-3">
-                  Commodities
+                  <span className="me-1">Status</span>{" "}
+                  <span>
+                    <img src="/img/down3.svg" className="ms-1" alt="filter" />
+                  </span>
+                </th>
+                <th scope="col" className="py-3">
+                  <span className="me-1">Description</span>{" "}
+                  <span>
+                    <img src="/img/down3.svg" className="ms-1" alt="filter" />
+                  </span>
+                </th>
+                <th scope="col" className="py-3">
+                  <span>Amount</span>
                 </th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td className="py-3">DIV-076489: N50,000</td>
-                <td className="py-3">REE-890352: N40,000</td>
-                <td className="py-3">INN-087543: N120,000</td>
-                <td className="py-3">COM-896369: N43,000</td>
+                <td className="py-3">09/10/2021</td>
+                <td className="py-3">2:01am</td>
+                <td className="py-3">Loan request</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N50, 000 </td>
               </tr>
 
               <tr>
-                <td className="py-3">DIV-635423: N30,000</td>
-                <td className="py-3">REE-056003: N90,000</td>
-                <td className="py-3">INN-789232: N40,000</td>
-                <td className="py-3">COM-109321: N93,000</td>
+                <td className="py-3">09/10/2021</td>
+                <td className="py-3">2:01am</td>
+                <td className="py-3">Loan request</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N50, 000 </td>
               </tr>
 
               <tr>
-                <td className="py-3">DIV-157653: N100,000</td>
-                <td className="py-3">REE-763908: N60,000</td>
-                <td className="py-3">INN-321423: N50,000</td>
-                <td className="py-3">COM-309321: N32,000</td>
+                <td className="py-3">09/10/2021</td>
+                <td className="py-3">2:01am</td>
+                <td className="py-3">Loan request</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N50, 000 </td>
               </tr>
 
               <tr>
-                <td className="py-3">DIV-098635: N40,000</td>
-                <td className="py-3">REE-124372: N20,000</td>
-                <td className="py-3">INN-984272: N90,000</td>
-                <td className="py-3">COM-090321: N55,000</td>
+                <td className="py-3">09/10/2021</td>
+                <td className="py-3">2:01am</td>
+                <td className="py-3">Loan request</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N50, 000 </td>
               </tr>
 
               <tr>
-                <td className="py-3">DIV-273860: N20,000</td>
-                <td className="py-3">REE-198732: N50,000</td>
-                <td className="py-3">INN-124382: N50,000</td>
-                <td className="py-3">COM-120942: N60,000</td>
+                <td className="py-3">09/10/2021</td>
+                <td className="py-3">2:01am</td>
+                <td className="py-3">Loan request</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N50, 000 </td>
               </tr>
 
               <tr>
-                <td className="py-3">DIV-323417: N80,000</td>
-                <td className="py-3">REE-287432: N70,000</td>
-                <td className="py-3">INN-008232: N220,000</td>
-                <td className="py-3">COM-092213: N20,000</td>
+                <td className="py-3">09/10/2021</td>
+                <td className="py-3">2:01am</td>
+                <td className="py-3">Loan request</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N50, 000 </td>
               </tr>
 
               <tr>
-                <td className="py-3">Total: N320,000</td>
-                <td className="py-3">Total: N330,000 </td>
-                <td className="py-3">Total: N570,000 </td>
-                <td className="py-3">Total: N303,000</td>
+                <td className="py-3">09/10/2021</td>
+                <td className="py-3">2:01am</td>
+                <td className="py-3">Loan request</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N50, 000 </td>
               </tr>
             </tbody>
           </table>
