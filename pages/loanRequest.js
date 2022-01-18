@@ -3,7 +3,7 @@ import React from "react";
 function LoanRequest() {
   return (
     <div className="loan">
-      <p className="">
+      <p className="mb-3">
         <span>N.B:</span>{" "}
         <span>
           ( 80% of “cash value invested” can be requested as loan, which attract
@@ -99,10 +99,10 @@ function LoanRequest() {
           </div>
         </div>
 
-        {/* APPLY */}
+        {/* APPLY BUTTON */}
         <div className="row my-4 align-items-center justify-content-center mb-3">
-          <div className="text-start col-lg-8">
-            <button className="loan_btn"></button>
+          <div className="text-start col-lg-8 my-4">
+            <button className="loan_btn w-100 px-3 py-3">Apply</button>
           </div>
         </div>
       </div>
