@@ -130,6 +130,28 @@ function TransactionHistory() {
                 <td className="py-3">Loan</td>
                 <td className="py-3">N50, 000 </td>
               </tr>
+
+              <tr>
+                <td className="py-3">14/10/2021</td>
+                <td className="py-3">6:45am</td>
+                <td className="py-3">Asset Subscription</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">DIV-78653</td>
+                <td className="py-3">N40, 000 </td>
+              </tr>
+
+              <tr>
+                <td className="py-3">15/10/2021</td>
+                <td className="py-3">7:00am</td>
+                <td className="py-3">Assest Liquidation</td>
+                <td className="py-3">
+                  <span className="success">Success</span>
+                </td>
+                <td className="py-3">COM-35289</td>
+                <td className="py-3">N50, 000 </td>
+              </tr>
             </tbody>
           </table>
         </div>
