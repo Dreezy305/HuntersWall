@@ -17,8 +17,20 @@ function LoanRequest() {
         <div className="text-start col-lg-6">
           <label className="form-label pb-2">Amount</label>
           <br />
-          <div className="p-3 profileNames">
-            <p>Hun023475</p>
+          <div className="p-3 loanCurrency ">
+            <span className="pe-3 items ">NGN</span>{" "}
+            <span className="ps-3"></span>
+          </div>
+        </div>
+      </div>
+
+      <div className="row align-items-center mb-3">
+        <div className="text-start col-lg-6">
+          <label className="form-label pb-2">Amount</label>
+          <br />
+          <div className="p-3 loanCurrency ">
+            <span className="pe-3 items ">NGN</span>{" "}
+            <span className="ps-3"></span>
           </div>
         </div>
       </div>
