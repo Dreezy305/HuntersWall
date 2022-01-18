@@ -19,7 +19,7 @@ function LoanRequest() {
         {/* AMOUNT */}
         <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
-            <label className="form-label pb-2">Amount</label>
+            <label className="form-label loan_label  pb-2">Amount</label>
             <br />
             <div className="p-3 loanCurrency " style={{ background: "#fff" }}>
               <span className="pe-3 items ">NGN</span>{" "}
@@ -31,7 +31,7 @@ function LoanRequest() {
         {/* COLLATERAL */}
         <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
-            <label className="form-label pb-2">Collateral</label>
+            <label className="form-label loan_label pb-2">Collateral</label>
             <br />
 
             <select
@@ -51,7 +51,7 @@ function LoanRequest() {
         {/* BANK NAME */}
         <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
-            <label className="form-label pb-2">Bank Name</label>
+            <label className="form-label loan_label  pb-2">Bank Name</label>
             <br />
 
             <input
@@ -68,7 +68,9 @@ function LoanRequest() {
         {/* ACCOUNT NUMBER */}
         <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
-            <label className="form-label pb-2">Account Number</label>
+            <label className="form-label loan_label  pb-2">
+              Account Number
+            </label>
             <br />
 
             <input
@@ -85,7 +87,7 @@ function LoanRequest() {
         {/* ACCOUNT NAME */}
         <div className="row my-4 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
-            <label className="form-label pb-2">Account Name</label>
+            <label className="form-label loan_label  pb-2">Account Name</label>
             <br />
 
             <input
