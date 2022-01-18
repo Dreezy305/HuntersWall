@@ -13,24 +13,27 @@ function LoanRequest() {
         </span>
       </p>
 
-      <div className="row align-items-center mb-3">
-        <div className="text-start col-lg-6">
-          <label className="form-label pb-2">Amount</label>
-          <br />
-          <div className="p-3 loanCurrency ">
-            <span className="pe-3 items ">NGN</span>{" "}
-            <span className="ps-3"></span>
+      <div className="container text-center">
+        <h6 className="mb-3">Request for loan</h6>
+        <div className="row align-items-center justify-content-center mb-3">
+          <div className="text-start col-lg-6">
+            <label className="form-label pb-2">Amount</label>
+            <br />
+            <div className="p-3 loanCurrency ">
+              <span className="pe-3 items ">NGN</span>{" "}
+              <span className="ps-3"></span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="row align-items-center mb-3">
-        <div className="text-start col-lg-6">
-          <label className="form-label pb-2">Amount</label>
-          <br />
-          <div className="p-3 loanCurrency ">
-            <span className="pe-3 items ">NGN</span>{" "}
-            <span className="ps-3"></span>
+        <div className="row align-items-center justify-content-center mb-3">
+          <div className="text-start col-lg-6">
+            <label className="form-label pb-2">Amount</label>
+            <br />
+            <div className="p-3 loanCurrency ">
+              <span className="pe-3 items ">NGN</span>{" "}
+              <span className="ps-3"></span>
+            </div>
           </div>
         </div>
       </div>
