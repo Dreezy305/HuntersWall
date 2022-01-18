@@ -24,6 +24,10 @@
     height: 56px;
     box-shadow: none;
     outline: none;
+    background: #fff;
+    border: 1px solid #2081f9;
+    font-family: Lato;
+    color: rgba(18, 18, 18, 0.6);
 
     background-image: url(../public/img/down.svg) !important;
     background-repeat: no-repeat !important;
@@ -33,6 +37,15 @@
     appearance: none;
     outline: none;
     overflow: hidden;
+
+    option {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 15px;
+      color: rgba(18, 18, 18, 0.6);
+    }
   }
 }
 

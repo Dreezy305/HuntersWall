@@ -14,13 +14,13 @@ function LoanRequest() {
       </p>
 
       <div className="w-75 loan_container text-center">
-        <h6 className="my-3">Request for loan</h6>
+        <h6 className="py-3">Request for loan</h6>
 
         <div className="row my-3 align-items-center justify-content-center mb-3">
           <div className="text-start col-lg-8">
             <label className="form-label pb-2">Amount</label>
             <br />
-            <div className="p-3 loanCurrency ">
+            <div className="p-3 loanCurrency " style={{ background: "#fff" }}>
               <span className="pe-3 items ">NGN</span>{" "}
               <span className="ps-3"></span>
             </div>
@@ -31,10 +31,7 @@ function LoanRequest() {
           <div className="text-start col-lg-8">
             <label className="form-label pb-2">Collateral</label>
             <br />
-            {/* <div className="p-3 loanCurrency ">
-              <span className="pe-3 items ">NGN</span>{" "}
-              <span className="ps-3"></span>
-            </div> */}
+
             <select
               className="loan_select w-100 px-3"
               placeholder="Select an asset"
@@ -42,6 +39,9 @@ function LoanRequest() {
               <option value="" disabled selected hidden>
                 Select asset code (active asset code)
               </option>
+              <option value="realestate">Real Estate</option>
+              <option value="inn">Innovation</option>
+              <option value="div">Diversified Portfolio</option>
             </select>
           </div>
         </div>
