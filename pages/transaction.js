@@ -88,30 +88,41 @@ function TransactionHistory() {
               </tr>
 
               <tr>
-                <td className="py-3">09/10/2021</td>
+                <td className="py-3">12/10/2021</td>
                 <td className="py-3">2:01am</td>
-                <td className="py-3">Loan request</td>
+                <td className="py-3">Assest Liquidation</td>
                 <td className="py-3">
                   <span className="success">Success</span>
                 </td>
-                <td className="py-3">Loan</td>
+                <td className="py-3">REE-67890</td>
                 <td className="py-3">N50, 000 </td>
               </tr>
 
               <tr>
-                <td className="py-3">09/10/2021</td>
-                <td className="py-3">2:01am</td>
-                <td className="py-3">Loan request</td>
+                <td className="py-3">13/10/2021</td>
+                <td className="py-3">6:01am</td>
+                <td className="py-3">Deposit</td>
                 <td className="py-3">
-                  <span className="success">Success</span>
+                  <span className="failure">Failure</span>
                 </td>
                 <td className="py-3">Loan</td>
-                <td className="py-3">N50, 000 </td>
+                <td className="py-3">N30, 000 </td>
               </tr>
 
               <tr>
-                <td className="py-3">09/10/2021</td>
-                <td className="py-3">2:01am</td>
+                <td className="py-3">14/10/2021</td>
+                <td className="py-3">7:05am</td>
+                <td className="py-3">Withdrawal</td>
+                <td className="py-3">
+                  <span className="failure">Failure</span>
+                </td>
+                <td className="py-3">Loan</td>
+                <td className="py-3">N30, 000 </td>
+              </tr>
+
+              <tr>
+                <td className="py-3">14/10/2021</td>
+                <td className="py-3">4:01am</td>
                 <td className="py-3">Loan request</td>
                 <td className="py-3">
                   <span className="success">Success</span>
