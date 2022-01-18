@@ -1,0 +1,18 @@
+.loan {
+  padding: 20px;
+
+  p {
+    width: 80%;
+    text-align: justify;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    span {
+      &:nth-child(1) {
+        color: #2081f9;
+      }
+    }
+  }
+}
