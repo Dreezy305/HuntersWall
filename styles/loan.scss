@@ -19,6 +19,12 @@
   &_container {
     background: #f1f7ff;
   }
+
+  &_select {
+    height: 56px;
+    box-shadow: none;
+    outline: none;
+  }
 }
 
 .loanCurrency {

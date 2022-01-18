@@ -15,8 +15,9 @@ function LoanRequest() {
 
       <div className="w-75 loan_container text-center">
         <h6 className="my-3">Request for loan</h6>
+
         <div className="row my-3 align-items-center justify-content-center mb-3">
-          <div className="text-start col-lg-6">
+          <div className="text-start col-lg-8">
             <label className="form-label pb-2">Amount</label>
             <br />
             <div className="p-3 loanCurrency ">
@@ -27,13 +28,18 @@ function LoanRequest() {
         </div>
 
         <div className="row my-3 align-items-center justify-content-center mb-3">
-          <div className="text-start col-lg-6">
-            <label className="form-label pb-2">Amount</label>
+          <div className="text-start col-lg-8">
+            <label className="form-label pb-2">Collateral</label>
             <br />
-            <div className="p-3 loanCurrency ">
+            {/* <div className="p-3 loanCurrency ">
               <span className="pe-3 items ">NGN</span>{" "}
               <span className="ps-3"></span>
-            </div>
+            </div> */}
+            <select className="loan_select w-100" placeholder="Select an asset">
+              <option value="" disabled selected hidden>
+                Select asset code (active asset code)
+              </option>
+            </select>
           </div>
         </div>
       </div>
