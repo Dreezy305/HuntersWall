@@ -12,6 +12,7 @@ import "../styles/form.scss";
 import "../styles/deposit.scss";
 import "../styles/portfolio.scss";
 import "../styles/loan.scss";
+import "../styles/transaction.scss";
 import { AuthProvider } from "../auth/useAuth";
 
 function MyApp({ Component, pageProps }) {
