@@ -3,7 +3,6 @@ import React from "react";
 function PersonalSettings() {
   return (
     <div className="personalSettings">
-      Persal settings
       <div className="container">
         <div className="row">
           <div className="col-lg-6 border-end px-3">
@@ -137,7 +136,53 @@ function PersonalSettings() {
               </div>
             </form>
           </div>
-          <div className="col-lg-6 border-start px-3">col 2</div>
+          <div className="col-lg-6 border-start px-3">
+            {/* CURRENT PSWD */}
+            <div className="d-flex justify-content-between align-items-baseline">
+              <label className="form-label label pb-2 me-3">
+                Current Password
+              </label>
+              <br />
+              <input
+                type="text"
+                className="ms-3 w-50 input"
+                value=""
+                autoComplete="on"
+                autoFocus
+                required
+              />
+            </div>
+
+            {/* NEW PSWD */}
+            <div className="d-flex justify-content-between align-items-baseline">
+              <label className="form-label label pb-2 me-3">New Password</label>
+              <br />
+              <input
+                type="text"
+                className="ms-3 w-50 input"
+                value=""
+                autoComplete="on"
+                autoFocus
+                required
+              />
+            </div>
+
+            {/* CONFIRM PSWD */}
+            <div className="d-flex justify-content-between align-items-baseline">
+              <label className="form-label label pb-2 me-3">
+                Confirm Password
+              </label>
+              <br />
+              <input
+                type="text"
+                className="ms-3 w-50 input"
+                value=""
+                autoComplete="on"
+                autoFocus
+                required
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
