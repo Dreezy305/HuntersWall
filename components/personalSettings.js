@@ -187,7 +187,6 @@ function PersonalSettings() {
               </div>
 
               {/* EMAIL NOTIFICATION */}
-
               <div className="d-flex justify-content-between align-items-center">
                 <label className="form-label label pb-2 me-3">Email</label>
                 <div className="form-check form-switch">
