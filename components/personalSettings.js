@@ -10,11 +10,11 @@ function PersonalSettings() {
             <form className="row g-4 py-5" onSubmit={(e) => e.preventDefault()}>
               {/* FIRST NAME */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">First Name</label>
+                <label className="form-label pb-2 me-3 label">First Name</label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
@@ -24,11 +24,11 @@ function PersonalSettings() {
 
               {/* LAST NAME */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">Last Name</label>
+                <label className="form-label label pb-2 me-3">Last Name</label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
@@ -38,11 +38,11 @@ function PersonalSettings() {
 
               {/* EMAIL */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">Last Name</label>
+                <label className="form-label label pb-2 me-3">Last Name</label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
@@ -52,11 +52,11 @@ function PersonalSettings() {
 
               {/* GENDER */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">GENDER</label>
+                <label className="form-label label pb-2 me-3">Gender</label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
@@ -66,11 +66,11 @@ function PersonalSettings() {
 
               {/* BIRTHDAY */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">BIRTHDAY</label>
+                <label className="form-label label pb-2 me-3">Birthday</label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
@@ -80,11 +80,13 @@ function PersonalSettings() {
 
               {/* PROFESSION */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">PROFESSION</label>
+                <label className="form-label label pb-2 me-2">
+                  Proffession
+                </label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
@@ -94,11 +96,11 @@ function PersonalSettings() {
 
               {/* ADDRESS */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">ADDRESS</label>
+                <label className="form-label label pb-2 me-3">Address</label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
@@ -108,11 +110,11 @@ function PersonalSettings() {
 
               {/* CITY */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">CITY</label>
+                <label className="form-label label pb-2 me-3">City</label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
@@ -122,11 +124,11 @@ function PersonalSettings() {
 
               {/* COUNTRY */}
               <div className="d-flex justify-content-between align-items-baseline">
-                <label className="form-label pb-2 me-3">COUNTRY</label>
+                <label className="form-label label pb-2 me-3">Country</label>
                 <br />
                 <input
                   type="text"
-                  className="ms-3 w-75"
+                  className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
                   autoFocus
