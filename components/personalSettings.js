@@ -194,10 +194,15 @@ function PersonalSettings() {
                     className="form-check-input checkbox"
                     type="checkbox"
                     id="flexSwitchCheckChecked"
-                    style={{ boxShadow: "none", outline: "none" }}
                   />
                 </div>
               </div>
+
+              {/* NOTIFICATION MESSAGE */}
+              <p className="label">
+                Switch on the notification button to recieve mail of updated
+                market
+              </p>
 
               {/* SAVE */}
               <div className="d-flex justify-content-end">
