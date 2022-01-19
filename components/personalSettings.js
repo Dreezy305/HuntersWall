@@ -6,7 +6,7 @@ function PersonalSettings() {
       Persal settings
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 border-end">
+          <div className="col-lg-6 border-end px-3">
             <form className="row g-4 py-5" onSubmit={(e) => e.preventDefault()}>
               {/* FIRST NAME */}
               <div className="d-flex justify-content-between align-items-baseline">
@@ -135,7 +135,7 @@ function PersonalSettings() {
               </div>
             </form>
           </div>
-          <div className="col-lg-6 border-start">col 2</div>
+          <div className="col-lg-6 border-start px-3">col 2</div>
         </div>
       </div>
     </div>
