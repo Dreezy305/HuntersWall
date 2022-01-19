@@ -13,6 +13,21 @@
       color: #000000;
     }
   }
+
+  &_btn {
+    background: #f99820;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 .personalSettings {
