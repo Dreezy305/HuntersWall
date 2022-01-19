@@ -6,7 +6,7 @@ import PersonalInfo from "../components/personalInfo";
 import BankAccountDetails from "../components/bankAccountDetails";
 
 function Profile() {
-  const [tgoggle, setToggle] = useState(0);
+  const [toggle, setToggle] = useState(0);
 
   const Tabs = [
     { id: 1, component: <PersonalInfo /> },
@@ -24,7 +24,7 @@ function Profile() {
         </h6>
       </div>
 
-      <div className="mt-4">{Tabs[tgoggle].component}</div>
+      <div className="mt-4">{Tabs[toggle].component}</div>
     </div>
   );
 }
