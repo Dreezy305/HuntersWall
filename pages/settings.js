@@ -13,7 +13,7 @@ function Settings() {
   return (
     <div className="settings">
       <div className="settings_top d-flex align-items-center justify-content-start">
-        <h6 className="tabs me-5 h6" onClick={() => setToggle(0)}>
+        <h6 className="tabs me-5 h6 active y" onClick={() => setToggle(0)}>
           Personal Settings
         </h6>
         <h6 className="tabs ms-5 h6" onClick={() => setToggle(1)}>
