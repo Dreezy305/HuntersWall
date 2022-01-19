@@ -186,7 +186,7 @@ function PersonalSettings() {
                 />
               </div>
 
-              {/* APPLY */}
+              {/* SAVE */}
               <div className="d-flex justify-content-end">
                 <button className="settings_btn px-3 py-3 w-25">Save</button>
               </div>
