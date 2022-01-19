@@ -4,7 +4,7 @@ function PersonalSettings() {
   return (
     <div className="personalSettings">
       <div className="container">
-        <div className="row">
+        <div className="row align-items-baseline">
           <div className="col-lg-6 border-end px-3">
             <form className="row g-4 py-5" onSubmit={(e) => e.preventDefault()}>
               {/* FIRST NAME */}
@@ -136,52 +136,56 @@ function PersonalSettings() {
               </div>
             </form>
           </div>
-          <div className="col-lg-6 border-start px-3">
+          <div className="col-lg-6 px-3">
             {/* CURRENT PSWD */}
-            <div className="d-flex justify-content-between align-items-baseline">
-              <label className="form-label label pb-2 me-3">
-                Current Password
-              </label>
-              <br />
-              <input
-                type="text"
-                className="ms-3 w-50 input"
-                value=""
-                autoComplete="on"
-                autoFocus
-                required
-              />
-            </div>
+            <form className="row g-4 py-5" onSubmit={(e) => e.preventDefault()}>
+              <div className="d-flex justify-content-between align-items-baseline">
+                <label className="form-label label pb-2 me-3">
+                  Current Password
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className="ms-3 w-50 input"
+                  value=""
+                  autoComplete="on"
+                  autoFocus
+                  required
+                />
+              </div>
 
-            {/* NEW PSWD */}
-            <div className="d-flex justify-content-between align-items-baseline">
-              <label className="form-label label pb-2 me-3">New Password</label>
-              <br />
-              <input
-                type="text"
-                className="ms-3 w-50 input"
-                value=""
-                autoComplete="on"
-                autoFocus
-                required
-              />
-            </div>
+              {/* NEW PSWD */}
+              <div className="d-flex justify-content-between align-items-baseline">
+                <label className="form-label label pb-2 me-3">
+                  New Password
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className="ms-3 w-50 input"
+                  value=""
+                  autoComplete="on"
+                  autoFocus
+                  required
+                />
+              </div>
 
-            {/* CONFIRM PSWD */}
-            <div className="d-flex justify-content-between align-items-baseline">
-              <label className="form-label label pb-2 me-3">
-                Confirm Password
-              </label>
-              <br />
-              <input
-                type="text"
-                className="ms-3 w-50 input"
-                value=""
-                autoComplete="on"
-                autoFocus
-                required
-              />
-            </div>
+              {/* CONFIRM PSWD */}
+              <div className="d-flex justify-content-between align-items-baseline">
+                <label className="form-label label pb-2 me-3">
+                  Confirm Password
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className="ms-3 w-50 input"
+                  value=""
+                  autoComplete="on"
+                  autoFocus
+                  required
+                />
+              </div>
+            </form>
           </div>
         </div>
       </div>
