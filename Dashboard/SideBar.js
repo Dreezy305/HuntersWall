@@ -116,17 +116,20 @@ function SideBar({ handleClick }) {
 
       <div className="sidebar_bottom ">
         <ul className="list-unstyled">
-          <li
-            className="d-flex align-items-center mb-3 py-2"
-            onClick={() => handleClick(6)}
-          >
-            <SettingIcon
-              fill="none"
-              marginRight={3}
-              stylesObj={{ fontSize: "16px" }}
-            />
-            Settings
-          </li>
+          <Link href="/settings">
+            <li
+              className="d-flex align-items-center mb-3 py-2"
+              onClick={() => handleClick(6)}
+            >
+              <SettingIcon
+                fill="none"
+                marginRight={3}
+                stylesObj={{ fontSize: "16px" }}
+              />
+              Settings
+            </li>
+          </Link>
+
           <li className="d-flex align-items-center mb-2 py-2">
             <LogoutIcon
               fill="none"
