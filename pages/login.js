@@ -81,7 +81,7 @@ function Login() {
           setLoading(false);
           return [
             response,
-            router.push({ pathname: "/dashboard", query: userObj }),
+            router.push({ pathname: "/profile", query: userObj }),
           ];
         } else if (response.error) {
           setUserExist(true);

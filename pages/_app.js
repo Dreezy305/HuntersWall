@@ -14,6 +14,7 @@ import "../styles/portfolio.scss";
 import "../styles/loan.scss";
 import "../styles/transaction.scss";
 import "../styles/market.scss";
+import "../styles/modal.css";
 import { AuthProvider } from "../auth/useAuth";
 
 function MyApp({ Component, pageProps }) {
