@@ -16,7 +16,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -30,7 +30,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -44,7 +44,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -58,7 +58,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -72,7 +72,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -88,7 +88,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -102,7 +102,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -116,7 +116,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -130,7 +130,7 @@ function PersonalSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -149,7 +149,7 @@ function PersonalSettings() {
                   className="ms-3 w-50 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -165,7 +165,7 @@ function PersonalSettings() {
                   className="ms-3 w-50 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -181,7 +181,7 @@ function PersonalSettings() {
                   className="ms-3 w-50 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>

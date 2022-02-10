@@ -174,7 +174,7 @@ function LoanRequest() {
                     type="text"
                     value=""
                     autoComplete="on"
-                    autoFocus
+                    // autoFocus
                     required
                   />
                 </div>
@@ -193,7 +193,7 @@ function LoanRequest() {
                     type="text"
                     value=""
                     autoComplete="on"
-                    autoFocus
+                    // autoFocus
                     required
                   />
                 </div>
@@ -212,7 +212,7 @@ function LoanRequest() {
                     type="text"
                     value=""
                     autoComplete="on"
-                    autoFocus
+                    // autoFocus
                     required
                   />
                 </div>

@@ -18,7 +18,7 @@ function BankAccSettings() {
                   className="ms-1 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -32,7 +32,7 @@ function BankAccSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -48,7 +48,7 @@ function BankAccSettings() {
                   className="ms-1 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -62,7 +62,7 @@ function BankAccSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -76,7 +76,7 @@ function BankAccSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
@@ -90,7 +90,7 @@ function BankAccSettings() {
                   className="ms-3 w-75 input"
                   value=""
                   autoComplete="on"
-                  autoFocus
+                  // autoFocus
                   required
                 />
               </div>
