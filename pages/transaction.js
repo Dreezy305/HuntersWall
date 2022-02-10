@@ -98,7 +98,7 @@ function TransactionHistory() {
         </div>
 
         <div className="dashboard_left">
-          <SideBar handleClick={(t) => handleClick(t)} />
+          <SideBar />
         </div>
 
         <div className="dashboard_right">
