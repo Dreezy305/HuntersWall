@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import {
@@ -30,74 +31,86 @@ function SideBar({ handleClick }) {
 
       <div className="sidebar_top mb-5">
         <ul className="list-unstyled">
-          <li
-            className="d-flex align-items-center mb-3 py-1"
-            onClick={() => handleClick(0)}
-          >
-            <ProfileIcon
-              marginRight={3}
-              fill="#fff"
-              // onMouseOver={handleOver}
-            />
-            Profile
-          </li>
+          <Link href="/profile">
+            <li
+              className="d-flex align-items-center mb-3 py-1"
+              onClick={() => handleClick(0)}
+            >
+              <ProfileIcon
+                marginRight={3}
+                fill="#fff"
+                // onMouseOver={handleOver}
+              />
+              Profile
+            </li>
+          </Link>
+          <Link href="/wallet">
+            <li
+              className="d-flex align-items-center mb-3 py-1"
+              onClick={() => handleClick(1)}
+            >
+              <ShoppingIcon
+                fill="none"
+                marginRight={3}
+                stylesObj={{ fontSize: "16px" }}
+                className="icon"
+              />
+              Wallet
+            </li>
+          </Link>
 
-          <li
-            className="d-flex align-items-center mb-3 py-1"
-            onClick={() => handleClick(1)}
-          >
-            <ShoppingIcon
-              fill="none"
-              marginRight={3}
-              stylesObj={{ fontSize: "16px" }}
-              className="icon"
-            />
-            Wallet
-          </li>
-          <li
-            className="d-flex align-items-center mb-3 py-1"
-            onClick={() => handleClick(2)}
-          >
-            <WalletIcon
-              fill="none"
-              marginRight={3}
-              stylesObj={{ fontSize: "16px" }}
-            />
-            Portfolio
-          </li>
-          <li
-            className="d-flex align-items-center mb-3 py-1"
-            onClick={() => handleClick(3)}
-          >
-            <NairaIcon
-              fill="none"
-              marginRight={3}
-              stylesObj={{ fontSize: "16px" }}
-            />
-            Loan request
-          </li>
-          <li
-            className="d-flex align-items-center mb-3 py-1"
-            onClick={() => handleClick(4)}
-          >
-            <MarketIcon
-              fill="none"
-              marginRight={3}
-              stylesObj={{ fontSize: "16px" }}
-            />
-            Market
-          </li>
-          <li
-            className="d-flex align-items-center mb-3 py-1"
-            onClick={() => handleClick(5)}
-          >
-            <TransactionIcon
-              fill="none"
-              marginRight={3}
-              stylesObj={{ fontSize: "16px" }}
-            />
-            Transaction History
-          </li>
+          <Link href="/portfolio">
+            <li
+              className="d-flex align-items-center mb-3 py-1"
+              onClick={() => handleClick(2)}
+            >
+              <WalletIcon
+                fill="none"
+                marginRight={3}
+                stylesObj={{ fontSize: "16px" }}
+              />
+              Portfolio
+            </li>
+          </Link>
+          <Link href="/loanRequest">
+            <li
+              className="d-flex align-items-center mb-3 py-1"
+              onClick={() => handleClick(3)}
+            >
+              <NairaIcon
+                fill="none"
+                marginRight={3}
+                stylesObj={{ fontSize: "16px" }}
+              />
+              Loan request
+            </li>
+          </Link>
+          <Link href="/market">
+            <li
+              className="d-flex align-items-center mb-3 py-1"
+              onClick={() => handleClick(4)}
+            >
+              <MarketIcon
+                fill="none"
+                marginRight={3}
+                stylesObj={{ fontSize: "16px" }}
+              />
+              Market
+            </li>
+          </Link>
+          <Link href="/transaction">
+            <li
+              className="d-flex align-items-center mb-3 py-1"
+              onClick={() => handleClick(5)}
+            >
+              <TransactionIcon
+                fill="none"
+                marginRight={3}
+                stylesObj={{ fontSize: "16px" }}
+              />
+              Transaction History
+            </li>
+          </Link>
         </ul>
       </div>
 

@@ -1,6 +1,11 @@
 import React from "react";
 
-function TopBar({ title = "", firstName = "", lastName = "", ID = "" }) {
+function TopBar({
+  title = "",
+  firstName = "Ifeoluwa",
+  lastName = "Eniola",
+  ID = "Hun12345",
+}) {
   return (
     <div className="topbar">
       <div className="topbar_left">
