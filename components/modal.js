@@ -13,7 +13,7 @@ function Modal({
   return (
     <>
       <div
-        className={`modal ${open ? "block" : "hidden"} `}
+        className={`modal ${open ? "d-block" : "d-none"} `}
         // role="modal"
         id="modal"
         aria-labelledby="modal"
@@ -22,16 +22,14 @@ function Modal({
         {/* xtralarge size modal */}
         {size === "xl" && (
           <div className={`modal-content`} style={{ width: "60%" }}>
-            <div className="modal-header relative">
+            <div className="modal-header position-relative">
               <span
-                className="close-btn absolute cursor-pointer"
+                className="close-btn position-absolute cursor-pointer"
                 onClick={onClose}
               >
                 &times;
               </span>
-              <h2
-                className={`font-bold opacity-100 ${largeTitle && "text-2xl"}`}
-              >
+              <h2 className={`fw-bold o-100 ${largeTitle && "text-2xl"}`}>
                 {title}
               </h2>
             </div>
@@ -41,17 +39,15 @@ function Modal({
 
         {/* large size modal */}
         {size === "lg" && (
-          <div className={`modal-content `} style={{ width: "40%" }}>
-            <div className="modal-header relative">
+          <div className={`modal-content`} style={{ width: "40%" }}>
+            <div className="modal-header position-relative">
               <span
-                className="close-btn absolute cursor-pointer"
+                className="close-btn position-absolute cursor-pointer"
                 onClick={onClose}
               >
                 &times;
               </span>
-              <h2
-                className={`font-bold opacity-100 ${largeTitle && "text-2xl"}`}
-              >
+              <h2 className={`fw-bold o-100 ${largeTitle && "text-2xl"}`}>
                 {title}
               </h2>
             </div>
@@ -62,16 +58,14 @@ function Modal({
         {/* medium size modal */}
         {size === "md" && (
           <div className={`modal-content`} style={{ width: "30%" }}>
-            <div className="modal-header relative">
+            <div className="modal-header position-relative">
               <span
-                className="close-btn absolute cursor-pointer"
+                className="close-btn position-absolute cursor-pointer"
                 onClick={onClose}
               >
                 &times;
               </span>
-              <h2
-                className={`font-bold opacity-100 ${largeTitle && "text-2xl"}`}
-              >
+              <h2 className={`fw-bold o-100 ${largeTitle && "text-2xl"}`}>
                 {title}
               </h2>
             </div>
@@ -82,16 +76,14 @@ function Modal({
         {/* small size modal */}
         {size === "sm" && (
           <div className={`modal-content`} style={{ width: "20%" }}>
-            <div className="modal-header relative">
+            <div className="modal-header position-relative">
               <span
-                className="close-btn absolute cursor-pointer"
+                className="close-btn position-absolute cursor-pointer"
                 onClick={onClose}
               >
                 &times;
               </span>
-              <h2
-                className={`font-bold opacity-100 ${largeTitle && "text-2xl"}`}
-              >
+              <h2 className={`fw-bold o-100 ${largeTitle && "text-2xl"}`}>
                 {title}
               </h2>
             </div>
@@ -102,16 +94,14 @@ function Modal({
         {/* xtra small size modal */}
         {size === "xs" && (
           <div className={`modal-content`} style={{ width: "15%" }}>
-            <div className="modal-header relative">
+            <div className="modal-header position-relative">
               <span
-                className="close-btn absolute cursor-pointer"
+                className="close-btn position-absolute cursor-pointer"
                 onClick={onClose}
               >
                 &times;
               </span>
-              <h2
-                className={`font-bold opacity-100 ${largeTitle && "text-2xl"}`}
-              >
+              <h2 className={`fw-bold o-100 ${largeTitle && "text-2xl"}`}>
                 {title}
               </h2>
             </div>
