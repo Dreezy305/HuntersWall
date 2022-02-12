@@ -1,2 +1,26 @@
 .toast-container {
+  position: fixed;
+  z-index: 10;
+  font-style: 14px;
+  background-color: greenyellow;
+}
+
+.bottom-right {
+  bottom: 16px;
+  right: 16px;
+}
+
+.success {
+  background-color: greenyellow;
+}
+
+.warning {
+  background-color: yellow;
+}
+
+.danger {
+  background-color: red;
+}
+
+.info {
 }

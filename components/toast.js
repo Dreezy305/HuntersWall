@@ -4,12 +4,21 @@ function Toast({
   visiblity = true || false,
   title = "",
   description = "",
-  theme = "success" || "failure" || "warning" || "danger",
+  theme = "success" || "error" || "warning" || "danger" || "info",
+  position = "",
+  handleClose = () => {},
 }) {
   return (
-    <div className="toast-container" id="">
-      <div className="d-flex flex-row">
-        <span className="">&times;</span>
+    <div
+      className={`toast-container ${
+        position === "bottom-right" && "bottom-right"
+      } ${visiblity ? "visible" : "invisible"}`}
+      id=""
+    >
+      <div className="d-flex flex-row align-items-center">
+        <span className="" onClick={handleClose} style={{ cursor: "pointer" }}>
+          &times;
+        </span>
         <span>
           <span>{title}</span>
           <span>{description}</span>
@@ -20,3 +29,7 @@ function Toast({
 }
 
 export default Toast;
+
+/**
+ * position --> bottom-right etc
+ */

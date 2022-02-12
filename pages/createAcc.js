@@ -152,7 +152,7 @@ function CreateAcc() {
   };
 
   const handleClose = () => {
-    setShowModal(false);
+    setToast(false);
   };
 
   return (
@@ -427,7 +427,11 @@ function CreateAcc() {
             </div>
           </div>
         </section>
-        <Toast visiblity={toast} />
+        <Toast
+          visiblity={toast}
+          handleClose={() => handleClose}
+          position="bottom-right"
+        />
       </Layout>
     </>
   );
