@@ -7,8 +7,8 @@ function Toast({
   theme = "success" || "failure" || "warning" || "danger",
 }) {
   return (
-    <div className="toats" id="toast">
-      <div className="">
+    <div className="toast-container" id="">
+      <div className="d-flex flex-row">
         <span className="">&times;</span>
         <span>
           <span>{title}</span>
