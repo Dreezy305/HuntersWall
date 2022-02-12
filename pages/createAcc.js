@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Layout from "../layouts";
 import { useAuth } from "../auth/useAuth";
+import Toast from "../components/toast";
 // import { useValidation } from "../hooks/validation";
 
 function CreateAcc() {
@@ -25,6 +26,7 @@ function CreateAcc() {
   const [first, setCheckFirst] = useState(false);
   const [last, setCheckLast] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState(false);
 
   const auth = useAuth();
 
@@ -132,15 +134,20 @@ function CreateAcc() {
     checkTermsAndCondition(signUpData.Terms_and_Condition);
 
     return await auth.signUp(signUpData).then((response) => {
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setPhoneNumber("");
-      setPassword("");
-      setConfirmPassword("");
-      setCheckBox(false);
-      setLoading(false);
-      return [response, router.push({ pathname: "/profile", query: userObj })];
+      if (!response.error) {
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhoneNumber("");
+        setPassword("");
+        setConfirmPassword("");
+        setCheckBox(false);
+        setLoading(false);
+        return [
+          response,
+          router.push({ pathname: "/profile", query: userObj }),
+        ];
+      }
     });
   };
 
@@ -179,7 +186,7 @@ function CreateAcc() {
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
                       autoComplete="on"
-                      autoFocus
+                      // autoFocus
                       required
                     />
                     {first && (
@@ -197,7 +204,7 @@ function CreateAcc() {
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
                       autoComplete="on"
-                      autoFocus
+                      // autoFocus
                       required
                     />
                     {last && (
@@ -215,7 +222,7 @@ function CreateAcc() {
                       onChange={(e) => setEmail(e.target.value)}
                       className="px-3 py-3"
                       autoComplete="on"
-                      autoFocus
+                      // autoFocus
                       required
                     />
                     {isEmailValid && (
@@ -233,7 +240,7 @@ function CreateAcc() {
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value)}
                       autoComplete="on"
-                      autoFocus
+                      // autoFocus
                       required
                     />
                   </div>
@@ -246,7 +253,7 @@ function CreateAcc() {
                       onChange={(e) => setPassword(e.target.value)}
                       className="px-3 py-3"
                       autoComplete="on"
-                      autoFocus
+                      // autoFocus
                       required
                     />
                     {isPasswordValid && (
@@ -318,7 +325,7 @@ function CreateAcc() {
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       autoComplete="on"
-                      autoFocus
+                      // autoFocus
                       required
                     />
                     {checkPass && (
@@ -387,6 +394,7 @@ function CreateAcc() {
                         onClick={() => setCheckBox(!checkBox)}
                         className=""
                         required
+                        style={{ cursor: "pointer" }}
                       />
                       <p>
                         <span>
@@ -408,7 +416,8 @@ function CreateAcc() {
                     <button
                       type="button"
                       className="px-3 py-3"
-                      onClick={() => handleSubmit()}
+                      // onClick={() => handleSubmit()}
+                      onClick={() => setToast(true)}
                     >
                       {loading ? "Creating acount..." : "Create account"}
                     </button>
@@ -418,6 +427,7 @@ function CreateAcc() {
             </div>
           </div>
         </section>
+        <Toast visiblity={toast} />
       </Layout>
     </>
   );
