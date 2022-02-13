@@ -19,10 +19,15 @@ function Toast({
         <span className="" onClick={handleClose} style={{ cursor: "pointer" }}>
           &times;
         </span>
-        <span>
-          <span>{title}</span>
-          <span>{description}</span>
-        </span>
+        <div className="d-flex flex-row">
+          <span>
+            <img />
+          </span>
+          <span>
+            <span>{title}</span>
+            <span>{description}</span>
+          </span>
+        </div>
       </div>
     </div>
   );
