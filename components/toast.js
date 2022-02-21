@@ -38,7 +38,7 @@ function Toast({
           : "primary"
       } ${
         position === "bottom-right"
-          ? "bottom-right"
+          ? "bottom-right toast-right-slide"
           : position === "bottom-left"
           ? "bottom-left"
           : position === "bottom-center"
@@ -56,7 +56,23 @@ function Toast({
       aria-label="toast"
       aria-labelledby="toast"
     >
-      <div className="d-flex flex-row align-items-baseline notification py-3">
+      <div
+        className={`d-flex flex-row align-items-baseline notification py-3 ${
+          position === "bottom-right"
+            ? "bottom-right toast-right-slide"
+            : position === "bottom-left"
+            ? "bottom-left"
+            : position === "bottom-center"
+            ? "bottom-center"
+            : position === "top-right"
+            ? "top-right"
+            : position === "top-left"
+            ? "top-left"
+            : position === "top-center"
+            ? "top-center"
+            : "bottom-right toast-right-slide"
+        }`}
+      >
         <div className="d-flex flex-row">
           <span className="align-self-center ps-4">
             {theme === "success" && (

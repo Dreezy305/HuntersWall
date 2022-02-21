@@ -6,11 +6,23 @@
   border-radius: 4px;
   height: auto;
   width: auto;
+  transition: 0.3s ease;
 }
 
 .bottom-right {
   bottom: 16px;
   right: 16px;
+  animation-name: toast-right-slide;
+  animation-duration: 0.7s;
+}
+
+@keyframes toast-right-slide {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(0%);
+  }
 }
 
 .bottom-center {
