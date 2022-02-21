@@ -51,7 +51,10 @@ function Toast({
           ? "top-center"
           : "bottom-left"
       }`}
-      id=""
+      id="toast"
+      aria-describedby="toast"
+      aria-label="toast"
+      aria-labelledby="toast"
     >
       <div className="d-flex flex-row align-items-baseline notification py-3">
         <div className="d-flex flex-row">
