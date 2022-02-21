@@ -16,6 +16,10 @@ function Toast({
 }) {
   const imageRes = {
     success: "/img/check.svg",
+    error: "/img/error.svg",
+    info: "/img/info.svg",
+    warning: "/img/warning.svg",
+    danger: "/img/danger.svg",
   };
 
   return (
@@ -30,6 +34,18 @@ function Toast({
           <span className="align-self-center ps-4">
             {theme === "success" && (
               <img src={imageRes.success} className="" alt="success" />
+            )}
+            {theme === "error" && (
+              <img src={imageRes.error} className="" alt="success" />
+            )}
+            {theme === "info" && (
+              <img src={imageRes.info} className="" alt="success" />
+            )}
+            {theme === "warning" && (
+              <img src={imageRes.warning} className="" alt="success" />
+            )}
+            {theme === "danger" && (
+              <img src={imageRes.danger} className="" alt="success" />
             )}
           </span>
           <div className="d-flex flex-column text-center">
