@@ -24,9 +24,7 @@ function Toast({
 
   return (
     <div
-      className={`toast-container ${
-        position === "bottom-right" && "bottom-right"
-      } ${visiblity ? "visible" : "invisible"} ${
+      className={`toast-container ${visiblity ? "visible" : "invisible"} ${
         theme === "success"
           ? "success"
           : theme === "error"
@@ -38,6 +36,20 @@ function Toast({
           : theme === "danger"
           ? "danger"
           : "primary"
+      } ${
+        position === "bottom-right"
+          ? "bottom-right"
+          : position === "bottom-left"
+          ? "bottom-left"
+          : position === "bottom-center"
+          ? "bottom-center"
+          : position === "top-right"
+          ? "top-right"
+          : position === "top-left"
+          ? "top-left"
+          : position === "top-center"
+          ? "top-center"
+          : "bottom-left"
       }`}
       id=""
     >
