@@ -6,7 +6,12 @@ function Toast({
   title = "",
   description = "",
   theme = "success" || "error" || "warning" || "danger" || "info",
-  position = "",
+  position = "bottom-right" ||
+    "bottom-left" ||
+    "bottom-center" ||
+    "top-left" ||
+    "top-right" ||
+    "top-center",
   handleClose = () => {},
 }) {
   const imageRes = {
@@ -20,21 +25,25 @@ function Toast({
       } ${visiblity ? "visible" : "invisible"}`}
       id=""
     >
-      <div className="d-flex flex-row align-items-center">
-        <span className="" onClick={handleClose} style={{ cursor: "pointer" }}>
-          &times;
-        </span>
+      <div className="d-flex flex-row align-items-baseline notification py-3">
         <div className="d-flex flex-row">
-          <span>
+          <span className="align-self-center ps-4">
             {theme === "success" && (
               <img src={imageRes.success} className="" alt="success" />
             )}
           </span>
-          <span>
-            <span>{title}</span>
-            <span>{description}</span>
-          </span>
+          <div className="d-flex flex-column text-center">
+            <p className="title fw-bold text-white">{title}</p>
+            <p className="description px-5 text-white">{description}</p>
+          </div>
         </div>
+        <span
+          className="pe-4 fw-bold times error-text text-danger"
+          onClick={handleClose}
+          style={{ cursor: "pointer" }}
+        >
+          &times;
+        </span>
       </div>
     </div>
   );

@@ -75,6 +75,7 @@ function Login() {
     return await auth
       .signIn(data)
       .then((response) => {
+        // console.log(response);
         if (!response.error) {
           setEmail("");
           setPassword("");

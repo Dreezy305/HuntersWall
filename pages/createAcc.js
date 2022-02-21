@@ -430,6 +430,8 @@ function CreateAcc() {
         <Toast
           visiblity={toast}
           handleClose={() => handleClose}
+          title="Congratulations"
+          description="Kindly login with your email and password"
           position="bottom-right"
         />
       </Layout>

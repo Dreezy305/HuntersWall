@@ -3,11 +3,38 @@
   z-index: 10;
   font-style: 14px;
   background-color: greenyellow;
+  border-radius: 4px;
 }
 
 .bottom-right {
   bottom: 16px;
   right: 16px;
+}
+
+.bottom-center {
+  left: 50%;
+  bottom: 16px;
+}
+
+.bottom-left {
+  left: 16px;
+  bottom: 16px;
+}
+
+.top-center {
+  left: 50%;
+  top: 16px;
+  margin: auto;
+}
+
+.top-right {
+  right: 16px;
+  top: 16px;
+}
+
+.top-left {
+  top: 16px;
+  left: 16px;
 }
 
 .success {
@@ -24,4 +51,17 @@
 
 .info {
   background-color: blue;
+}
+
+.title {
+  line-height: 1.5px;
+}
+
+.description {
+  line-height: 1.5px;
+}
+
+.times {
+  font-size: 25px;
+  cursor: pointer;
 }
