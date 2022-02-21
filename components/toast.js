@@ -15,7 +15,7 @@ function Toast({
   handleClose = () => {},
 }) {
   const imageRes = {
-    success: "/img/check.svg",
+    success: "/img/success.svg",
     error: "/img/error.svg",
     info: "/img/info.svg",
     warning: "/img/warning.svg",
