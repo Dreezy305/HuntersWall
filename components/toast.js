@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 function Toast({
@@ -8,6 +9,10 @@ function Toast({
   position = "",
   handleClose = () => {},
 }) {
+  const imageRes = {
+    success: "/img/check.svg",
+  };
+
   return (
     <div
       className={`toast-container ${
@@ -21,7 +26,9 @@ function Toast({
         </span>
         <div className="d-flex flex-row">
           <span>
-            <img />
+            {theme === "success" && (
+              <img src={imageRes.success} className="" alt="success" />
+            )}
           </span>
           <span>
             <span>{title}</span>
