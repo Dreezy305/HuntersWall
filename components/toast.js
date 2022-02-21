@@ -49,7 +49,7 @@ function Toast({
           ? "top-left"
           : position === "top-center"
           ? "top-center"
-          : "bottom-left"
+          : "bottom-right"
       }`}
       id="toast"
       aria-describedby="toast"

@@ -12,7 +12,7 @@
 }
 
 .bottom-center {
-  left: 50%;
+  right: 33%;
   bottom: 16px;
 }
 
@@ -29,11 +29,11 @@
 
 .top-right {
   right: 16px;
-  top: 16px;
+  top: 25%;
 }
 
 .top-left {
-  top: 16px;
+  top: 15%;
   left: 16px;
 }
 
