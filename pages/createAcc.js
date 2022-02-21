@@ -429,7 +429,7 @@ function CreateAcc() {
         </section>
         <Toast
           visiblity={toast}
-          handleClose={() => handleClose}
+          handleClose={() => setToast(false)}
           title="Congratulations"
           description="Kindly login with your email and password"
           position="bottom-right"
