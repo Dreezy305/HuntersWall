@@ -38,19 +38,23 @@
 }
 
 .success {
-  background-color: greenyellow;
+  background-color: #328854;
 }
 
 .warning {
-  background-color: yellow;
+  background-color: #fec23d;
 }
 
 .danger {
-  background-color: red;
+  background-color: #dc3c45;
 }
 
 .info {
-  background-color: blue;
+  background-color: #35caf0;
+}
+
+.primary {
+  background-color: #1370fa;
 }
 
 .title {
@@ -64,4 +68,5 @@
 .times {
   font-size: 25px;
   cursor: pointer;
+  color: #f8f9fa;
 }

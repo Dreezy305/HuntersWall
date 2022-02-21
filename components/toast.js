@@ -26,7 +26,19 @@ function Toast({
     <div
       className={`toast-container ${
         position === "bottom-right" && "bottom-right"
-      } ${visiblity ? "visible" : "invisible"}`}
+      } ${visiblity ? "visible" : "invisible"} ${
+        theme === "success"
+          ? "success"
+          : theme === "error"
+          ? "danger"
+          : theme === "warning"
+          ? "warning"
+          : theme === "info"
+          ? "info"
+          : theme === "danger"
+          ? "danger"
+          : "primary"
+      }`}
       id=""
     >
       <div className="d-flex flex-row align-items-baseline notification py-3">
@@ -54,7 +66,7 @@ function Toast({
           </div>
         </div>
         <span
-          className="pe-4 fw-bold times error-text text-danger"
+          className="pe-4 fw-bold times"
           onClick={handleClose}
           style={{ cursor: "pointer" }}
         >

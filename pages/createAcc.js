@@ -433,6 +433,7 @@ function CreateAcc() {
           title="Congratulations"
           description="Kindly login with your email and password"
           position="bottom-right"
+          theme="success"
         />
       </Layout>
     </>
