@@ -4,6 +4,8 @@
   font-style: 14px;
   background-color: greenyellow;
   border-radius: 4px;
+  height: auto;
+  width: auto;
 }
 
 .bottom-right {
