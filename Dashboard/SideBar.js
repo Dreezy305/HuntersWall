@@ -52,7 +52,7 @@ function SideBar({ handleClick }) {
               <ShoppingIcon
                 fill="none"
                 marginRight={3}
-                stylesObj={{ fontSize: "16px" }}
+                stylesObj={{ fontSize: "12px" }}
                 className="icon"
               />
               Wallet
@@ -67,7 +67,7 @@ function SideBar({ handleClick }) {
               <WalletIcon
                 fill="none"
                 marginRight={3}
-                stylesObj={{ fontSize: "16px" }}
+                stylesObj={{ fontSize: "12px" }}
               />
               Portfolio
             </li>
