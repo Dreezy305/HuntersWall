@@ -1,0 +1,100 @@
+.loan {
+  padding: 20px;
+
+  p {
+    width: 82%;
+    text-align: justify;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+
+    span {
+      &:nth-child(1) {
+        color: #2081f9;
+      }
+    }
+  }
+
+  &_container {
+    background: #f1f7ff;
+
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+    }
+  }
+
+  &_label {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  &_select {
+    height: 56px;
+    box-shadow: none;
+    outline: none;
+    background: #fff;
+    border: 1px solid #2081f9;
+    font-family: Lato;
+    color: rgba(18, 18, 18, 0.6);
+
+    background-image: url(../public/img/down2.svg) !important;
+    background-repeat: no-repeat !important;
+    background-position: right 15px center !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    overflow: hidden;
+
+    option {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 15px;
+      color: rgba(18, 18, 18, 0.6);
+    }
+  }
+
+  &_input {
+    background: #ffffff;
+    border: 1px solid #2081f9;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    height: 56px;
+  }
+
+  &_btn {
+    background: #f99820;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.loanCurrency {
+  background: #f1f7ff;
+  border: 1px solid #2081f9;
+  box-sizing: border-box;
+  height: 56px;
+}

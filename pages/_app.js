@@ -10,6 +10,12 @@ import "../styles/wallet.scss";
 import "../styles/settings.scss";
 import "../styles/form.scss";
 import "../styles/deposit.scss";
+import "../styles/portfolio.scss";
+import "../styles/loan.scss";
+import "../styles/transaction.scss";
+import "../styles/market.scss";
+import "../styles/modal.css";
+import "../styles/toast.css";
 import { AuthProvider } from "../auth/useAuth";
 
 function MyApp({ Component, pageProps }) {

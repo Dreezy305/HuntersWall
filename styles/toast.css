@@ -1,0 +1,86 @@
+.toast-container {
+  position: fixed;
+  z-index: 10;
+  font-style: 14px;
+  background-color: greenyellow;
+  border-radius: 4px;
+  height: auto;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+.bottom-right {
+  bottom: 16px;
+  right: 16px;
+  animation-name: toast-right-slide;
+  animation-duration: 0.7s;
+}
+
+@keyframes toast-right-slide {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+
+.bottom-center {
+  right: 33%;
+  bottom: 16px;
+}
+
+.bottom-left {
+  left: 16px;
+  bottom: 16px;
+}
+
+.top-center {
+  left: 50%;
+  top: 16px;
+  margin: auto;
+}
+
+.top-right {
+  right: 16px;
+  top: 25%;
+}
+
+.top-left {
+  top: 15%;
+  left: 16px;
+}
+
+.success {
+  background-color: #328854;
+}
+
+.warning {
+  background-color: #fec23d;
+}
+
+.danger {
+  background-color: #dc3c45;
+}
+
+.info {
+  background-color: #35caf0;
+}
+
+.primary {
+  background-color: #1370fa;
+}
+
+.title {
+  line-height: 1.5px;
+}
+
+.description {
+  line-height: 1.5px;
+}
+
+.times {
+  font-size: 25px;
+  cursor: pointer;
+  color: #f8f9fa;
+}

@@ -1,0 +1,53 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
+.transaction {
+  padding: 20px;
+
+  &_row {
+    table {
+      thead {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 15px;
+        color: #000000;
+
+        tr {
+          background: #f1f7ff;
+          border-style: none;
+          white-space: nowrap;
+          cursor: pointer;
+        }
+      }
+
+      tbody {
+        border-top: none !important;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 15px;
+        color: #000000;
+
+        tr {
+          td {
+            border-bottom-width: 0px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+.success {
+  padding: 5px 8px;
+  background: #94f984;
+}
+
+.failure {
+  padding: 5px 8px;
+  background: rgba(254, 68, 32, 0.4);
+}

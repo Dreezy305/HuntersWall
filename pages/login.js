@@ -59,6 +59,12 @@ function Login() {
     }
   };
 
+  const userObj = {
+    firstName: "Ifeoluwa",
+    lastName: "Olagbemi",
+    userId: "Hun023475",
+  };
+
   const handleSubmit = async (data = logInData) => {
     setLoading(true);
 
@@ -69,11 +75,15 @@ function Login() {
     return await auth
       .signIn(data)
       .then((response) => {
+        // console.log(response);
         if (!response.error) {
           setEmail("");
           setPassword("");
           setLoading(false);
-          return [response, router.push("/dashboard")];
+          return [
+            response,
+            router.push({ pathname: "/profile", query: userObj }),
+          ];
         } else if (response.error) {
           setUserExist(true);
         }

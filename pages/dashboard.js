@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import PropTypes from "prop-types";
+// import { useLocation } from "react-router-dom";
 import SideBar from "../Dashboard/SideBar";
 import TopBar from "../Dashboard/TopBar";
 import Profile from "./profile";
@@ -12,7 +14,8 @@ import Market from "./market";
 import TransactionHistory from "./transaction";
 import Settings from "./settings";
 
-function dashboard() {
+function dashboard({ children }) {
+  console.log(children, "pp");
   const [counter, setCounter] = useState(0);
   const [mobile, setMobile] = useState(false);
   const [mobileBg, setMobileBg] = useState("");
@@ -84,7 +87,6 @@ function dashboard() {
   return (
     <>
       <div className="dashboard">
-        {/* <div className="" style={{ background: mobileBg }}> */}
         <div className="mobile" style={{ background: mobileBg }}>
           <div className="left_text">
             <h3 className="mb-5" style={{ color: mobileColor }}>
@@ -168,9 +170,14 @@ function dashboard() {
         </div>
 
         <div className="dashboard_right">
-          <TopBar title={Pages[counter].title} />
+          <TopBar
+            title={Pages[counter].title}
+            firstName={router.query.firstName}
+            lastName={router.query.lastName}
+            ID={router.query.userId}
+          />
           <div className="position-sticky"></div>
-          {Pages[counter].component}
+          {/* <>{Pages[counter].component}</> */}
         </div>
       </div>
     </>
@@ -178,3 +185,7 @@ function dashboard() {
 }
 
 export default dashboard;
+
+dashboard.propTypes = {
+  children: PropTypes.element,
+};
