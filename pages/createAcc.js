@@ -416,8 +416,8 @@ function CreateAcc() {
                     <button
                       type="button"
                       className="px-3 py-3"
-                      // onClick={() => handleSubmit()}
-                      onClick={() => setToast(true)}
+                      onClick={() => handleSubmit()}
+                      // onClick={() => setToast(true)}
                     >
                       {loading ? "Creating acount..." : "Create account"}
                     </button>
