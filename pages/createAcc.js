@@ -146,6 +146,7 @@ function CreateAcc() {
         return [
           response,
           router.push({ pathname: "/profile", query: userObj }),
+          setToast(true),
         ];
       }
     });
@@ -158,6 +159,14 @@ function CreateAcc() {
   return (
     <>
       <Layout>
+        <Toast
+          visiblity={toast}
+          handleClose={() => setToast(false)}
+          title="Congratulations"
+          description="Kindly login with your email and password"
+          position="bottom-right"
+          theme="success"
+        />
         <section className="createAcc">
           <div className="container ">
             <div className="row gx-lg-5">
@@ -427,14 +436,6 @@ function CreateAcc() {
             </div>
           </div>
         </section>
-        <Toast
-          visiblity={toast}
-          handleClose={() => setToast(false)}
-          title="Congratulations"
-          description="Kindly login with your email and password"
-          position="bottom-right"
-          theme="success"
-        />
       </Layout>
     </>
   );
