@@ -169,7 +169,7 @@ function SideBarMobile({ handClick }) {
               </li>
             </Link>
           </ul>
-          <ul className="list-unstyled mt-3">
+          <ul className="list-unstyled mt-3 pt-3">
             <Link href="/settings">
               <li
                 className="d-flex align-items-center mb-3 py-2"
