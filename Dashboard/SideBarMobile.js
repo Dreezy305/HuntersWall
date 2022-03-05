@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import {
+  LogoutIcon,
+  MarketIcon,
+  NairaIcon,
+  ProfileIcon,
+  SettingIcon,
+  ShoppingIcon,
+  TransactionIcon,
+  WalletIcon,
+} from "../components/icon";
 
-function SideBarMobile() {
+function SideBarMobile({ handClick }) {
   const [mobile, setMobile] = useState(false);
   const [mobileBg, setMobileBg] = useState("");
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -12,7 +22,10 @@ function SideBarMobile() {
   };
 
   return (
-    <div className="mobile" style={{ background: mobileBg }}>
+    <div
+      className={`mobile ${mobile ? "mobileBg" : "mobileBgOff"}`}
+      // style={{ background: mobileBg }}
+    >
       <div className="left_text">
         <h3 className="mb-5" style={{ color: mobileColor }}>
           HuntersWall
@@ -74,13 +87,115 @@ function SideBarMobile() {
       </div>
 
       {mobileMenu && (
-        <>
+        <div className="mobile-list">
           <ul className="list-unstyled">
-            <li>Profile</li>
-            <li>Wallet</li>
-            <li>Loan request</li>
+            <Link href="/profile">
+              <li
+                className="d-flex align-items-center mb-3 py-1"
+                // onClick={() => handleClick(0)}
+              >
+                <ProfileIcon
+                  marginRight={3}
+                  fill="#fff"
+                  // onMouseOver={handleOver}
+                />
+                Profile
+              </li>
+            </Link>
+            <Link href="/wallet">
+              <li
+                className="d-flex align-items-center mb-3 py-1"
+                // onClick={() => handleClick(1)}
+              >
+                <ShoppingIcon
+                  fill="none"
+                  marginRight={3}
+                  stylesObj={{ fontSize: "12px" }}
+                  className="icon"
+                />
+                Wallet
+              </li>
+            </Link>
+            <Link href="/portfolio">
+              <li
+                className="d-flex align-items-center mb-3 py-1"
+                onClick={() => handleClick(2)}
+              >
+                <WalletIcon
+                  fill="none"
+                  marginRight={3}
+                  stylesObj={{ fontSize: "12px" }}
+                />
+                Portfolio
+              </li>
+            </Link>
+            <Link href="/loanRequest">
+              <li
+                className="d-flex align-items-center mb-3 py-1"
+                onClick={() => handleClick(3)}
+              >
+                <NairaIcon
+                  fill="none"
+                  marginRight={3}
+                  stylesObj={{ fontSize: "16px" }}
+                />
+                Loan request
+              </li>
+            </Link>
+            <Link href="/market">
+              <li
+                className="d-flex align-items-center mb-3 py-1"
+                onClick={() => handleClick(4)}
+              >
+                <MarketIcon
+                  fill="none"
+                  marginRight={3}
+                  stylesObj={{ fontSize: "16px" }}
+                />
+                Market
+              </li>
+            </Link>
+            <Link href="/transaction">
+              <li
+                className="d-flex align-items-center mb-3 py-1"
+                onClick={() => handleClick(5)}
+              >
+                <TransactionIcon
+                  fill="none"
+                  marginRight={3}
+                  stylesObj={{ fontSize: "16px" }}
+                />
+                Transaction History
+              </li>
+            </Link>
           </ul>
-        </>
+          <ul className="list-unstyled mt-3">
+            <Link href="/settings">
+              <li
+                className="d-flex align-items-center mb-3 py-2"
+                onClick={() => handleClick(6)}
+              >
+                <SettingIcon
+                  fill="none"
+                  marginRight={3}
+                  stylesObj={{ fontSize: "16px" }}
+                />
+                Settings
+              </li>
+            </Link>
+            <li
+              className="d-flex align-items-center mb-2 py-2"
+              // onClick={logOut}
+            >
+              <LogoutIcon
+                fill="none"
+                marginRight={3}
+                stylesObj={{ fontSize: "16px" }}
+              />
+              Log Out
+            </li>
+          </ul>
+        </div>
       )}
     </div>
   );
