@@ -69,5 +69,25 @@
   color: #2081f9;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1180px) {
+  .sidebar {
+    h3 {
+      font-size: 20px;
+    }
+    &_top {
+      ul {
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &_bottom {
+      ul {
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }

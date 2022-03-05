@@ -43,6 +43,7 @@
 
   .mobile {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: baseline;
     position: absolute;
@@ -67,6 +68,14 @@
 
   .dashboard_right {
     margin-top: 50px;
+  }
+
+  .left_text {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 

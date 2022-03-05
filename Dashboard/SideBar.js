@@ -12,10 +12,20 @@ import {
   WalletIcon,
 } from "../components/icon";
 import Link from "next/link";
+import { useAuth } from "../auth/useAuth";
 
 function SideBar({ handleClick }) {
   const [hover, setHover] = useState(false);
   const [mobile, setMobile] = useState(false);
+
+  const auth = useAuth();
+
+  const logOut = async () => {
+    // await auth
+    //   .signOut()
+    //   .then(() => setUser(false))
+    //   .catch((e) => e);
+  };
 
   const handleOver = () => {
     setHover(true);
@@ -52,7 +62,7 @@ function SideBar({ handleClick }) {
               <ShoppingIcon
                 fill="none"
                 marginRight={3}
-                stylesObj={{ fontSize: "16px" }}
+                stylesObj={{ fontSize: "12px" }}
                 className="icon"
               />
               Wallet
@@ -67,7 +77,7 @@ function SideBar({ handleClick }) {
               <WalletIcon
                 fill="none"
                 marginRight={3}
-                stylesObj={{ fontSize: "16px" }}
+                stylesObj={{ fontSize: "12px" }}
               />
               Portfolio
             </li>
@@ -130,7 +140,7 @@ function SideBar({ handleClick }) {
             </li>
           </Link>
 
-          <li className="d-flex align-items-center mb-2 py-2">
+          <li className="d-flex align-items-center mb-2 py-2" onClick={logOut}>
             <LogoutIcon
               fill="none"
               marginRight={3}
