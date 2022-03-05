@@ -74,13 +74,13 @@ function SideBarMobile() {
       </div>
 
       {mobileMenu && (
-        <>
+        <div className="mobile-list">
           <ul className="list-unstyled">
             <li>Profile</li>
             <li>Wallet</li>
             <li>Loan request</li>
           </ul>
-        </>
+        </div>
       )}
     </div>
   );
