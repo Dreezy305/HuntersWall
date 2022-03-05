@@ -13,7 +13,7 @@ function PersonalInfo() {
               <p>Ifeoluwa</p>
             </div>
           </div>
-          <div className="text-start col-lg-3">
+          <div className="text-start col-lg-3 small">
             <label className="form-label pb-2">Last Name</label>
             <br />
             <div className="p-3 profileNames">
@@ -53,7 +53,7 @@ function PersonalInfo() {
               <p>Male</p>
             </div>
           </div>
-          <div className="text-start col-lg-4">
+          <div className="text-start col-lg-4 small">
             <label className="form-label pb-2">Birthday</label>
             <br />
             <div className="p-3 profileNames">
