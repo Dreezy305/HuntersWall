@@ -52,7 +52,7 @@ function Deposit() {
 
           <div className="row align-items-center mt-5">
             <div className="text-start col-lg-12 px-5">
-              <div className="d-lg-flex flex-lg-row justify-content-lg-between">
+              <div className="d-lg-flex flex-lg-row justify-content-lg-between d-md-flex flex-md-row justify-content-md-between">
                 <label>
                   <input
                     type="radio"
