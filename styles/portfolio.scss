@@ -4,6 +4,7 @@
 .portfolio {
   flex: 4;
   padding: 0px 20px;
+  overflow: hidden;
   &_top {
     cursor: pointer;
     h6 {
