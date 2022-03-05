@@ -79,6 +79,15 @@
       cursor: pointer;
     }
   }
+
+  .mobileBg {
+    background-color: #2081f9;
+    transition: all ease 1s;
+  }
+
+  .mobileBgOff {
+    transition: all ease 0.5s;
+  }
 }
 
 @media screen and (max-width: 768px) {
