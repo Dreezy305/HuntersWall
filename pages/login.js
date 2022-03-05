@@ -165,7 +165,11 @@ function Login() {
                         height="24"
                         viewBox="0 0 24 24"
                         className="position-absolute svg"
-                        style={{ top: "53px", right: "60px" }}
+                        style={{
+                          top: "53px",
+                          right: "60px",
+                          cursor: "pointer",
+                        }}
                         onClick={() => {
                           setEyeOpen(!eyeOpen);
                           togglePasswordVisiblity();
@@ -190,7 +194,11 @@ function Login() {
                         height="24"
                         viewBox="0 0 24 24"
                         className="position-absolute svg"
-                        style={{ top: "53px", right: "60px" }}
+                        style={{
+                          top: "53px",
+                          right: "60px",
+                          cursor: "pointer",
+                        }}
                         onClick={() => {
                           setEyeOpen(!eyeOpen);
                           togglePasswordVisiblity();
