@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { useState } from "react";
 import Link from "next/link";
 import {
@@ -30,7 +31,7 @@ function SideBarMobile({ handClick }) {
         <h3 className="mb-5" style={{ color: mobileColor }}>
           HuntersWall
         </h3>
-        {/* <div className=""> */}
+
         {!mobile ? (
           <svg
             width="32"
@@ -83,7 +84,6 @@ function SideBarMobile({ handClick }) {
             />
           </svg>
         )}
-        {/* </div> */}
       </div>
 
       {mobileMenu && (
