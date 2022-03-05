@@ -119,7 +119,7 @@ function SideBarMobile({ handClick }) {
             <Link href="/portfolio">
               <li
                 className="d-flex align-items-center mb-3 py-1"
-                onClick={() => handleClick(2)}
+                // onClick={() => handleClick(2)}
               >
                 <WalletIcon
                   fill="none"
@@ -132,7 +132,7 @@ function SideBarMobile({ handClick }) {
             <Link href="/loanRequest">
               <li
                 className="d-flex align-items-center mb-3 py-1"
-                onClick={() => handleClick(3)}
+                // onClick={() => handleClick(3)}
               >
                 <NairaIcon
                   fill="none"
@@ -145,7 +145,7 @@ function SideBarMobile({ handClick }) {
             <Link href="/market">
               <li
                 className="d-flex align-items-center mb-3 py-1"
-                onClick={() => handleClick(4)}
+                // onClick={() => handleClick(4)}
               >
                 <MarketIcon
                   fill="none"
@@ -158,7 +158,7 @@ function SideBarMobile({ handClick }) {
             <Link href="/transaction">
               <li
                 className="d-flex align-items-center mb-3 py-1"
-                onClick={() => handleClick(5)}
+                // onClick={() => handleClick(5)}
               >
                 <TransactionIcon
                   fill="none"
@@ -173,7 +173,7 @@ function SideBarMobile({ handClick }) {
             <Link href="/settings">
               <li
                 className="d-flex align-items-center mb-3 py-2"
-                onClick={() => handleClick(6)}
+                // onClick={() => handleClick(6)}
               >
                 <SettingIcon
                   fill="none"
