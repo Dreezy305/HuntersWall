@@ -69,6 +69,11 @@
     width: 100%;
     text-align: end;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
     ul {
       font-family: "Lato";
       font-style: normal;
@@ -136,6 +141,11 @@
     width: 100%;
     text-align: end;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
     ul {
       font-family: "Lato";
       font-style: normal;
@@ -144,6 +154,21 @@
       line-height: $line-height29;
       color: #ffffff;
       cursor: pointer;
+
+      li {
+        &:hover {
+          background: #ffffff;
+          color: #2081f9;
+          box-shadow: 20px 0px 0px 0px #ffffff, -20px 0px 0px 0px #ffffff,
+            20px 10px 0px 0px #ffffff, 20px -10px 0px 0px #ffffff,
+            -10px 0px 0px 10px #ffffff, 26px 0px 0px 10px #ffffff;
+
+          cursor: pointer;
+        }
+
+        &:checked {
+        }
+      }
     }
   }
 
