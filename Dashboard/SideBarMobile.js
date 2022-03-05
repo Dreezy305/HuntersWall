@@ -187,26 +187,6 @@ function SideBarMobile({ handClick }) {
               Log Out
             </li>
           </ul>
-          <ul className="list-unstyled mt-3 pt-3">
-            {/* <Link href="/settings">
-              <li className="d-flex align-items-center mb-3 py-2">
-                <SettingIcon
-                  fill="none"
-                  marginRight={3}
-                  stylesObj={{ fontSize: "16px" }}
-                />
-                Settings
-              </li>
-            </Link>
-            <li className="d-flex align-items-center mb-2 py-2">
-              <LogoutIcon
-                fill="none"
-                marginRight={3}
-                stylesObj={{ fontSize: "16px" }}
-              />
-              Log Out
-            </li> */}
-          </ul>
         </div>
       )}
     </div>
