@@ -78,7 +78,14 @@ function SideBarMobile() {
           <ul className="list-unstyled">
             <li>Profile</li>
             <li>Wallet</li>
+            <li>Portfolio</li>
             <li>Loan request</li>
+            <li>Market</li>
+            <li>Transaction history</li>
+          </ul>
+          <ul className="list-unstyled">
+            <li>Settings</li>
+            <li>Log Out</li>
           </ul>
         </div>
       )}
