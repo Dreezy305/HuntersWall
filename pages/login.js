@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAuth } from "../auth/useAuth";
 import Layout from "../layouts";
+import toast, { Toaster } from "react-hot-toast";
 
 function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -20,6 +21,8 @@ function Login() {
 
   const auth = useAuth();
   const router = useRouter();
+
+  // const notify = (message) => toast(message);
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -75,7 +78,7 @@ function Login() {
     return await auth
       .signIn(data)
       .then((response) => {
-        // console.log(response);
+        console.log(response);
         if (!response.error) {
           setEmail("");
           setPassword("");
@@ -83,6 +86,7 @@ function Login() {
           return [
             response,
             router.push({ pathname: "/profile", query: userObj }),
+            // toast.success("successfully logged in"),
           ];
         } else if (response.error) {
           setUserExist(true);
@@ -160,11 +164,10 @@ function Login() {
                     <>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-eye"
+                        className="icon icon-tabler icon-tabler-eye position-absolute svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
-                        className="position-absolute svg"
                         style={{
                           top: "53px",
                           right: "60px",
@@ -189,11 +192,10 @@ function Login() {
                     <>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-eye-off"
+                        className="icon icon-tabler icon-tabler-eye-off position-absolute svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
-                        className="position-absolute svg"
                         style={{
                           top: "53px",
                           right: "60px",
