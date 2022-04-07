@@ -121,5 +121,15 @@ const useAuthProvider = () => {
       });
   };
 
-  return { user, signUp, signIn };
+  const signOut = async () => {
+    return await signOut(auth)
+      .then(() => {
+        console.log("sign out succssful");
+      })
+      .catch((error) => {
+        return error;
+      });
+  };
+
+  return { user, signUp, signIn, signOut };
 };

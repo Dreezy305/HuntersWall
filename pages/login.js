@@ -20,6 +20,7 @@ function Login() {
   const [userExist, setUserExist] = useState(false);
 
   const auth = useAuth();
+
   const router = useRouter();
 
   // const notify = (message) => toast(message);
