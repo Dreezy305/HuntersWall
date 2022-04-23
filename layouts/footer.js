@@ -37,8 +37,12 @@ function Footer() {
         <div className="row text-center footer_h1 align-items-stretch">
           <h6 className="pb-3">
             {" "}
-            <Link href={"/privacy"}>Privacy Policy.</Link>{" "}
-            <Link href={"/terms"}>Terms & Conditions.</Link>
+            <a href={"/privacy"} style={{ color: "#e5e5f4" }}>
+              Privacy Policy.
+            </a>{" "}
+            <a href={"/terms"} style={{ color: "#e5e5f4" }}>
+              Terms & Conditions.
+            </a>
           </h6>
           <h6 className="pb-5">
             Copyright 2022. Hunterswall Strategies Limited (RC: 1843219)

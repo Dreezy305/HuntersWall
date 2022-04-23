@@ -402,7 +402,9 @@ function CreateAcc() {
                           By creating an account I have read and agreed to
                         </span>
                         <span style={{ cursor: "pointer" }}>
-                          Terms and Conditions
+                          <a href="/terms" style={{ textDecoration: "none" }}>
+                            Terms and Conditions{" "}
+                          </a>
                         </span>
                       </p>
                     </div>
