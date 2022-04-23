@@ -6,7 +6,7 @@ function terms() {
     <Layout>
       <section>
         <div className="container">
-          <article className="terms">
+          <article className="terms py-4">
             <h2 className="py-2 pb-2 fw-bold">Terms & Conditions</h2>
             <h6 className="py-2 pb-2 fw-bold">General Terms</h6>
             <p className="pb-2">
