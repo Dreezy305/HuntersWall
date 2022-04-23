@@ -7,7 +7,7 @@ function AboutUs() {
   };
   return (
     <Layout>
-      <section className=" aboutUs">
+      <section className="aboutUs">
         <div className="text-center aboutUs_content pt-5">
           <h1 style={{ color: "#2081f9" }}>
             About Us

@@ -1,0 +1,12 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
+.privacy {
+  h2 {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font36;
+    line-height: $line-height40;
+  }
+}

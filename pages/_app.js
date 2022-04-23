@@ -16,6 +16,8 @@ import "../styles/transaction.scss";
 import "../styles/market.scss";
 import "../styles/modal.css";
 import "../styles/toast.css";
+import "../styles/privacy.scss";
+import "../styles/terms.scss";
 import { AuthProvider } from "../auth/useAuth";
 
 function MyApp({ Component, pageProps }) {

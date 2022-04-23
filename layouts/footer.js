@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -34,7 +35,11 @@ function Footer() {
       <hr style={{ border: "1px solid #75B1FB" }} />
       <div className="container pt-2">
         <div className="row text-center footer_h1 align-items-stretch">
-          <h6 className="pb-3"> Privacy Policy. Terms & Conditions.</h6>
+          <h6 className="pb-3">
+            {" "}
+            <Link href={"/privacy"}>Privacy Policy.</Link>{" "}
+            <Link href={"/terms"}>Terms & Conditions.</Link>
+          </h6>
           <h6 className="pb-5">
             Copyright 2022. Hunterswall Strategies Limited (RC: 1843219)
           </h6>
