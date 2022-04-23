@@ -21,10 +21,7 @@ function SideBar({ handleClick }) {
   const auth = useAuth();
 
   const logOut = async () => {
-    // await auth
-    //   .signOut()
-    //   .then(() => setUser(false))
-    //   .catch((e) => e);
+    return await auth.signOut;
   };
 
   const handleOver = () => {

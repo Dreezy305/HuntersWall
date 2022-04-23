@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Layout from "../layouts";
 import { useAuth } from "../auth/useAuth";
-import Toast from "../components/toast";
+import toast, { Toaster } from "react-hot-toast";
 // import { useValidation } from "../hooks/validation";
 
 function CreateAcc() {
@@ -31,6 +31,8 @@ function CreateAcc() {
   const auth = useAuth();
 
   const router = useRouter();
+
+  const notify = (message) => toast(message);
 
   const userObj = {
     firstName: "Ifeoluwa",
@@ -146,8 +148,10 @@ function CreateAcc() {
         return [
           response,
           router.push({ pathname: "/profile", query: userObj }),
+
           setToast(true),
         ];
+        toast.success("account created successfully");
       }
     });
   };
@@ -159,14 +163,6 @@ function CreateAcc() {
   return (
     <>
       <Layout>
-        <Toast
-          visiblity={toast}
-          handleClose={() => setToast(false)}
-          title="Congratulations"
-          description="Kindly login with your email and password"
-          position="bottom-right"
-          theme="success"
-        />
         <section className="createAcc">
           <div className="container ">
             <div className="row gx-lg-5">
@@ -275,11 +271,10 @@ function CreateAcc() {
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-eye"
+                          className="icon icon-tabler icon-tabler-eye position-absolute svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
-                          className="position-absolute svg"
                           style={{ top: "53px", right: "60px" }}
                           onClick={() => {
                             setEyeOpen(!eyeOpen);
@@ -300,11 +295,10 @@ function CreateAcc() {
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-eye-off"
+                          className="icon icon-tabler icon-tabler-eye-off position-absolute svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
-                          className="position-absolute svg"
                           style={{ top: "53px", right: "60px" }}
                           onClick={() => {
                             setEyeOpen(!eyeOpen);
@@ -346,11 +340,10 @@ function CreateAcc() {
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-eye"
+                          className="icon icon-tabler icon-tabler-eye position-absolute svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
-                          className="position-absolute svg"
                           style={{ top: "53px", right: "60px" }}
                           onClick={() => {
                             setOpen(!open);
@@ -371,11 +364,10 @@ function CreateAcc() {
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-eye-off"
+                          className="icon icon-tabler icon-tabler-eye-off position-absolute svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
-                          className="position-absolute svg"
                           style={{ top: "53px", right: "60px" }}
                           onClick={() => {
                             setOpen(!open);

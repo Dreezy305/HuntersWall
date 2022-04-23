@@ -1,0 +1,29 @@
+@import "./variable";
+@import "./fontFamily.scss";
+
+.terms {
+  font-family: "Lato";
+  h2 {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font36;
+    line-height: $line-height40;
+  }
+
+  h6 {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font20;
+    line-height: $line-height22;
+  }
+
+  p {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font18;
+    line-height: $line-height27;
+  }
+}
