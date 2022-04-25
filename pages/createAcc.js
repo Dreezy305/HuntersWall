@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import Layout from "../layouts";
 import { useAuth } from "../auth/useAuth";
@@ -402,9 +403,11 @@ function CreateAcc() {
                           By creating an account I have read and agreed to
                         </span>
                         <span style={{ cursor: "pointer" }}>
-                          <a href="/terms" style={{ textDecoration: "none" }}>
-                            Terms and Conditions{" "}
-                          </a>
+                          <Link href="/terms">
+                            <a style={{ textDecoration: "none" }}>
+                              Terms and Conditions{" "}
+                            </a>
+                          </Link>
                         </span>
                       </p>
                     </div>
