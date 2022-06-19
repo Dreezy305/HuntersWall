@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import Layout from "../layouts";
 import { useAuth } from "../auth/useAuth";
@@ -148,10 +149,9 @@ function CreateAcc() {
         return [
           response,
           router.push({ pathname: "/profile", query: userObj }),
-
+          toast.success("account created successfully"),
           setToast(true),
         ];
-        toast.success("account created successfully");
       }
     });
   };
@@ -402,7 +402,11 @@ function CreateAcc() {
                           By creating an account I have read and agreed to
                         </span>
                         <span style={{ cursor: "pointer" }}>
-                          Terms and Conditions
+                          <Link href="/terms">
+                            <a style={{ textDecoration: "none" }}>
+                              Terms and Conditions{" "}
+                            </a>
+                          </Link>
                         </span>
                       </p>
                     </div>
