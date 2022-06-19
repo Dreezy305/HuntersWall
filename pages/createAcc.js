@@ -149,10 +149,9 @@ function CreateAcc() {
         return [
           response,
           router.push({ pathname: "/profile", query: userObj }),
-
+          toast.success("account created successfully"),
           setToast(true),
         ];
-        toast.success("account created successfully");
       }
     });
   };
