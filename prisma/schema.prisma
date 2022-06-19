@@ -9,3 +9,33 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id            String    @id @default(cuid())
+  firstName     String
+  lastName      String
+  email         String   @unique
+  phoneNumber   String
+  password      String
+}
+
+model UserPersonalDetails {
+  id            String    @id @default(cuid()) 
+  gender        String
+  birthday      String
+  occupation    String
+  address       String
+  city          String
+  state         String
+  country       String
+}
+
+model BankDetails {
+  id                 String    @id @default(cuid())
+  accountName        String   
+  bankName           String
+  accountNumber      String    @unique
+  bvn                String    @unique
+  sortcode           String
+}
+
